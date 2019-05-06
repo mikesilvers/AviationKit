@@ -1,6 +1,6 @@
 # AviationKit
 
-[![CI Status](https://img.shields.io/travis/Mike Silvers/AviationKit.svg?style=flat)](https://travis-ci.org/Mike Silvers/AviationKit)
+[![CI Status](https://img.shields.io/travis/mikesilvers/AviationKit.svg?style=flat)](https://travis-ci.org/mikesilvers/AviationKit)
 [![Version](https://img.shields.io/cocoapods/v/AviationKit.svg?style=flat)](https://cocoapods.org/pods/AviationKit)
 [![License](https://img.shields.io/cocoapods/l/AviationKit.svg?style=flat)](https://cocoapods.org/pods/AviationKit)
 [![Platform](https://img.shields.io/cocoapods/p/AviationKit.svg?style=flat)](https://cocoapods.org/pods/AviationKit)
@@ -22,7 +22,7 @@ pod 'AviationKit'
 
 ## Author
 
-Mike Silvers, mike.silvers@buckettechnologies.com
+Mike Silvers, mikesilvers@gmail.com
 
 ## License
 
