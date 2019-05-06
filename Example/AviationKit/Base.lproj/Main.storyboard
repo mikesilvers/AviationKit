@@ -1,30 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PL1-gH-Q2W">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Main View Controller-->
+        <scene sceneID="xTO-8h-qbT">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="AviationKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PL1-gH-Q2W" customClass="MainViewController" customModule="AviationKit_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="ozc-S0-isH"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Bk-Xy-r7B"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="Qqx-tY-OF6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="sBK-Xj-wQe">
+                                <rect key="frame" x="16" y="20" width="343" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ore-7r-CbD"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="METAR"/>
+                                    <segment title="TAF"/>
+                                </segments>
+                                <connections>
+                                    <action selector="fillMetarTaf:" destination="PL1-gH-Q2W" eventType="valueChanged" id="Hac-wC-N62"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HLa-mv-Om4">
+                                <rect key="frame" x="16" y="50" width="343" height="617"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MetarCell" id="9U2-I9-kIF" customClass="MetarTableViewCell" customModule="AviationKit_Example" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9U2-I9-kIF" id="LtX-sW-ZTD">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TafCell" id="FnW-nr-Q5E" customClass="TafTableViewCell" customModule="AviationKit_Example" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FnW-nr-Q5E" id="i2F-6g-dQ7">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="PL1-gH-Q2W" id="rYZ-M4-Ivl"/>
+                                    <outlet property="delegate" destination="PL1-gH-Q2W" id="YXJ-Cv-dyb"/>
+                                    <outlet property="prefetchDataSource" destination="PL1-gH-Q2W" id="Ytf-qp-W4S"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HLa-mv-Om4" firstAttribute="leading" secondItem="Qqx-tY-OF6" secondAttribute="leadingMargin" id="A7q-bK-nnE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HLa-mv-Om4" secondAttribute="trailing" id="FeR-IA-nE5"/>
+                            <constraint firstItem="4Bk-Xy-r7B" firstAttribute="top" secondItem="HLa-mv-Om4" secondAttribute="bottom" id="JUB-f4-yOK"/>
+                            <constraint firstItem="sBK-Xj-wQe" firstAttribute="leading" secondItem="Qqx-tY-OF6" secondAttribute="leadingMargin" id="OUq-1A-0Kz"/>
+                            <constraint firstItem="sBK-Xj-wQe" firstAttribute="top" secondItem="ozc-S0-isH" secondAttribute="bottom" id="X1R-eJ-Y8q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sBK-Xj-wQe" secondAttribute="trailing" id="q7F-il-Dhf"/>
+                            <constraint firstItem="HLa-mv-Om4" firstAttribute="top" secondItem="sBK-Xj-wQe" secondAttribute="bottom" id="zJA-3b-RMz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="metarTafSelection" destination="sBK-Xj-wQe" id="9HJ-mD-sXv"/>
+                        <outlet property="tableView" destination="HLa-mv-Om4" id="djj-Fd-8Sr"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hed-lI-CE9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-538" y="-902"/>
         </scene>
     </scenes>
 </document>

@@ -8,9 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0BCA3F522345D72ECBFF6480 /* Pods_AviationKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C439F61501A594BBFB02DE0A /* Pods_AviationKit_Example.framework */; };
+		1234921F2280A76000A9D164 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1234921E2280A76000A9D164 /* MainViewController.swift */; };
+		123492202280A76000A9D164 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1234921E2280A76000A9D164 /* MainViewController.swift */; };
+		123492222280AD8600A9D164 /* MetarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123492212280AD8600A9D164 /* MetarTableViewCell.swift */; };
+		123492232280AD8600A9D164 /* MetarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123492212280AD8600A9D164 /* MetarTableViewCell.swift */; };
+		123492252280AD9B00A9D164 /* TafTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123492242280AD9B00A9D164 /* TafTableViewCell.swift */; };
+		123492262280AD9B00A9D164 /* TafTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123492242280AD9B00A9D164 /* TafTableViewCell.swift */; };
 		4F3D02661F535411949D72B3 /* Pods_AviationKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAAF1CE1AD7BF2A89F8D9300 /* Pods_AviationKit_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -28,15 +33,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1234921E2280A76000A9D164 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		123492212280AD8600A9D164 /* MetarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetarTableViewCell.swift; sourceTree = "<group>"; };
+		123492242280AD9B00A9D164 /* TafTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TafTableViewCell.swift; sourceTree = "<group>"; };
 		1888CEA6920462DABB7754B9 /* Pods-AviationKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AviationKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-AviationKit_Example/Pods-AviationKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		3059EA6AD7367FB2740F5C4A /* Pods-AviationKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AviationKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-AviationKit_Tests/Pods-AviationKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		3B24E10FB87DBB7212BB54AD /* AviationKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AviationKit.podspec; path = ../AviationKit.podspec; sourceTree = "<group>"; };
+		3B24E10FB87DBB7212BB54AD /* AviationKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AviationKit.podspec; path = ../AviationKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5874C24DF34F09B36470A1E2 /* Pods-AviationKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AviationKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-AviationKit_Tests/Pods-AviationKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5D78BA3895C3CF0343452CA8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* AviationKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AviationKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -69,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		123492272280ADA700A9D164 /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				123492212280AD8600A9D164 /* MetarTableViewCell.swift */,
+				123492242280AD9B00A9D164 /* TafTableViewCell.swift */,
+			);
+			name = "Table View Cells";
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -94,7 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				1234921E2280A76000A9D164 /* MainViewController.swift */,
+				123492272280ADA700A9D164 /* Table View Cells */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -170,7 +187,6 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				9C38117366986895E0586C0D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,28 +277,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9C38117366986895E0586C0D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AviationKit_Example/Pods-AviationKit_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AviationKit/AviationKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AviationKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AviationKit_Example/Pods-AviationKit_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E1F59988A73245809D88E384 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -334,8 +328,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				123492222280AD8600A9D164 /* MetarTableViewCell.swift in Sources */,
+				1234921F2280A76000A9D164 /* MainViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				123492252280AD9B00A9D164 /* TafTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +339,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				123492232280AD8600A9D164 /* MetarTableViewCell.swift in Sources */,
+				123492202280A76000A9D164 /* MainViewController.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				123492262280AD9B00A9D164 /* TafTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
