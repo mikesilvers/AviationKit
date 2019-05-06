@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'AviationKit_Example' do
+  pod 'AviationKit', :path => '../'
+
+  target 'AviationKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
