@@ -3,5 +3,6 @@ use_frameworks!
 
 target 'AviationKit_Example' do
   pod 'AviationKit', :path => '../'
+  pod 'IQKeyboardManagerSwift'
 
 end

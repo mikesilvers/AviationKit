@@ -1,0 +1,23 @@
+PODS:
+  - AviationKit (0.0.1)
+  - IQKeyboardManagerSwift (6.3.0)
+
+DEPENDENCIES:
+  - AviationKit (from `../`)
+  - IQKeyboardManagerSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - IQKeyboardManagerSwift
+
+EXTERNAL SOURCES:
+  AviationKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AviationKit: 5b14d2f1a0c70713246209145f3c95dc7026ad18
+  IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
+
+PODFILE CHECKSUM: f02449b442154ef6b11d83f24f83d7c9fbff08b0
+
+COCOAPODS: 1.6.1

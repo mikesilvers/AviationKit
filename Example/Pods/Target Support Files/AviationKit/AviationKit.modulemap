@@ -1,0 +1,6 @@
+framework module AviationKit {
+  umbrella header "AviationKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
