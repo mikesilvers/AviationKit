@@ -98,10 +98,12 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             // this is for testing
             if let path = Bundle.main.url(forResource: "metars.cache", withExtension: "xml"),
-                let document = try? String(contentsOf: path, encoding: .utf8) {
+                let docdata = try? Data(contentsOf: path) {
                 
-                let _ = MetarParser(document)
-                
+                let m = MetarParser()
+                m.parseDocument(docdata) { (metars) in
+                    print("metars: \(metars)")
+                }
             }
             
             

@@ -12,35 +12,29 @@ public class MetarParser : NSObject, XMLParserDelegate {
     private var metars : [METAR] = []
     private var currentMetar  = METAR()
     
+    private var parser : XMLParser?
     private var currentElement = ""
     
     public override init() { }
     
-    public convenience init(_ document: String ) {
-        self.init()
+    public func parseDocument(_ data: Data, completion: (_ metar: [METAR])->()) {
         
-        self.parseDocument(document)
-        
-    }
-    
-    public func parseDocument(_ document: String) {
-        
-        if let parsedata = document.data(using: .utf8) {
-            
-            let parser = XMLParser(data: parsedata)
-            parser.delegate = self
-            parser.parse()
-            
+        let parser = XMLParser(data: data)
+        parser.delegate = self
+        if parser.parse() {
+            completion(self.metars)
+        } else if let  pe = parser.parserError {
+            print("Parse Error: \(pe)")
         }
         
     }
     
     private func parserDidStartDocument(_ parser: XMLParser) {
-        
+        print("parserDidStartDocument")
     }
     
     private func parserDidEndDocument(_ parser: XMLParser) {
-        
+        print("parserDidEndDocument")
     }
     
     private func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
@@ -88,7 +82,10 @@ public class MetarParser : NSObject, XMLParserDelegate {
                 print("The currentElement was NOT found for foundCharacters")
             }
         }
-
+    }
+    
+    private func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
+        print("parse error: \(parseError)")
     }
     
 }
