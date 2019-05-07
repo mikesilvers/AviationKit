@@ -95,6 +95,17 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             airportCode.isHidden  = false
             airportCode.text      = "K"
             airportCode.becomeFirstResponder()
+            
+            // this is for testing
+            if let path = Bundle.main.url(forResource: "metars.cache", withExtension: "xml"),
+                let document = try? String(contentsOf: path, encoding: .utf8) {
+                
+                let _ = MetarParser(document)
+                
+            }
+            
+            
+            
         case 1:
             // this is TAC Airport Code
             airportLabel.isHidden = false
