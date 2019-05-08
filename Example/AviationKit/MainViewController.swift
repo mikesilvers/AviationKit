@@ -97,17 +97,15 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             airportCode.becomeFirstResponder()
             
             // this is for testing
-            if let path = Bundle.main.url(forResource: "metars.cache", withExtension: "xml"),
-                let docdata = try? Data(contentsOf: path) {
-                
-                let m = MetarParser()
+//            if let path = Bundle.main.url(forResource: "metars.cache", withExtension: "xml"),
+//                let docdata = try? Data(contentsOf: path) {
+            
+            let m = MetarParser()
+            if let docdata = m.demoMETAR.data(using: .utf8) {
                 m.parseDocument(docdata) { (metars) in
                     print("metars: \(metars)")
                 }
             }
-            
-            
-            
         case 1:
             // this is TAC Airport Code
             airportLabel.isHidden = false
