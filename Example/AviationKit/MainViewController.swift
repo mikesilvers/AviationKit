@@ -90,45 +90,44 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         switch sender.selectedSegmentIndex {
         case 0:
+            
             // this is METAR Airport Code
             airportLabel.isHidden = false
             airportCode.isHidden  = false
             airportCode.text      = "K"
             airportCode.becomeFirstResponder()
             
-            // this is for testing
-//            if let path = Bundle.main.url(forResource: "metars.cache", withExtension: "xml"),
-//                let docdata = try? Data(contentsOf: path) {
-            
-            let m = MetarParser()
-            if let docdata = m.demoMETAR.data(using: .utf8) {
-                m.parseDocument(docdata) { (metars) in
-                    print("metars: \(metars)")
-                }
-            }
         case 1:
+            
             // this is TAC Airport Code
             airportLabel.isHidden = false
             airportCode.isHidden  = false
             airportCode.text      = "K"
             airportCode.becomeFirstResponder()
+            
         case 2:
+            
             // this is the METAR (location)
             airportLabel.isHidden = true
             airportCode.isHidden  = true
             airportCode.text      = ""
             airportCode.resignFirstResponder()
+            
         case 3:
+            
             // this is the TAC (location)
             airportLabel.isHidden = true
             airportCode.isHidden  = true
             airportCode.text      = ""
             airportCode.resignFirstResponder()
+            
         default :
+            
             airportLabel.isHidden = true
             airportCode.isHidden  = true
             airportCode.text      = ""
             airportCode.resignFirstResponder()
+            
         }
         
     }

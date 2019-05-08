@@ -42,6 +42,54 @@ public class MetarParser : NSObject, XMLParserDelegate {
             st.append("<metar_type>METAR</metar_type> ")
             st.append("<elevation_m>3807.0</elevation_m> ")
             st.append("</METAR> ")
+            
+            st.append("<METAR> ")
+            st.append("<raw_text>PAVC 061604Z AUTO 08007KT 10SM BKN022 BKN029 OVC037 04/03 A2941 RMK AO2 RAE03 P0000</raw_text> ")
+            st.append("<station_id>PAVC</station_id> ")
+            st.append("<observation_time>2019-05-06T16:04:00Z</observation_time> ")
+            st.append("<latitude>55.12</latitude> ")
+            st.append("<longitude>-162.27</longitude> ")
+            st.append("<temp_c>4.0</temp_c> ")
+            st.append("<dewpoint_c>3.0</dewpoint_c> ")
+            st.append("<wind_dir_degrees>80</wind_dir_degrees> ")
+            st.append("<wind_speed_kt>7</wind_speed_kt> ")
+            st.append("<visibility_statute_mi>10.0</visibility_statute_mi> ")
+            st.append("<altim_in_hg>29.409449</altim_in_hg> ")
+            st.append("<quality_control_flags> ")
+            st.append("<auto>TRUE</auto> ")
+            st.append("<auto_station>TRUE</auto_station> ")
+            st.append("</quality_control_flags> ")
+            st.append("<sky_condition sky_cover=\"BKN\" cloud_base_ft_agl=\"2200\" /> ")
+            st.append("<sky_condition sky_cover=\"BKN\" cloud_base_ft_agl=\"2900\" /> ")
+            st.append("<sky_condition sky_cover=\"OVC\" cloud_base_ft_agl=\"3700\" /> ")
+            st.append("<flight_category>MVFR</flight_category> ")
+            st.append("<precip_in>0.005</precip_in> ")
+            st.append("<metar_type>SPECI</metar_type> ")
+            st.append("<elevation_m>47.0</elevation_m> ")
+            st.append("</METAR> ")
+
+            st.append("<METAR> ")
+            st.append("<raw_text>KOTH 061604Z 01010KT 10SM OVC004 09/08 A2999 RMK AO2 PNO $</raw_text> ")
+            st.append("<station_id>KOTH</station_id> ")
+            st.append("<observation_time>2019-05-06T16:04:00Z</observation_time> ")
+            st.append("<latitude>43.42</latitude> ")
+            st.append("<longitude>-124.25</longitude> ")
+            st.append("<temp_c>9.0</temp_c> ")
+            st.append("<dewpoint_c>8.0</dewpoint_c> ")
+            st.append("<wind_dir_degrees>10</wind_dir_degrees> ")
+            st.append("<wind_speed_kt>10</wind_speed_kt> ")
+            st.append("<visibility_statute_mi>10.0</visibility_statute_mi> ")
+            st.append("<altim_in_hg>29.991142</altim_in_hg> ")
+            st.append("<quality_control_flags> ")
+            st.append("<auto_station>TRUE</auto_station> ")
+            st.append("<maintenance_indicator_on>TRUE</maintenance_indicator_on> ")
+            st.append("</quality_control_flags> ")
+            st.append("<sky_condition sky_cover=\"OVC\" cloud_base_ft_agl=\"400\" /> ")
+            st.append("<flight_category>LIFR</flight_category> ")
+            st.append("<metar_type>SPECI</metar_type> ")
+            st.append("<elevation_m>4.0</elevation_m> ")
+            st.append("</METAR> ")
+            
             st.append("<METAR> ")
             st.append("<raw_text>PAVC 061604Z AUTO 08007KT 10SM BKN022 BKN029 OVC037 04/03 A2941 RMK AO2 RAE03 P0000</raw_text> ")
             st.append("<station_id>PAVC</station_id> ")
@@ -119,44 +167,14 @@ public class MetarParser : NSObject, XMLParserDelegate {
     
     public func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         
-        print("didStartElement: \(elementName)  qualifiedName: \(qName ?? "")  attributes: \n\(attributeDict)")
-        
-        currentElement = elementName
+        currentElement = ""
         
         switch elementName {
         case "METAR":
             currentMetar = METAR()
-            currentElement = ""
-        case "raw_text":
-            currentElement = "raw_text"
-        case "station_id":
-            currentElement = "station_id"
-        case "observation_time":
-            currentElement = "observation_time"
-        case "latitude":
-            currentElement = "latitude"
-        case "longitude":
-            currentElement = "longitude"
-        case "temp_c":
-            currentElement = "temp_c"
-        case "dewpoint_c":
-            currentElement = "dewpoint_c"
-        case "wind_dir_degrees":
-            currentElement = "wind_dir_degrees"
-        case "wind_speed_kt":
-            currentElement = "wind_speed_kt"
-        case "wind_gust_kt":
-            currentElement = "wind_gust_kt"
-        case "altim_in_hg":
-            currentElement = "altim_in_hg"
-        case "auto":
-            currentElement = "auto"
-        case "auto_station":
-            currentElement = "auto_station"
-        case "present_weather_sensor_off":
-            currentElement = "present_weather_sensor_off"
+            
         case "sky_condition":
-            currentElement = "sky_condition"
+            currentElement = elementName
             var sky = SkyCondition()
             
             if let skc = attributeDict["sky_cover"] {
@@ -168,19 +186,8 @@ public class MetarParser : NSObject, XMLParserDelegate {
 
             currentValues.skycondition = sky
 
-        case "metar_type":
-            currentElement = "metar_type"
-        case "elevation_m":
-            currentElement = "elevation_m"
-        case "visibility_statute_mi":
-            currentElement = "visibility_statute_mi"
-        case "flight_category":
-            currentElement = "flight_category"
-        case "no_signal":
-            currentElement = "no_signal"
         default:
-            print("Element \(elementName) NOT started")
-            currentElement = ""
+            currentElement = elementName
         }
         
         
@@ -188,104 +195,94 @@ public class MetarParser : NSObject, XMLParserDelegate {
     
     public func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
 
-        print("didEndElement: \(elementName)  qualifiedName: \(qName ?? "")")
-        
         switch elementName {
         case "METAR":
             metars.append(currentMetar)
         case "raw_text":
             currentMetar.rawText = currentValues.string
-            currentElement = ""
-            currentValues = current()
         case "station_id":
             currentMetar.stationId = currentValues.string
-            currentElement = ""
-            currentValues = current()
         case "observation_time":
             currentMetar.observationTime = currentValues.integer
-            currentElement = ""
-            currentValues = current()
         case "latitude":
             currentMetar.latitude = currentValues.double
-            currentElement = ""
-            currentValues = current()
         case "longitude":
             currentMetar.longitude = currentValues.double
-            currentElement = ""
-            currentValues = current()
         case "temp_c":
             currentMetar.temperature = currentValues.double
-            currentElement = ""
-            currentValues = current()
+        case "precip_in":
+            currentMetar.precipitation = currentValues.double
         case "dewpoint_c":
             currentMetar.dewpoint = currentValues.double
-            currentElement = ""
-            currentValues = current()
         case "wind_dir_degrees":
             currentMetar.windDirection = currentValues.integer
-            currentElement = ""
-            currentValues = current()
         case "wind_speed_kt":
             currentMetar.windSpeed = currentValues.integer
-            currentElement = ""
-            currentValues = current()
         case "wind_gust_kt":
             currentMetar.windGust = currentValues.integer
-            currentElement = ""
-            currentValues = current()
         case "altim_in_hg":
             currentMetar.altimiter = currentValues.double
-            currentElement = ""
-            currentValues = current()
         case "auto":
             currentMetar.autoRecord = currentValues.bool
-            currentElement = ""
-            currentValues = current()
         case "auto_station":
             currentMetar.autoStation = currentValues.bool
-            currentElement = ""
-            currentValues = current()
+        case "lightning_sensor_off":
+            currentMetar.lightningSensorOff = currentValues.bool
+        case "freezing_rain_sensor_off":
+            currentMetar.freezingRainSensorOff = currentValues.bool
         case "present_weather_sensor_off":
-            currentMetar.presentWeatherSensor = currentValues.bool
-            currentElement = ""
-            currentValues = current()
+            currentMetar.presentWeatherSensorOff = currentValues.bool
+        case "maintenance_indicator_on":
+            currentMetar.maintenance = currentValues.bool
+        case "sea_level_pressure_mb":
+            currentMetar.sealevelPressure = currentValues.double
+        case "three_hr_pressure_tendency_mb":
+            currentMetar.threeHourPressure = currentValues.double
+        case "maxT_c":
+            currentMetar.sixHourMaxTemp = currentValues.double
+        case "minT_c":
+            currentMetar.sixHourMinTemp = currentValues.double
+        case "maxT24hr_c":
+            currentMetar.twentyFourHourTempMax = currentValues.double
+        case "minT24hr_c":
+            currentMetar.twentyFourHourTempMin = currentValues.double
+        case "pcp3hr_in":
+            currentMetar.precipitationThreeHour = currentValues.double
+        case "pcp6hr_in":
+            currentMetar.precipitationSixHour = currentValues.double
+        case "pcp24hr_in":
+            currentMetar.precipitationTwentyFourHour = currentValues.double
+        case "snow_in":
+            currentMetar.snow = currentValues.double
+
         case "sky_condition":
             if currentMetar.skyCondition == nil {
                 currentMetar.skyCondition = [currentValues.skycondition]
             } else {
                 currentMetar.skyCondition?.append(currentValues.skycondition)
             }
-            currentElement = ""
-            currentValues = current()
+
+        case "wx_string":
+            currentMetar.weatherDescription = currentValues.string
         case "metar_type":
             currentMetar.metarType = currentValues.string
-            currentElement = ""
-            currentValues = current()
         case "elevation_m":
             currentMetar.elevation = currentValues.double
-            currentElement = ""
-            currentValues = current()
         case "flight_category":
             currentMetar.flightCategory = currentValues.string
-            currentElement = ""
-            currentValues = current()
         case "visibility_statute_mi":
             currentMetar.visibility = currentValues.double
-            currentElement = ""
-            currentValues = current()
+        case "vert_vis_ft":
+            currentMetar.verticalVisibility = currentValues.integer
         case "no_signal":
             currentMetar.noSignal = currentValues.bool
-            currentElement = ""
-            currentValues = current()
-
 
         default:
             print("Element \(elementName) NOT ended")
-            currentElement = ""
-            currentValues = current()
         }
 
         currentElement = ""
+        currentValues = current()
 
     }
     
@@ -297,62 +294,60 @@ public class MetarParser : NSObject, XMLParserDelegate {
             print("parser current element: \(currentElement) foundCharacters: \(data)")
             
             switch currentElement {
-            case "raw_text":
-                currentValues.string.append(data)
-            case "station_id":
-                currentValues.string.append(data)
+                
             case "observation_time":
                 if let di = dateformatter.date(from: data) {
                     let dii = di.timeIntervalSince1970
                     currentValues.integer = Int(dii)
                 }
-            case "latitude":
-                currentValues.double = Double(data) ?? 0.0
-            case "longitude":
-                currentValues.double = Double(data) ?? 0.0
-            case "temp_c":
-                currentValues.double = Double(data) ?? 0.0
-            case "dewpoint_c":
-                currentValues.double = Double(data) ?? 0.0
-            case "wind_dir_degrees":
+
+            case "vert_vis_ft",
+                 "wind_gust_kt",
+                 "wind_speed_kt",
+                 "wind_dir_degrees":
                 currentValues.integer = Int(data) ?? 0
-            case "wind_speed_kt":
-                currentValues.integer = Int(data) ?? 0
-            case "wind_gust_kt":
-                currentValues.integer = Int(data) ?? 0
-            case "altim_in_hg":
+                
+            case "temp_c",
+                 "maxT_c",
+                 "minT_c",
+                 "snow_in",
+                 "maxT24hr_c",
+                 "minT24hr_c",
+                 "pcp3hr_in",
+                 "pcp6hr_in",
+                 "pcp24hr_in",
+                 "precip_in",
+                 "latitude",
+                 "longitude",
+                 "dewpoint_c",
+                 "altim_in_hg",
+                 "elevation_m",
+                 "sea_level_pressure_mb",
+                 "visibility_statute_mi",
+                 "three_hr_pressure_tendency_mb":
                 currentValues.double = Double(data) ?? 0.0
-            case "auto":
-                currentValues.bool = false
-                if data == "TRUE" {
-                    currentValues.bool = true
-                }
-            case "auto_station":
-                currentValues.bool = false
-                if data == "TRUE" {
-                    currentValues.bool = true
-                }
-            case "present_weather_sensor_off":
-                currentValues.bool = false
-                if data == "TRUE" {
-                    currentValues.bool = true
-                }
-            case "metar_type":
-                currentValues.string.append(data)
-            case "elevation_m":
-                currentValues.double = Double(data) ?? 0.0
-            case "flight_category":
-                currentValues.string.append(data)
-            case "visibility_statute_mi":
-                currentValues.double = Double(data) ?? 0.0
-            case "no_signal":
+
+            case "auto",
+                 "no_signal",
+                 "auto_station",
+                 "lightning_sensor_off",
+                 "freezing_rain_sensor_off",
+                 "present_weather_sensor_off",
+                 "maintenance_indicator_on":
                 currentValues.bool = false
                 if data == "TRUE" {
                     currentValues.bool = true
                 }
 
+            case "raw_text",
+                 "wx_string",
+                 "metar_type",
+                 "station_id",
+                 "flight_category":
+                currentValues.string.append(data)
+
             default:
-                print("The currentElement was NOT found for foundCharacters")
+                print("The element \(currentElement) was NOT found for foundCharacters  The data is: \(data)")
             }
         }
     }

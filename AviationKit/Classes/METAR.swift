@@ -17,45 +17,74 @@ public struct METAR : Codable {
     var latitude             : Double?
     var longitude            : Double?
     
-    var temperature          : Double?
-    var dewpoint             : Double?
-    
+    var temperature                 : Double?
+    var sixHourMinTemp              : Double?
+    var sixHourMaxTemp              : Double?
+    var twentyFourHourTempMax       : Double?
+    var twentyFourHourTempMin       : Double?
+    var dewpoint                    : Double?
+    var snow                        : Double?
+    var precipitation               : Double?
+    var precipitationThreeHour      : Double?
+    var precipitationSixHour        : Double?
+    var precipitationTwentyFourHour : Double?
+
     var windDirection        : Int?
     var windSpeed            : Int?
     var windGust             : Int?
+    var verticalVisibility   : Int?
     var visibility           : Double?
     var altimiter            : Double?
-    
-    var noSignal             : Bool = false
-    var autoRecord           : Bool = false
-    var autoStation          : Bool = false
-    var presentWeatherSensor : Bool = false
-    
+    var elevation            : Double?
+    var sealevelPressure     : Double?
+    var threeHourPressure    : Double?
+
+    var noSignal                : Bool = false
+    var autoRecord              : Bool = false
+    var autoStation             : Bool = false
+    var maintenance             : Bool = false
+    var lightningSensorOff      : Bool = false
+    var freezingRainSensorOff   : Bool = false
+    var presentWeatherSensorOff : Bool = false
+
     var skyCondition         : [SkyCondition]?
     
+    var weatherDescription   : String?
     var metarType            : String?
     var flightCategory       : String?
     
-    var elevation            : Double?
-    
     enum CodingKeys: String, CodingKey {
         
-        case rawText              = "raw_text"
-        case stationId            = "station_id"
-        case observationTime      = "observation_time"
-        case temperature          = "temp_c"
-        case dewpoint             = "dewpoint_c"
-        case windDirection        = "wind_dir_degrees"
-        case windSpeed            = "wind_speed_kt"
-        case windGust             = "wind_gust_kt"
-        case altimiter            = "altim_in_hg"
-        case metarType            = "metar_type"
-        case elevation            = "elevation_m"
-        case flightCategory       = "flight_category"
-        case visibility           = "visibility_statute_mi"
+        case rawText                     = "raw_text"
+        case stationId                   = "station_id"
+        case observationTime             = "observation_time"
+        case temperature                 = "temp_c"
+        case dewpoint                    = "dewpoint_c"
+        case windDirection               = "wind_dir_degrees"
+        case windSpeed                   = "wind_speed_kt"
+        case windGust                    = "wind_gust_kt"
+        case altimiter                   = "altim_in_hg"
+        case metarType                   = "metar_type"
+        case elevation                   = "elevation_m"
+        case flightCategory              = "flight_category"
+        case visibility                  = "visibility_statute_mi"
+        case precipitation               = "precip_in"
+        case verticalVisibility          = "vert_vis_ft"
         
-        case skyCondition         = "sky_condition"
-        case qualityControlFlags  = "quality_control_flags"
+        case sealevelPressure            = "sea_level_pressure_mb"
+        case threeHourPressure           = "three_hr_pressure_tendency_mb"
+        case sixHourMaxTemp              = "maxT_c"
+        case sixHourMinTemp              = "minT_c"
+        case twentyFourHourTempMax       = "maxT24hr_c"
+        case twentyFourHourTempMin       = "minT24hr_c"
+        case precipitationThreeHour      = "pcp3hr_in"
+        case precipitationSixHour        = "pcp6hr_in"
+        case precipitationTwentyFourHour = "pcp24hr_in"
+        case snow                        = "snow_in"
+        case weatherDescription          = "wx_string"
+        
+        case skyCondition        = "sky_condition"
+        case qualityControlFlags = "quality_control_flags"
 
         case latitude, longitude
         
@@ -63,10 +92,13 @@ public struct METAR : Codable {
     
     enum QualityControlFlagsKeys: String, CodingKey {
 
-        case noSignal             = "no_signal"
-        case autoRecord           = "auto"
-        case autoStation          = "auto_station"
-        case presentWeatherSensor = "present_weather_sensor_off"
+        case noSignal                = "no_signal"
+        case autoRecord              = "auto"
+        case autoStation             = "auto_station"
+        case maintenance             = "maintenance_indicator_on"
+        case lightningSensorOff      = "lightning_sensor_off"
+        case freezingRainSensorOff   = "freezing_rain_sensor_off"
+        case presentWeatherSensorOff = "present_weather_sensor_off"
 
     }
     
@@ -78,29 +110,45 @@ public struct METAR : Codable {
         
         let values = try decoder.container(keyedBy: CodingKeys.self)
         
-        rawText      = try values.decode(String.self, forKey: .rawText)
-        stationId    = try values.decode(String.self, forKey: .stationId)
-        metarType    = try values.decode(String.self, forKey: .metarType)
+        rawText            = try values.decode(String.self, forKey: .rawText)
+        stationId          = try values.decode(String.self, forKey: .stationId)
+        metarType          = try values.decode(String.self, forKey: .metarType)
+        weatherDescription = try? values.decode(String.self, forKey: .weatherDescription)
 
-        latitude    = try values.decode(Double.self, forKey: .latitude)
-        longitude   = try values.decode(Double.self, forKey: .longitude)
-        temperature = try values.decode(Double.self, forKey: .temperature)
-        dewpoint    = try values.decode(Double.self, forKey: .dewpoint)
-        altimiter   = try values.decode(Double.self, forKey: .altimiter)
-        elevation   = try values.decode(Double.self, forKey: .elevation)
+        latitude                    = try values.decode(Double.self, forKey: .latitude)
+        longitude                   = try values.decode(Double.self, forKey: .longitude)
+        temperature                 = try values.decode(Double.self, forKey: .temperature)
+        dewpoint                    = try values.decode(Double.self, forKey: .dewpoint)
+        altimiter                   = try values.decode(Double.self, forKey: .altimiter)
+        elevation                   = try values.decode(Double.self, forKey: .elevation)
+        precipitation               = try? values.decode(Double.self, forKey: .precipitation)
+        sealevelPressure            = try? values.decode(Double.self, forKey: .sealevelPressure)
+        threeHourPressure           = try? values.decode(Double.self, forKey: .threeHourPressure)
+        sixHourMaxTemp              = try? values.decode(Double.self, forKey: .sixHourMaxTemp)
+        sixHourMinTemp              = try? values.decode(Double.self, forKey: .sixHourMinTemp)
+        twentyFourHourTempMax       = try? values.decode(Double.self, forKey: .twentyFourHourTempMax)
+        twentyFourHourTempMin       = try? values.decode(Double.self, forKey: .twentyFourHourTempMin)
+        precipitationThreeHour      = try? values.decode(Double.self, forKey: .precipitationThreeHour)
+        precipitationSixHour        = try? values.decode(Double.self, forKey: .precipitationSixHour)
+        precipitationTwentyFourHour = try? values.decode(Double.self, forKey: .precipitationTwentyFourHour)
+        snow                        = try? values.decode(Double.self, forKey: .snow)
 
-        windDirection = try values.decode(Int.self, forKey: .windDirection)
-        windSpeed     = try values.decode(Int.self, forKey: .windSpeed)
-        windGust      = try values.decode(Int.self, forKey: .windGust)
+        windSpeed          = try values.decode(Int.self, forKey: .windSpeed)
+        windGust           = try values.decode(Int.self, forKey: .windGust)
+        windDirection      = try values.decode(Int.self, forKey: .windDirection)
+        verticalVisibility = try values.decode(Int.self, forKey: .verticalVisibility)
 
         skyCondition = try values.decode([SkyCondition].self, forKey: .skyCondition)
 
         let qualityControlFlags = try values.nestedContainer(keyedBy: QualityControlFlagsKeys.self, forKey: .qualityControlFlags)
         
-        autoRecord           = try qualityControlFlags.decode(Bool.self, forKey: .autoRecord)
-        autoStation          = try qualityControlFlags.decode(Bool.self, forKey: .autoStation)
-        presentWeatherSensor = try qualityControlFlags.decode(Bool.self, forKey: .presentWeatherSensor)
-        
+        autoRecord              = try qualityControlFlags.decode(Bool.self, forKey: .autoRecord)
+        autoStation             = try qualityControlFlags.decode(Bool.self, forKey: .autoStation)
+        maintenance             = try qualityControlFlags.decode(Bool.self, forKey: .maintenance)
+        lightningSensorOff      = try qualityControlFlags.decode(Bool.self, forKey: .lightningSensorOff)
+        freezingRainSensorOff   = try qualityControlFlags.decode(Bool.self, forKey: .freezingRainSensorOff)
+        presentWeatherSensorOff = try qualityControlFlags.decode(Bool.self, forKey: .presentWeatherSensorOff)
+
     }
     
     public func encode(to encoder: Encoder) throws {
@@ -111,6 +159,7 @@ public struct METAR : Codable {
         try container.encode(stationId, forKey: .stationId)
         try container.encode(skyCondition, forKey: .skyCondition)
         try container.encode(metarType, forKey: .metarType)
+        try container.encode(weatherDescription, forKey: .weatherDescription)
         
         try container.encode(latitude, forKey: .latitude)
         try container.encode(longitude, forKey: .longitude)
@@ -118,16 +167,32 @@ public struct METAR : Codable {
         try container.encode(dewpoint, forKey: .dewpoint)
         try container.encode(altimiter, forKey: .altimiter)
         try container.encode(elevation, forKey: .elevation)
+        try container.encode(precipitation, forKey: .precipitation)
         
-        try container.encode(windDirection, forKey: .windDirection)
         try container.encode(windSpeed, forKey: .windSpeed)
         try container.encode(windGust, forKey: .windGust)
+        try container.encode(windDirection, forKey: .windDirection)
+        try container.encode(verticalVisibility, forKey: .verticalVisibility)
+
+        try container.encode(sealevelPressure, forKey: .sealevelPressure)
+        try container.encode(threeHourPressure, forKey: .threeHourPressure)
+        try container.encode(sixHourMaxTemp, forKey: .sixHourMaxTemp)
+        try container.encode(sixHourMinTemp, forKey: .sixHourMinTemp)
+        try container.encode(twentyFourHourTempMax, forKey: .twentyFourHourTempMax)
+        try container.encode(twentyFourHourTempMin, forKey: .twentyFourHourTempMin)
+        try container.encode(precipitationThreeHour, forKey: .precipitationThreeHour)
+        try container.encode(precipitationSixHour, forKey: .precipitationSixHour)
+        try container.encode(precipitationTwentyFourHour, forKey: .precipitationTwentyFourHour)
+        try container.encode(snow, forKey: .snow)
 
         var qualityControlFlags = container.nestedContainer(keyedBy: QualityControlFlagsKeys.self, forKey: .qualityControlFlags)
         
         try qualityControlFlags.encode(autoRecord, forKey: .autoRecord)
         try qualityControlFlags.encode(autoStation, forKey: .autoStation)
-        try qualityControlFlags.encode(presentWeatherSensor, forKey: .presentWeatherSensor)
-        
+        try qualityControlFlags.encode(maintenance, forKey: .maintenance)
+        try qualityControlFlags.encode(lightningSensorOff, forKey: .lightningSensorOff)
+        try qualityControlFlags.encode(freezingRainSensorOff, forKey: .freezingRainSensorOff)
+        try qualityControlFlags.encode(presentWeatherSensorOff, forKey: .presentWeatherSensorOff)
+
     }
 }
