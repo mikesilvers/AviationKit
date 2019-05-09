@@ -13,8 +13,8 @@ import Foundation
 public struct Forecast : Codable {
     
     // MARK: variables to define the sky condition
-    var vaidFromTime       : Int?
-    var vaidToTime         : Int?
+    var validFromTime      : Int?
+    var validToTime        : Int?
     var timeBecoming       : Int?
     var probability        : Int?
     var windDirection      : Int?
@@ -39,8 +39,8 @@ public struct Forecast : Codable {
 
     // MARK: Coding Key enum
     enum CodingKeys: String, CodingKey {
-        case vaidFromTime       = "time_from"
-        case vaidToTime         = "time_to"
+        case validFromTime      = "time_from"
+        case validToTime        = "time_to"
         case timeBecoming       = "time_becoming"
         case probability        = "probability"
         case windDirection      = "wind_dir_degrees"

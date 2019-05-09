@@ -25,7 +25,8 @@ public class MetarParser : NSObject, XMLParserDelegate {
         get {
             var st = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
             st.append("<response xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XML-Schema-instance\" version=\"1.2\" ")
-            st.append("xsi:noNamespaceSchemaLocation=\"http://aviationweather.gov/adds/schema/metar1_2.xsd\"> ")
+        st.append("xsi:noNamespaceSchemaLocation=\"http://aviationweather.gov/adds/schema/metar1_2.xsd\"> ")
+            
             st.append("<request_index>45459668</request_index> ")
             st.append("<data_source name=\"metars\" /> ")
             st.append("<request type=\"retrieve\" /> ")
