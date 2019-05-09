@@ -11,6 +11,9 @@
 		1234923C2281C93C00A9D164 /* MetarParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1234923B2281C93C00A9D164 /* MetarParser.swift */; };
 		1234923E2281CD7200A9D164 /* TafParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1234923D2281CD7200A9D164 /* TafParser.swift */; };
 		123492442281EEEC00A9D164 /* SkyCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123492432281EEEC00A9D164 /* SkyCondition.swift */; };
+		129B7E87228497EA00C1B22D /* TurbulenceCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B7E84228497E900C1B22D /* TurbulenceCondition.swift */; };
+		129B7E88228497EA00C1B22D /* IcingCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B7E85228497EA00C1B22D /* IcingCondition.swift */; };
+		129B7E89228497EA00C1B22D /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B7E86228497EA00C1B22D /* Temperature.swift */; };
 		25BD4F335E809E081488AEB541A97B18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AABFE60463C3AF51CB267EA82A0CCF3 /* Foundation.framework */; };
 		30C07F53D870FC78B292E0E4F91FEE9E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C5248F3F8F5DD6FF2489BCA891824D /* QuartzCore.framework */; };
 		36DD0B1007BF3C7BFE352704D5C415F7 /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1CDD4F340C23DD238A853E560C9006 /* IQTextView.swift */; };
@@ -69,6 +72,9 @@
 		1234923B2281C93C00A9D164 /* MetarParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MetarParser.swift; path = AviationKit/Classes/MetarParser.swift; sourceTree = "<group>"; };
 		1234923D2281CD7200A9D164 /* TafParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TafParser.swift; path = AviationKit/Classes/TafParser.swift; sourceTree = "<group>"; };
 		123492432281EEEC00A9D164 /* SkyCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SkyCondition.swift; path = AviationKit/Classes/SkyCondition.swift; sourceTree = "<group>"; };
+		129B7E84228497E900C1B22D /* TurbulenceCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TurbulenceCondition.swift; path = AviationKit/Classes/TurbulenceCondition.swift; sourceTree = "<group>"; };
+		129B7E85228497EA00C1B22D /* IcingCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IcingCondition.swift; path = AviationKit/Classes/IcingCondition.swift; sourceTree = "<group>"; };
+		129B7E86228497EA00C1B22D /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Temperature.swift; path = AviationKit/Classes/Temperature.swift; sourceTree = "<group>"; };
 		17D5053F2A5215D7472A947EDE5B61B6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		1A8BC998D2B89A05AEEBE8B9DA642BAE /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardReturnKeyHandler.swift; path = IQKeyboardManagerSwift/IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
 		1B864BFE95FAE118C4C3A52725C9B261 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -161,6 +167,9 @@
 		3385823FF1715A4117490DEB938D133D /* AviationKit */ = {
 			isa = PBXGroup;
 			children = (
+				129B7E85228497EA00C1B22D /* IcingCondition.swift */,
+				129B7E86228497EA00C1B22D /* Temperature.swift */,
+				129B7E84228497E900C1B22D /* TurbulenceCondition.swift */,
 				BDDD0DC0452B8870018FEB5C7901F537 /* CommsFunctions.swift */,
 				123492432281EEEC00A9D164 /* SkyCondition.swift */,
 				210D4EDECC767CAE990A21520AC76265 /* METAR.swift */,
@@ -499,9 +508,12 @@
 				1234923E2281CD7200A9D164 /* TafParser.swift in Sources */,
 				39745ADE01F64DA4332C4CC1027955D1 /* AviationKit-dummy.m in Sources */,
 				7F65FEED8135FED5918E94C2AC38F631 /* CommsFunctions.swift in Sources */,
+				129B7E88228497EA00C1B22D /* IcingCondition.swift in Sources */,
 				CE15768F05ECB156358AB4EE9F72E42F /* METAR.swift in Sources */,
+				129B7E87228497EA00C1B22D /* TurbulenceCondition.swift in Sources */,
 				123492442281EEEC00A9D164 /* SkyCondition.swift in Sources */,
 				E5C95CAA7A870B88C5133FE76A039EDB /* TAF.swift in Sources */,
+				129B7E89228497EA00C1B22D /* Temperature.swift in Sources */,
 				1234923C2281C93C00A9D164 /* MetarParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

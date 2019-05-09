@@ -236,6 +236,10 @@ public class MetarParser : NSObject, XMLParserDelegate {
                 sky.cloudBase = skcI
             }
 
+            if let skc = attributeDict["cloud_type"] {
+                sky.cloudType = skc
+            }
+
             // set the new sky condition object to the current METAR
             currentValues.skycondition = sky
 
@@ -451,6 +455,7 @@ public class MetarParser : NSObject, XMLParserDelegate {
             // the text elements
             case "raw_text",
                  "wx_string",
+                 "cloud_type",
                  "metar_type",
                  "station_id",
                  "flight_category":
