@@ -10,7 +10,6 @@
 		1234921F2280A76000A9D164 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1234921E2280A76000A9D164 /* MainViewController.swift */; };
 		123492222280AD8600A9D164 /* MetarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123492212280AD8600A9D164 /* MetarTableViewCell.swift */; };
 		123492252280AD9B00A9D164 /* TafTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123492242280AD9B00A9D164 /* TafTableViewCell.swift */; };
-		123492422281EBD400A9D164 /* tafs.cache.xml in Resources */ = {isa = PBXBuildFile; fileRef = 123492412281EBD400A9D164 /* tafs.cache.xml */; };
 		405880707C5B54920DAFF2C9 /* Pods_AviationKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC564BCD534CAABA7F4C64DB /* Pods_AviationKit_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -22,7 +21,6 @@
 		1234921E2280A76000A9D164 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		123492212280AD8600A9D164 /* MetarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetarTableViewCell.swift; sourceTree = "<group>"; };
 		123492242280AD9B00A9D164 /* TafTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TafTableViewCell.swift; sourceTree = "<group>"; };
-		123492412281EBD400A9D164 /* tafs.cache.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = tafs.cache.xml; sourceTree = "<group>"; };
 		29CE255DB2071B47DF0268B1 /* Pods-AviationKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AviationKit_Example.release.xcconfig"; path = "Target Support Files/Pods-AviationKit_Example/Pods-AviationKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3B24E10FB87DBB7212BB54AD /* AviationKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AviationKit.podspec; path = ../AviationKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5D78BA3895C3CF0343452CA8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
-				123492412281EBD400A9D164 /* tafs.cache.xml */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for AviationKit";
@@ -210,7 +207,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				123492422281EBD400A9D164 /* tafs.cache.xml in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
