@@ -2,6 +2,8 @@
 //  METAR.swift
 //  AviationKit
 //
+//  Field Reference:  https://www.aviationweather.gov/dataserver/fields?datatype=metar
+//
 //  Created by Mike Silvers on 5/6/19.
 //
 
@@ -39,6 +41,7 @@ public struct METAR : Codable {
     var sealevelPressure     : Double?
     var threeHourPressure    : Double?
 
+    var correctedRecord         : Bool = false
     var noSignal                : Bool = false
     var autoRecord              : Bool = false
     var autoStation             : Bool = false
@@ -92,6 +95,7 @@ public struct METAR : Codable {
     
     enum QualityControlFlagsKeys: String, CodingKey {
 
+        case correctedRecord         = "corrected"
         case noSignal                = "no_signal"
         case autoRecord              = "auto"
         case autoStation             = "auto_station"
@@ -142,6 +146,7 @@ public struct METAR : Codable {
 
         let qualityControlFlags = try values.nestedContainer(keyedBy: QualityControlFlagsKeys.self, forKey: .qualityControlFlags)
         
+        correctedRecord         = try qualityControlFlags.decode(Bool.self, forKey: .correctedRecord)
         autoRecord              = try qualityControlFlags.decode(Bool.self, forKey: .autoRecord)
         autoStation             = try qualityControlFlags.decode(Bool.self, forKey: .autoStation)
         maintenance             = try qualityControlFlags.decode(Bool.self, forKey: .maintenance)
@@ -190,6 +195,7 @@ public struct METAR : Codable {
         try qualityControlFlags.encode(autoRecord, forKey: .autoRecord)
         try qualityControlFlags.encode(autoStation, forKey: .autoStation)
         try qualityControlFlags.encode(maintenance, forKey: .maintenance)
+        try qualityControlFlags.encode(correctedRecord, forKey: .correctedRecord)
         try qualityControlFlags.encode(lightningSensorOff, forKey: .lightningSensorOff)
         try qualityControlFlags.encode(freezingRainSensorOff, forKey: .freezingRainSensorOff)
         try qualityControlFlags.encode(presentWeatherSensorOff, forKey: .presentWeatherSensorOff)
