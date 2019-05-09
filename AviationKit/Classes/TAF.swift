@@ -26,31 +26,6 @@ public struct TAF : Codable {
     var fromTime     : Int?
     var toTime       : Int?
     
-    struct forecast {
-        var vaidFromTime       : Int?
-        var vaidToTime         : Int?
-        var timeBecoming       : Int?
-        var probability        : Int?
-        var windDirection      : Int?
-        var windSpeed          : Int?
-        var windGust           : Int?
-        var windShearDirection : Int?
-        var windShearSpeed     : Int?
-        var windShearHeightAGL : Int?
-        var verticalVisibility : Int?
-        
-        var visibility : Double?
-        var altimiter  : Double?
-        
-        var weatherDescription : String?
-        var changeIndicator    : String?
-        var notDecoded         : String?
-        
-        var temperatures        : [Temperature]?
-        var skyCondition        : [SkyCondition]?
-        var icingCondition      : [IcingCondition]?
-        var turbulenceCondition : [TurbulenceCondition]?
-
-    }
+    var forecast : [Forecast]?
 
 }
