@@ -9,8 +9,13 @@
 
 import Foundation
 
+/**
+ The struct *METAR* represents a METAR object.
+ This object is *codable* to allow easy manipulaition with JSON.
+ */
 public struct METAR : Codable {
     
+    // MARK: variables used for the METAR object
     var rawText              : String?
     var stationId            : String?
     
@@ -56,6 +61,10 @@ public struct METAR : Codable {
     var metarType            : String?
     var flightCategory       : String?
     
+    // MARK: Coding Key enums to process the codable
+    /**
+     The CodingKeys to define the overall JSON document
+    */
     enum CodingKeys: String, CodingKey {
         
         case rawText                     = "raw_text"
@@ -93,6 +102,9 @@ public struct METAR : Codable {
         
     }
     
+    /**
+     This enum processes the quality control section of the JSON
+    */
     enum QualityControlFlagsKeys: String, CodingKey {
 
         case correctedRecord         = "corrected"
@@ -106,9 +118,8 @@ public struct METAR : Codable {
 
     }
     
-    public init() {
-        
-    }
+    // MARK: initializers
+    public init() { }
     
     public init(from decoder: Decoder) throws {
         
@@ -156,6 +167,7 @@ public struct METAR : Codable {
 
     }
     
+    // MARK: The encoder
     public func encode(to encoder: Encoder) throws {
         
         var container = encoder.container(keyedBy: CodingKeys.self)
