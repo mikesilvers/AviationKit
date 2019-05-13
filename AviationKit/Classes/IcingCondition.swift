@@ -13,9 +13,9 @@ import Foundation
 public struct IcingCondition : Codable {
     
     // MARK: variables to define the sky condition
-    var intensity   : String?
-    var minAltitude : Int?
-    var maxAltitude : Int?
+    public var intensity   : String?
+    public var minAltitude : Int?
+    public var maxAltitude : Int?
 
     // MARK: Coding Key enum
     enum CodingKeys: String, CodingKey {

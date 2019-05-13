@@ -13,10 +13,10 @@ import Foundation
 public struct Temperature : Codable {
     
     // MARK: variables to define the sky condition
-    var validTime   : Int?
-    var surfaceTemp : Double?
-    var maxTemp     : Double?
-    var minTemp     : Double?
+    public var validTime   : Int?
+    public var surfaceTemp : Double?
+    public var maxTemp     : Double?
+    public var minTemp     : Double?
 
     // MARK: Coding Key enum
     enum CodingKeys: String, CodingKey {

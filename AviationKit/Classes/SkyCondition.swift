@@ -13,9 +13,9 @@ import Foundation
 public struct SkyCondition : Codable {
     
     // MARK: variables to define the sky condition
-    var skyCover  : String?
-    var cloudType : String?
-    var cloudBase : Int?
+    public var skyCover  : String?
+    public var cloudType : String?
+    public var cloudBase : Int?
 
     // MARK: Coding Key enum
     enum CodingKeys: String, CodingKey {

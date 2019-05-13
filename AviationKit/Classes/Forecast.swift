@@ -13,29 +13,29 @@ import Foundation
 public struct Forecast : Codable {
     
     // MARK: variables to define the sky condition
-    var validFromTime      : Int?
-    var validToTime        : Int?
-    var timeBecoming       : Int?
-    var probability        : Int?
-    var windDirection      : Int?
-    var windSpeed          : Int?
-    var windGust           : Int?
-    var windShearDirection : Int?
-    var windShearSpeed     : Int?
-    var windShearHeightAGL : Int?
-    var verticalVisibility : Int?
+    public var validFromTime      : Int?
+    public var validToTime        : Int?
+    public var timeBecoming       : Int?
+    public var probability        : Int?
+    public var windDirection      : Int?
+    public var windSpeed          : Int?
+    public var windGust           : Int?
+    public var windShearDirection : Int?
+    public var windShearSpeed     : Int?
+    public var windShearHeightAGL : Int?
+    public var verticalVisibility : Int?
     
-    var visibility : Double?
-    var altimiter  : Double?
+    public var visibility : Double?
+    public var altimiter  : Double?
     
-    var weatherDescription : String?
-    var changeIndicator    : String?
-    var notDecoded         : String?
+    public var weatherDescription : String?
+    public var changeIndicator    : String?
+    public var notDecoded         : String?
     
-    var temperature         : [Temperature]?
-    var skyCondition        : [SkyCondition]?
-    var icingCondition      : [IcingCondition]?
-    var turbulenceCondition : [TurbulenceCondition]?
+    public var temperature         : [Temperature]?
+    public var skyCondition        : [SkyCondition]?
+    public var icingCondition      : [IcingCondition]?
+    public var turbulenceCondition : [TurbulenceCondition]?
 
     // MARK: Coding Key enum
     enum CodingKeys: String, CodingKey {

@@ -16,50 +16,50 @@ import Foundation
 public struct METAR : Codable {
     
     // MARK: variables used for the METAR object
-    var rawText              : String?
-    var stationId            : String?
+    public var rawText              : String?
+    public var stationId            : String?
     
-    var observationTime      : Int?
+    public var observationTime      : Int?
     
-    var latitude             : Double?
-    var longitude            : Double?
+    public var latitude             : Double?
+    public var longitude            : Double?
     
-    var temperature                 : Double?
-    var sixHourMinTemp              : Double?
-    var sixHourMaxTemp              : Double?
-    var twentyFourHourTempMax       : Double?
-    var twentyFourHourTempMin       : Double?
-    var dewpoint                    : Double?
-    var snow                        : Double?
-    var precipitation               : Double?
-    var precipitationThreeHour      : Double?
-    var precipitationSixHour        : Double?
-    var precipitationTwentyFourHour : Double?
+    public var temperature                 : Double?
+    public var sixHourMinTemp              : Double?
+    public var sixHourMaxTemp              : Double?
+    public var twentyFourHourTempMax       : Double?
+    public var twentyFourHourTempMin       : Double?
+    public var dewpoint                    : Double?
+    public var snow                        : Double?
+    public var precipitation               : Double?
+    public var precipitationThreeHour      : Double?
+    public var precipitationSixHour        : Double?
+    public var precipitationTwentyFourHour : Double?
 
-    var windDirection        : Int?
-    var windSpeed            : Int?
-    var windGust             : Int?
-    var verticalVisibility   : Int?
-    var visibility           : Double?
-    var altimiter            : Double?
-    var elevation            : Double?
-    var sealevelPressure     : Double?
-    var threeHourPressure    : Double?
+    public var windDirection        : Int?
+    public var windSpeed            : Int?
+    public var windGust             : Int?
+    public var verticalVisibility   : Int?
+    public var visibility           : Double?
+    public var altimiter            : Double?
+    public var elevation            : Double?
+    public var sealevelPressure     : Double?
+    public var threeHourPressure    : Double?
 
-    var correctedRecord         : Bool = false
-    var noSignal                : Bool = false
-    var autoRecord              : Bool = false
-    var autoStation             : Bool = false
-    var maintenance             : Bool = false
-    var lightningSensorOff      : Bool = false
-    var freezingRainSensorOff   : Bool = false
-    var presentWeatherSensorOff : Bool = false
+    public var correctedRecord         : Bool = false
+    public var noSignal                : Bool = false
+    public var autoRecord              : Bool = false
+    public var autoStation             : Bool = false
+    public var maintenance             : Bool = false
+    public var lightningSensorOff      : Bool = false
+    public var freezingRainSensorOff   : Bool = false
+    public var presentWeatherSensorOff : Bool = false
 
-    var skyCondition         : [SkyCondition]?
+    public var skyCondition         : [SkyCondition]?
     
-    var weatherDescription   : String?
-    var metarType            : String?
-    var flightCategory       : String?
+    public var weatherDescription   : String?
+    public var metarType            : String?
+    public var flightCategory       : String?
     
     // MARK: Coding Key enums to process the codable
     /**

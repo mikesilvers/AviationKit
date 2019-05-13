@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1234921F2280A76000A9D164 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1234921E2280A76000A9D164 /* MainViewController.swift */; };
-		123492222280AD8600A9D164 /* MetarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123492212280AD8600A9D164 /* MetarTableViewCell.swift */; };
-		123492252280AD9B00A9D164 /* TafTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123492242280AD9B00A9D164 /* TafTableViewCell.swift */; };
+		12C0F3002285BB59005ECE01 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C0F2FF2285BB59005ECE01 /* DetailViewController.swift */; };
 		405880707C5B54920DAFF2C9 /* Pods_AviationKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC564BCD534CAABA7F4C64DB /* Pods_AviationKit_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -19,8 +18,7 @@
 
 /* Begin PBXFileReference section */
 		1234921E2280A76000A9D164 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		123492212280AD8600A9D164 /* MetarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetarTableViewCell.swift; sourceTree = "<group>"; };
-		123492242280AD9B00A9D164 /* TafTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TafTableViewCell.swift; sourceTree = "<group>"; };
+		12C0F2FF2285BB59005ECE01 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		29CE255DB2071B47DF0268B1 /* Pods-AviationKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AviationKit_Example.release.xcconfig"; path = "Target Support Files/Pods-AviationKit_Example/Pods-AviationKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3B24E10FB87DBB7212BB54AD /* AviationKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AviationKit.podspec; path = ../AviationKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5D78BA3895C3CF0343452CA8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -49,15 +47,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		123492272280ADA700A9D164 /* Table View Cells */ = {
-			isa = PBXGroup;
-			children = (
-				123492212280AD8600A9D164 /* MetarTableViewCell.swift */,
-				123492242280AD9B00A9D164 /* TafTableViewCell.swift */,
-			);
-			name = "Table View Cells";
-			sourceTree = "<group>";
-		};
 		46576DC4068963E8479F6675 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,7 +80,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				1234921E2280A76000A9D164 /* MainViewController.swift */,
-				123492272280ADA700A9D164 /* Table View Cells */,
+				12C0F2FF2285BB59005ECE01 /* DetailViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -269,10 +258,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				123492222280AD8600A9D164 /* MetarTableViewCell.swift in Sources */,
 				1234921F2280A76000A9D164 /* MainViewController.swift in Sources */,
+				12C0F3002285BB59005ECE01 /* DetailViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				123492252280AD9B00A9D164 /* TafTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

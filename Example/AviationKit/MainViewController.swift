@@ -9,15 +9,21 @@
 import UIKit
 import AviationKit
 
+
+//class TestGeneric<L : Codable>: Codable {
+//    private var theGeneric : L?
+//}
+
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     
-    @IBOutlet weak var tableView         : UITableView!
+    @IBOutlet var tableView         : UITableView!
     
-    @IBOutlet weak var airportLabel      : UILabel!
-    @IBOutlet weak var airportCode       : UITextField!
-    @IBOutlet weak var metarTafSelection : UISegmentedControl!
+    @IBOutlet var airportLabel      : UILabel!
+    @IBOutlet var airportCode       : UITextField!
+    @IBOutlet var metarTafSelection : UISegmentedControl!
 
     private var tableData : [Any] = []
+    private var currentItem : Codable?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,24 +49,63 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let td = tableData[indexPath.row]
 
+        cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
         if td is METAR {
-            cell = tableView.dequeueReusableCell(withIdentifier: "MetarCell", for: indexPath)
+            
+            let m = td as! METAR
+            
+            if let lon = m.longitude, let lat = m.latitude {
+                cell.detailTextLabel?.text = "(\(lat), \(lon))"
+            }
+            
         } else if td is TAF {
-            cell = tableView.dequeueReusableCell(withIdentifier: "TafCell", for: indexPath)
+            
+            let m = td as! TAF
+            
+            if let lon = m.longitude, let lat = m.latitude {
+                cell.detailTextLabel?.text = "(\(lat), \(lon))"
+            }
+
         }
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // deselect the cell
+        tableView.deselectRow(at: indexPath, animated: false)
+        
+        // now show the details
+        if let ci = tableData[indexPath.row] as? Codable {
+            currentItem = ci
+            self.performSegue(withIdentifier: "DetailSegue", sender: self)
+        }
+        
+    }
 
-    /*
+    
     // MARK: - Navigation
 
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+
+        // only allow the segue to continue if the data is there
+        if identifier == "DetailSegue", currentItem == nil { return false }
+        
+        return true
+    }
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        // deal with the detail segue
+        if segue.identifier == "DetailSegue" {
+            let dvc = segue.destination as! DetailViewController
+            dvc.currentItem = self.currentItem
+        }
+        
     }
-    */
+    
     
     // MARK: UITextFieldDelegate functions
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,  replacementString string: String) -> Bool {
@@ -113,6 +158,15 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             airportCode.text      = ""
             airportCode.resignFirstResponder()
             
+            // add the demo data
+            let mp = MetarParser()
+            if let data = mp.demoMETAR.data(using: .utf8) {
+                mp.parseDocument(data) { (metar) in
+                    self.tableData = metar
+                    self.tableView.reloadData()
+                }
+            }
+            
         case 3:
             
             // this is the TAC (location)
@@ -120,7 +174,16 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             airportCode.isHidden  = true
             airportCode.text      = ""
             airportCode.resignFirstResponder()
-            
+
+            // add the demo data
+            let mp = TafParser()
+            if let data = mp.demoTAF.data(using: .utf8) {
+                mp.parseDocument(data) { (taf) in
+                    self.tableData = taf
+                    self.tableView.reloadData()
+                }
+            }
+
         default :
             
             airportLabel.isHidden = true

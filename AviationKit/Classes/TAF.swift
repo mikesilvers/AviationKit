@@ -12,20 +12,20 @@ import Foundation
 public struct TAF : Codable {
     
     // MARK: variables used for the METAR object
-    var rawText   : String?
-    var stationId : String?
-    var remarks   : String?
+    public var rawText   : String?
+    public var stationId : String?
+    public var remarks   : String?
 
-    var latitude  : Double?
-    var longitude : Double?
+    public var latitude  : Double?
+    public var longitude : Double?
 
-    var elevation : Double?
+    public var elevation : Double?
 
-    var issueTime    : Int?
-    var bulletinTime : Int?
-    var fromTime     : Int?
-    var toTime       : Int?
+    public var issueTime    : Int?
+    public var bulletinTime : Int?
+    public var fromTime     : Int?
+    public var toTime       : Int?
     
-    var forecast : [Forecast]?
+    public var forecast : [Forecast]?
 
 }
