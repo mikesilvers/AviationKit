@@ -27,5 +27,5 @@ public struct TAF : Codable {
     public var toTime       : Int?
     
     public var forecast : [Forecast]?
-
+    
 }

@@ -134,9 +134,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62E-Qo-Bk2">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWl-gp-94Q">
                                 <rect key="frame" x="21" y="25" width="333" height="602"/>
-                            </scrollView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EwF-06-lbu">
                                 <rect key="frame" x="169" y="632" width="37" height="30"/>
                                 <constraints>
@@ -150,16 +153,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="62E-Qo-Bk2" firstAttribute="top" secondItem="BoW-mK-p0u" secondAttribute="bottom" constant="5" id="5Ro-vB-fYb"/>
-                            <constraint firstItem="xLX-VW-HJ0" firstAttribute="top" secondItem="EwF-06-lbu" secondAttribute="bottom" constant="5" id="LoL-Qe-hst"/>
-                            <constraint firstItem="EwF-06-lbu" firstAttribute="top" secondItem="62E-Qo-Bk2" secondAttribute="bottom" constant="5" id="WHN-ni-qWw"/>
+                            <constraint firstItem="BWl-gp-94Q" firstAttribute="leading" secondItem="AGv-aO-Otr" secondAttribute="leadingMargin" constant="5" id="8kq-tB-UxZ"/>
+                            <constraint firstItem="BWl-gp-94Q" firstAttribute="bottom" secondItem="EwF-06-lbu" secondAttribute="top" constant="-5" id="LUy-f4-xTg"/>
+                            <constraint firstItem="EwF-06-lbu" firstAttribute="bottom" secondItem="xLX-VW-HJ0" secondAttribute="top" constant="-5" id="LoL-Qe-hst"/>
+                            <constraint firstItem="BWl-gp-94Q" firstAttribute="trailing" secondItem="AGv-aO-Otr" secondAttribute="trailingMargin" constant="-5" id="VqD-Si-tQY"/>
                             <constraint firstItem="EwF-06-lbu" firstAttribute="centerX" secondItem="AGv-aO-Otr" secondAttribute="centerX" id="ccd-ed-VhR"/>
-                            <constraint firstItem="62E-Qo-Bk2" firstAttribute="leading" secondItem="AGv-aO-Otr" secondAttribute="leadingMargin" constant="5" id="ogo-ln-IVM"/>
-                            <constraint firstItem="62E-Qo-Bk2" firstAttribute="trailing" secondItem="AGv-aO-Otr" secondAttribute="trailingMargin" constant="-5" id="poC-0s-j6s"/>
+                            <constraint firstItem="BWl-gp-94Q" firstAttribute="top" secondItem="BoW-mK-p0u" secondAttribute="bottom" constant="5" id="syM-CQ-V58"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="doneButton" destination="EwF-06-lbu" id="FLd-tk-DbQ"/>
+                        <outlet property="textView" destination="BWl-gp-94Q" id="yMi-if-TcU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cWn-ru-CGr" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     var currentItem : Codable?
     
     @IBOutlet var doneButton : UIButton!
+    @IBOutlet var textView   : UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,23 +27,32 @@ class DetailViewController: UIViewController {
         super.viewWillAppear(animated)
         
         if let ci = currentItem {
-            
-            if ci is METAR {
-                setupMETAR(ci as! METAR)
-            } else if ci is TAF {
-                setupTAF(ci as! TAF)
-            }
-            
+            setupDisplay(ci as AnyObject)
         }
     }
     
+    private func setupDisplay(_ item: AnyObject) {
 
-    private func setupTAF(_ taf: TAF) {
+        let font     = [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 14.0)]
+        let boldfont = [NSAttributedString.Key.font:UIFont.boldSystemFont(ofSize: 14.0)]
         
-    }
-    
-    private func setupMETAR(_ metar: METAR) {
+        var text = NSMutableAttributedString()
+
+        if let it = item as? Decodable {
+            let tmpValues = it.printValues()
+            
+            for tmp in tmpValues {
+                text.append(NSAttributedString(string: "\(tmp.key): ", attributes: boldfont))
+                text.append(NSAttributedString(string: "\(tmp.value)\n\n", attributes: font))
+            }
         
+            if tmpValues.count == 0 {
+                text = NSMutableAttributedString(string: "No results found", attributes: font)
+            }
+        }
+        
+        textView.attributedText = text
+
     }
     
     @IBAction func doneAction(_ sender: UIButton) {
