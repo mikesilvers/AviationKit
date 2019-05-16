@@ -55,14 +55,18 @@ extension Decodable {
         case is Decimal:
             if let s = (value as? Decimal) { returnV = s as Any }
         case is Array<Any>:
+            
             if let arr = value as? Array<Any> {
                 // run thru the elements of the array to process
                 var arrtmp : [Any] = []
                 for a in arr {
-                    arrtmp.append(printObjectValues(a))
+                    if a is Decodable, let v = a as? Decodable {
+                        arrtmp.append(v.printValues())
+                    }
                 }
                 returnV = arrtmp as Any
             }
+            
         case is Set<AnyHashable>:
             if let s = (value as? Set<AnyHashable>) { returnV = s as Any }
         case is Dictionary<AnyHashable, Any>:

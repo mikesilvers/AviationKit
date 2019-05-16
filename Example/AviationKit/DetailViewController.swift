@@ -28,7 +28,7 @@ class DetailViewController: UIViewController {
 
         let font     = [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 14.0)]
         let boldfont = [NSAttributedString.Key.font:UIFont.boldSystemFont(ofSize: 14.0)]
-        
+
         var text = NSMutableAttributedString()
 
         if let it = item as? Decodable {
@@ -48,6 +48,7 @@ class DetailViewController: UIViewController {
 
     }
     
+
     @IBAction func doneAction(_ sender: UIButton) {
 
         self.dismiss(animated: true, completion: nil)
