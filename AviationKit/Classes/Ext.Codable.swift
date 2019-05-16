@@ -23,11 +23,10 @@ extension Decodable {
             
             if let label = child.label {
                 let value = child.value
-                items.append("\(label): \(label)\n\n")
+                items.append("\n\n\(label): \(label)\n")
                 
                 returnItems["\(label)"] = printObjectValues(value)
             }
-            
         }
         
         // print if they request
@@ -56,7 +55,14 @@ extension Decodable {
         case is Decimal:
             if let s = (value as? Decimal) { returnV = s as Any }
         case is Array<Any>:
-            if let s = (value as? Array<Any>) { returnV = s as Any }
+            if let arr = value as? Array<Any> {
+                // run thru the elements of the array to process
+                var arrtmp : [Any] = []
+                for a in arr {
+                    arrtmp.append(printObjectValues(a))
+                }
+                returnV = arrtmp as Any
+            }
         case is Set<AnyHashable>:
             if let s = (value as? Set<AnyHashable>) { returnV = s as Any }
         case is Dictionary<AnyHashable, Any>:

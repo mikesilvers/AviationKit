@@ -55,16 +55,20 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             let m = td as! METAR
             
+            if let mt = m.stationId { cell.textLabel?.text = "METAR: \(mt)" }
+            
             if let lon = m.longitude, let lat = m.latitude {
-                cell.detailTextLabel?.text = "(\(lat), \(lon))"
+                cell.detailTextLabel?.text = "(latitude: \(lat), longitude: \(lon))"
             }
             
         } else if td is TAF {
             
             let m = td as! TAF
             
+            if let mt = m.stationId { cell.textLabel?.text = "TAF: \(mt)" }
+
             if let lon = m.longitude, let lat = m.latitude {
-                cell.detailTextLabel?.text = "(\(lat), \(lon))"
+                cell.detailTextLabel?.text = "(latitude: \(lat), longitude: \(lon))"
             }
 
         }
