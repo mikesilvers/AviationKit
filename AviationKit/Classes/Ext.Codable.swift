@@ -12,7 +12,7 @@ extension Decodable {
     
     // MARK: - Print Values
     @discardableResult
-    public func printValues(_ printValues: Bool = true) -> [String:Any] {
+    public func printValues(_ printValues: Bool = false) -> [String:Any] {
         
         let mirror = Mirror(reflecting: self).children
         
