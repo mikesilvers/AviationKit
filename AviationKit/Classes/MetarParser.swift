@@ -16,7 +16,7 @@ returns the array of METAR's in a closure.
  */
 public class MetarParser : NSObject, XMLParserDelegate {
 
-    //MARK: Supporting variables with sample data
+    // MARK: - Supporting variables with sample data
     /**
     The variable that contains METAR XML for testing.
     There are three individual METAR's used for testing.
@@ -136,7 +136,7 @@ public class MetarParser : NSObject, XMLParserDelegate {
         }
     }
     
-    //MARK: Supporting variables
+    // MARK: - Supporting variables
     private var metars : [METAR] = []
     private var currentMetar  = METAR()
     
@@ -147,7 +147,7 @@ public class MetarParser : NSObject, XMLParserDelegate {
     
     private var dateformatter = DateFormatter()
     
-    //MARK: Supporting structures
+    // MARK: - Supporting structures
     /// This private struct contains the current values parsed from XML
     private struct current {
         var string       = ""
@@ -157,7 +157,7 @@ public class MetarParser : NSObject, XMLParserDelegate {
         var skycondition = SkyCondition()
     }
 
-    //MARK: Initializers
+    // MARK: - Initializers
     
     /**
     Initializes the new *MetarParser*.
@@ -172,7 +172,7 @@ public class MetarParser : NSObject, XMLParserDelegate {
         dateformatter.timeZone = TimeZone(secondsFromGMT: 0)
     }
     
-    //MARK: Core functions
+    // MARK: - Core functions
     /**
      The completion block for the return of parsed METAR objects.
      
@@ -201,7 +201,7 @@ public class MetarParser : NSObject, XMLParserDelegate {
         
     }
     
-    //MARK: XMLParserDelegate functions
+    // MARK: - XMLParserDelegate functions
     public func parserDidStartDocument(_ parser: XMLParser) {
         // we are only setting this for debug purposes - so you can see when the document has started processing
         print("parserDidStartDocument")

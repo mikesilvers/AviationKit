@@ -12,12 +12,12 @@ import Foundation
  */
 public struct SkyCondition : Codable {
     
-    // MARK: variables to define the sky condition
+    // MARK: - Variables to define the sky condition
     public var skyCover  : String?
     public var cloudType : String?
     public var cloudBase : Int?
 
-    // MARK: Coding Key enum
+    // MARK: - Coding Key enum
     enum CodingKeys: String, CodingKey {
         case skyCover  = "sky_cover"
         case cloudBase = "cloud_base_ft_agl"

@@ -12,7 +12,7 @@ import Foundation
  */
 public struct Forecast : Codable {
     
-    // MARK: variables to define the sky condition
+    // MARK: - Variables to define the sky condition
     public var validFromTime      : Int?
     public var validToTime        : Int?
     public var timeBecoming       : Int?
@@ -37,7 +37,7 @@ public struct Forecast : Codable {
     public var icingCondition      : [IcingCondition]?
     public var turbulenceCondition : [TurbulenceCondition]?
 
-    // MARK: Coding Key enum
+    // MARK: - Coding Key enum
     enum CodingKeys: String, CodingKey {
         case validFromTime      = "time_from"
         case validToTime        = "time_to"

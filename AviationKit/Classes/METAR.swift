@@ -15,7 +15,7 @@ import Foundation
  */
 public struct METAR : Codable {
     
-    // MARK: variables used for the METAR object
+    // MARK: - Variables used for the METAR object
     public var rawText              : String?
     public var stationId            : String?
     
@@ -61,7 +61,7 @@ public struct METAR : Codable {
     public var metarType            : String?
     public var flightCategory       : String?
     
-    // MARK: Coding Key enums to process the codable
+    // MARK: - Coding Key enums to process the codable
     /**
      The CodingKeys to define the overall JSON document
     */
@@ -118,7 +118,7 @@ public struct METAR : Codable {
 
     }
     
-    // MARK: initializers
+    // MARK: - Initializers
     public init() { }
     
     public init(from decoder: Decoder) throws {
@@ -167,7 +167,7 @@ public struct METAR : Codable {
 
     }
     
-    // MARK: The encoder
+    // MARK: - The encoder
     public func encode(to encoder: Encoder) throws {
         
         var container = encoder.container(keyedBy: CodingKeys.self)

@@ -12,13 +12,13 @@ import Foundation
  */
 public struct Temperature : Codable {
     
-    // MARK: variables to define the sky condition
+    // MARK: - Variables to define the sky condition
     public var validTime   : Int?
     public var surfaceTemp : Double?
     public var maxTemp     : Double?
     public var minTemp     : Double?
 
-    // MARK: Coding Key enum
+    // MARK: - Coding Key enum
     enum CodingKeys: String, CodingKey {
         case validTime   = "valid_time"
         case surfaceTemp = "sfc_temp_c"

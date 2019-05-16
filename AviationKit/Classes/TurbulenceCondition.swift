@@ -12,12 +12,12 @@ import Foundation
  */
 public struct TurbulenceCondition : Codable {
     
-    // MARK: variables to define the sky condition
+    // MARK: - Variables to define the sky condition
     public var intensity   : String?
     public var minAltitude : Int?
     public var maxAltitude : Int?
 
-    // MARK: Coding Key enum
+    // MARK: - Coding Key enum
     enum CodingKeys: String, CodingKey {
         case intensity   = "turbulence_intensity"
         case minAltitude = "turbulence_min_alt_ft_agl"

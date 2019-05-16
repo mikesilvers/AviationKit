@@ -11,7 +11,7 @@ import Foundation
 
 public struct TAF : Codable {
     
-    // MARK: variables used for the METAR object
+    // MARK: - Variables used for the METAR object
     public var rawText   : String?
     public var stationId : String?
     public var remarks   : String?
