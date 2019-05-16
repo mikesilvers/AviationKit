@@ -196,7 +196,7 @@ public class MetarParser : NSObject, XMLParserDelegate {
             // return the array of METAR objects
             completion(self.metars)
         } else if let  pe = parser.parserError {
-            print("Parse Error: \(pe)")
+            print("Parse Error (PE1000): \(pe)")
         }
         
     }

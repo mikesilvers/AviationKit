@@ -174,9 +174,13 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             airportCode.isHidden  = true
             airportCode.text      = ""
             airportCode.resignFirstResponder()
-
+            
             // add the demo data
             let mp = TafParser()
+            
+            // lets print the demo data to see what is wrong
+            print(mp.demoTAF)
+            
             if let data = mp.demoTAF.data(using: .utf8) {
                 mp.parseDocument(data) { (taf) in
                     self.tableData = taf
