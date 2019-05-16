@@ -27,10 +27,10 @@
                                     <constraint firstAttribute="height" constant="30" id="Ore-7r-CbD"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="METAR (AC)"/>
-                                    <segment title="TAF (AC)"/>
                                     <segment title="METAR"/>
                                     <segment title="TAF"/>
+                                    <segment title="METAR (D)"/>
+                                    <segment title="TAF (D)"/>
                                 </segments>
                                 <connections>
                                     <action selector="fillMetarTaf:" destination="PL1-gH-Q2W" eventType="valueChanged" id="Hac-wC-N62"/>
