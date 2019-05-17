@@ -37,7 +37,7 @@
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HLa-mv-Om4">
-                                <rect key="frame" x="16" y="90" width="343" height="577"/>
+                                <rect key="frame" x="16" y="60" width="343" height="607"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Oy0-Tt-5Cc" detailTextLabel="Iwq-u8-yAP" style="IBUITableViewCellStyleSubtitle" id="xEJ-dX-9ca">
@@ -71,48 +71,19 @@
                                     <outlet property="prefetchDataSource" destination="PL1-gH-Q2W" id="Ytf-qp-W4S"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Airport Code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VpN-9n-xhY">
-                                <rect key="frame" x="16" y="55" width="103" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="xOH-Ph-zH3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="seb-fL-pc7">
-                                <rect key="frame" x="124" y="55" width="66" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="NHx-2u-6k7"/>
-                                    <constraint firstAttribute="width" constant="66" id="uL1-HV-3eg"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="go" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                                <connections>
-                                    <outlet property="delegate" destination="PL1-gH-Q2W" id="AFK-2L-fhk"/>
-                                </connections>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="HLa-mv-Om4" firstAttribute="leading" secondItem="Qqx-tY-OF6" secondAttribute="leadingMargin" id="A7q-bK-nnE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HLa-mv-Om4" secondAttribute="trailing" id="FeR-IA-nE5"/>
-                            <constraint firstItem="seb-fL-pc7" firstAttribute="top" secondItem="sBK-Xj-wQe" secondAttribute="bottom" constant="5" id="JD0-79-zDo"/>
-                            <constraint firstItem="4Bk-Xy-r7B" firstAttribute="top" secondItem="HLa-mv-Om4" secondAttribute="bottom" id="JUB-f4-yOK"/>
+                            <constraint firstItem="HLa-mv-Om4" firstAttribute="trailing" secondItem="Qqx-tY-OF6" secondAttribute="trailingMargin" id="FeR-IA-nE5"/>
+                            <constraint firstItem="HLa-mv-Om4" firstAttribute="bottom" secondItem="4Bk-Xy-r7B" secondAttribute="top" id="JUB-f4-yOK"/>
                             <constraint firstItem="sBK-Xj-wQe" firstAttribute="leading" secondItem="Qqx-tY-OF6" secondAttribute="leadingMargin" id="OUq-1A-0Kz"/>
-                            <constraint firstItem="seb-fL-pc7" firstAttribute="leading" secondItem="VpN-9n-xhY" secondAttribute="trailing" constant="5" id="VHh-ii-6gK"/>
+                            <constraint firstItem="HLa-mv-Om4" firstAttribute="top" secondItem="sBK-Xj-wQe" secondAttribute="bottom" constant="10" id="PBE-PQ-fzH"/>
                             <constraint firstItem="sBK-Xj-wQe" firstAttribute="top" secondItem="ozc-S0-isH" secondAttribute="bottom" id="X1R-eJ-Y8q"/>
-                            <constraint firstItem="VpN-9n-xhY" firstAttribute="leading" secondItem="Qqx-tY-OF6" secondAttribute="leadingMargin" id="akB-uH-Uxc"/>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="seb-fL-pc7" secondAttribute="trailing" id="b1f-Tl-cFI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sBK-Xj-wQe" secondAttribute="trailing" id="q7F-il-Dhf"/>
-                            <constraint firstItem="VpN-9n-xhY" firstAttribute="top" secondItem="sBK-Xj-wQe" secondAttribute="bottom" constant="5" id="tFG-3p-pjb"/>
-                            <constraint firstItem="HLa-mv-Om4" firstAttribute="top" secondItem="VpN-9n-xhY" secondAttribute="bottom" constant="5" id="zJA-3b-RMz"/>
+                            <constraint firstItem="sBK-Xj-wQe" firstAttribute="trailing" secondItem="Qqx-tY-OF6" secondAttribute="trailingMargin" id="q7F-il-Dhf"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="airportCode" destination="seb-fL-pc7" id="jDj-T5-dN7"/>
-                        <outlet property="airportLabel" destination="VpN-9n-xhY" id="S3I-L6-SP5"/>
                         <outlet property="metarTafSelection" destination="sBK-Xj-wQe" id="9HJ-mD-sXv"/>
                         <outlet property="tableView" destination="HLa-mv-Om4" id="djj-Fd-8Sr"/>
                         <segue destination="7Ga-Om-PKo" kind="presentation" identifier="DetailSegue" id="bpN-ok-j17"/>

@@ -14,7 +14,7 @@ and return an array of METAR objects.
 This class parses the XML document in the *parseDocument* function and
 returns the array of METAR's in a closure.
  */
-public class MetarParser : NSObject, XMLParserDelegate {
+public class MetarParser : NSObject, XMLParserDelegate, XMLCustomParserProtocol {
 
     // MARK: - Supporting variables with sample data
     /**
@@ -178,7 +178,7 @@ public class MetarParser : NSObject, XMLParserDelegate {
      
      - parameter metar: An array of METAR objects parsed from the XML documents
     */
-    public typealias parseCompletion = (_ metar: [METAR])->()
+    public typealias parseCompletion = (_ metar: [Any])->()
     
     /**
     This function will parse the XML document and return an array of METAR obects.

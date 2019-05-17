@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class TafParser : NSObject, XMLParserDelegate {
+public class TafParser : NSObject, XMLParserDelegate, XMLCustomParserProtocol {
     
     public var demoTAF : String {
         get {
@@ -408,7 +408,7 @@ public class TafParser : NSObject, XMLParserDelegate {
      
      - parameter metar: An array of TAF objects parsed from the XML documents
      */
-    public typealias parseCompletion = (_ taf: [TAF])->()
+    public typealias parseCompletion = (_ taf: [Any])->()
 
     /**
      This function will parse the XML document and return an array of TAF obects.

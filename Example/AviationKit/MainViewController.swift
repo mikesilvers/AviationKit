@@ -8,6 +8,7 @@
 
 import UIKit
 import AviationKit
+import CoreLocation
 
 
 //class TestGeneric<L : Codable>: Codable {
@@ -18,22 +19,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet var tableView         : UITableView!
     
-    @IBOutlet var airportLabel      : UILabel!
-    @IBOutlet var airportCode       : UITextField!
     @IBOutlet var metarTafSelection : UISegmentedControl!
 
     private var tableData : [Any] = []
     private var currentItem : Codable?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        airportLabel.isHidden = true
-        airportCode.isHidden  = true
-        airportCode.text      = ""
-
-    }
-
     // MARK: - Table view data source
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -143,29 +133,42 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         switch sender.selectedSegmentIndex {
         case 0:
             
+            var location: CLLocationCoordinate2D
+            
             // this is METAR Airport Code
-            airportLabel.isHidden = false
-            airportCode.isHidden  = false
-            airportCode.text      = "K"
-            airportCode.becomeFirstResponder()
+            #if targetEnvironment(simulator)
+                location = CLLocationCoordinate2D(latitude: 38.920898,
+                                                  longitude: -77.031372)
+            #else
+                location = CLLocationCoordinate2D(latitude: 0.0,
+                                                  longitude: 0.0)
+            #endif
+            
+            let comms = Comms()
+            comms.getMETAR(location) { (results) in
+                self.tableData = results
+                self.tableView.reloadData()
+            }
+            
             
         case 1:
-            
+
+            var location: CLLocationCoordinate2D
+
             // this is TAC Airport Code
-            airportLabel.isHidden = false
-            airportCode.isHidden  = false
-            airportCode.text      = "K"
-            airportCode.becomeFirstResponder()
+            #if targetEnvironment(simulator)
+                location = CLLocationCoordinate2D(latitude: 38.920898,
+                                                  longitude: -77.031372)
+            #else
+                location = CLLocationCoordinate2D(latitude: 0.0,
+                                                  longitude: 0.0)
+            #endif
+            
+            
             
         case 2:
             
-            // this is the METAR (location)
-            airportLabel.isHidden = true
-            airportCode.isHidden  = true
-            airportCode.text      = ""
-            airportCode.resignFirstResponder()
-            
-            // add the demo data
+            // add the demo data for METAR
             let mp = MetarParser()
             if let data = mp.demoMETAR.data(using: .utf8) {
                 mp.parseDocument(data) { (metar) in
@@ -176,31 +179,16 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
         case 3:
             
-            // this is the TAC (location)
-            airportLabel.isHidden = true
-            airportCode.isHidden  = true
-            airportCode.text      = ""
-            airportCode.resignFirstResponder()
-            
-            // add the demo data
+            // add the demo data for TAF
             let mp = TafParser()
-            
             if let data = mp.demoTAF.data(using: .utf8) {
                 mp.parseDocument(data) { (taf) in
                     self.tableData = taf
                     self.tableView.reloadData()
                 }
             }
-
-        default :
-            
-            airportLabel.isHidden = true
-            airportCode.isHidden  = true
-            airportCode.text      = ""
-            airportCode.resignFirstResponder()
-            
+        default:
+            print("This should not occur")
         }
-        
     }
-
 }
