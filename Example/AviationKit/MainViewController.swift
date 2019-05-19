@@ -145,9 +145,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             #endif
             
             let comms = Comms()
-            comms.getMETAR(location) { (results) in
-                self.tableData = results
-                self.tableView.reloadData()
+            comms.getMETAR(location, 25) { (results, error) in
+                DispatchQueue.main.async {
+                    self.tableData = results
+                    self.tableView.reloadData()
+                }
             }
             
             

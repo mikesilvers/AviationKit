@@ -1,9 +1,9 @@
 //
 //  HTTPMethod.swift
-//  WeedmapsChallenge
+//  AviationKit
 //
 //  Created by Mike Silvers on 5/13/19.
-//  Copyright © 2019 Weedmaps, LLC. All rights reserved.
+
 //
 
 import Foundation

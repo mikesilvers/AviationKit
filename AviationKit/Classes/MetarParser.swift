@@ -189,6 +189,9 @@ public class MetarParser : NSObject, XMLParserDelegate, XMLCustomParserProtocol 
     */
     public func parseDocument(_ data: Data, completion: parseCompletion) {
         
+        print("Data String: \(String(data: data, encoding: .utf8) ?? "No Data")")
+        
+        
         // we are setting the XMLParser and the delegate to this class
         parser = XMLParser(data: data)
         parser.delegate = self

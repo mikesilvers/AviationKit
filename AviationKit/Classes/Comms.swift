@@ -11,19 +11,19 @@ import CoreLocation
 public struct Comms {
     
     struct url {
-        static let metar = "https://aviationweather.gov/adds/dataserver_current/"
-        static let taf   = "https://aviationweather.gov/adds/dataserver_current/"
+        static let metar = "https://aviationweather.gov/adds/dataserver_current/httpparam"
+        static let taf   = "https://aviationweather.gov/adds/dataserver_current/httpparam"
     }
     
     public init () {}
     
-    public func getMETAR(_ centerPoint: CLLocationCoordinate2D, radiusInMiles: Int = 10, completion: @escaping (_ metar: [METAR])->()) {
+    public func getMETAR(_ centerPoint: CLLocationCoordinate2D,_ radiusInMiles: Int = 10, completion: @escaping (_ metar: [METAR], Error?)->()) {
         
         // refer to: https://www.aviationweather.gov/dataserver/example?datatype=metar
-        let gmc = GetMetarCore(radiusInMiles: 3,
+        let gmc = GetMetarCore(radiusInMiles: radiusInMiles,
                                longitude: centerPoint.longitude,
                                latitude: centerPoint.latitude,
-                               dataSource: "metar",
+                               dataSource: "metars",
                                mostRecent: true,
                                hoursBeforeNow: 3)
         
@@ -32,9 +32,9 @@ public struct Comms {
                                        requestBody: EmptyJSON(),
                                        xmlParser: MetarParser(), nil) { (nil, result, response, data, error) in
                                         
-                                        if let res = result as? [METAR] {
-                                            completion(res)
+                                            if let res = result as? [METAR] {
+                                                completion(res, error)
+                                            }
                                         }
-        }
-    }
+                        }
 }

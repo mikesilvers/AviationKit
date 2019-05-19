@@ -1,9 +1,9 @@
 //
 //  GetBusinesses.swift
-//  WeedmapsChallenge
+//  AviationKit
 //
 //  Created by Mike Silvers on 5/13/19.
-//  Copyright © 2019 Weedmaps, LLC. All rights reserved.
+
 //
 
 import Foundation
@@ -33,17 +33,26 @@ struct GetMetarCore : NetworkingCodableProtocol {
     // for later use.
     var latitude : Double {
         didSet {
-            self.urlParams?["latitude"] = "\(latitude)"
+            if latitude != 0.0 && self.longitude != 0.0 {
+                let param = "\(radiusInMiles);\(self.longitude),\(latitude)"
+                self.urlParams?["radialDistance"] = "\(param)"
+            }
         }
     }
     var longitude : Double {
         didSet {
-            self.urlParams?["longitude"] = "\(longitude)"
+            if self.latitude != 0.0 && longitude != 0.0 {
+                let param = "\(radiusInMiles);\(longitude),\(self.latitude)"
+                self.urlParams?["radialDistance"] = "\(param)"
+            }
         }
     }
     var radiusInMiles : Int {
         didSet {
-            self.urlParams?["radialDistance"] = "\(radiusInMiles)"
+            if self.latitude != 0.0 && self.longitude != 0.0 {
+                let param = "\(radiusInMiles);\(self.longitude),\(self.latitude)"
+                self.urlParams?["radialDistance"] = "\(param)"
+            }
         }
     }
 
@@ -64,6 +73,18 @@ struct GetMetarCore : NetworkingCodableProtocol {
             self.urlParams?["hoursBeforeNow"] = "\(hoursBeforeNow)"
         }
     }
+    
+    var requestType : String {
+        didSet {
+            self.urlParams?["requesttype"] = requestType
+        }
+    }
+
+    var dataFormat : String {
+        didSet {
+            self.urlParams?["format"] = dataFormat
+        }
+    }
 
     // MARK: - Initializers
     /**
@@ -77,25 +98,29 @@ struct GetMetarCore : NetworkingCodableProtocol {
      - Returns: A new business search request
      
     */
-    init(radiusInMiles: Int=5, longitude: Double=0.0, latitude: Double=0.0, dataSource: String="metars",mostRecent: Bool = true, hoursBeforeNow: Int = 3) {
+    init(radiusInMiles: Int=5, longitude: Double=0.0, latitude: Double=0.0, dataSource: String = "metars", requestType: String = "retrieve", dataFormat: String = "xml",mostRecent: Bool = true, hoursBeforeNow: Int = 3) {
 
         // initially set to the defaults
-        self.radiusInMiles  = 5
         self.longitude      = 0.0
         self.latitude       = 0.0
+        self.radiusInMiles  = 5
         self.dataSource     = "metars"
         self.mostRecent     = true
         self.hoursBeforeNow = 3
+        self.requestType    = "retrieve"
+        self.dataFormat     = "xml"
 
         // after the object is initialized, perform the true initialization
         // this makes it so the "didSet" actually fire so the terms are saved in the parameter dictionary.  The parameter dictionary is used during requests.
         defer {
-            self.radiusInMiles  = radiusInMiles
             self.longitude      = longitude
             self.latitude       = latitude
+            self.radiusInMiles  = radiusInMiles
             self.dataSource     = dataSource
             self.mostRecent     = mostRecent
             self.hoursBeforeNow = hoursBeforeNow
+            self.requestType    = requestType
+            self.dataFormat     = dataFormat
         }
     }
     
