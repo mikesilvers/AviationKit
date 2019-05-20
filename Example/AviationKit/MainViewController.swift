@@ -151,6 +151,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         switch sender.selectedSegmentIndex {
         case 0:
             
+            tableData = []
+            
             var location: CLLocationCoordinate2D
             
             // this is METAR Airport Code
@@ -172,6 +174,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
             
         case 1:
+
+            tableData = []
 
             var location: CLLocationCoordinate2D
 
@@ -195,6 +199,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
         case 2:
             
+            tableData = []
+
             // add the sample data for METAR
             let mp = MetarParser()
             if let data = mp.sampleMETAR.data(using: .utf8) {
@@ -206,6 +212,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
         case 3:
             
+            tableData = []
+
             // add the sample data for TAF
             let mp = TafParser()
             if let data = mp.sampleTAF.data(using: .utf8) {
@@ -215,6 +223,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 }
             }
         default:
+
+            tableData = []
+
             print("This should not occur")
         }
     }
