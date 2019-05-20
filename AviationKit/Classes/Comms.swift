@@ -24,7 +24,7 @@ public struct Comms {
                                longitude: centerPoint.longitude,
                                latitude: centerPoint.latitude,
                                dataSource: "metars",
-                               mostRecent: true,
+                               mostRecent: false,
                                hoursBeforeNow: 3)
         
         ProcessHTTP.shared.makeRequest(gmc,
@@ -41,12 +41,12 @@ public struct Comms {
 
     public func getTAF(_ centerPoint: CLLocationCoordinate2D,_ radiusInMiles: Int = 10, completion: @escaping (_ metar: [TAF], Error?)->()) {
         
-        // refer to: https://www.aviationweather.gov/dataserver/example?datatype=metar
+        // refer to: https://www.aviationweather.gov/dataserver/example?datatype=taf
         let gmc = GetTafCore(radiusInMiles: radiusInMiles,
                                longitude: centerPoint.longitude,
                                latitude: centerPoint.latitude,
                                dataSource: "tafs",
-                               mostRecent: true,
+                               mostRecent: false,
                                hoursBeforeNow: 3)
         
         ProcessHTTP.shared.makeRequest(gmc,

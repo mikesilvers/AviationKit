@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 import AviationKit
 import CoreLocation
 
@@ -16,16 +17,37 @@ import CoreLocation
 
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     
+    @IBOutlet var centerbutton      : UIButton!
     @IBOutlet var tableView         : UITableView!
-    
     @IBOutlet var metarTafSelection : UISegmentedControl!
-
+    @IBOutlet var mapView           : MKMapView!
+    
     private var tableData : [Any] = []
     private var currentItem : Codable?
     
     private var locationManager = CLLocationManager()
     
+    internal var initialLocation = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)
+    internal var lastLocation    = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)
+    internal var milesRadius     = 10
+    
+    internal var dateformatter = DateFormatter()
+    
     // MARK: - View functions
+    override func viewDidLoad() {
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
+        // register the custom annotation to use the annotation view
+        mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: NSStringFromClass(WeatherAnnotation.self))
+        
+        // configure the date formatter for conversion between epoch time and the
+        // time passed in ISO8601 UTC format
+        dateformatter.dateFormat = "MM/dd/yyyy HH:mm:ss z"
+        dateformatter.timeZone = TimeZone.current
+
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -38,7 +60,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         default:
             DisplayMessages.requestLocation(self, locationManager)
         }
-        
         
     }
     
@@ -65,8 +86,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             if let mt = m.stationId { cell.textLabel?.text = "METAR: \(mt)" }
             
-            if let lon = m.longitude, let lat = m.latitude {
-                cell.detailTextLabel?.text = "(latitude: \(lat), longitude: \(lon))"
+            if let obt = m.observationTime {
+                let ts = dateformatter.string(from: Date(timeIntervalSince1970: Double(obt)))
+                cell.detailTextLabel?.text = "Observed: \(ts)"
             }
             
         } else if td is TAF {
@@ -75,8 +97,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             if let mt = m.stationId { cell.textLabel?.text = "TAF: \(mt)" }
 
-            if let lon = m.longitude, let lat = m.latitude {
-                cell.detailTextLabel?.text = "(latitude: \(lat), longitude: \(lon))"
+            if let obt = m.toTime {
+                let ts = dateformatter.string(from: Date(timeIntervalSince1970: Double(obt)))
+                cell.detailTextLabel?.text = "Valid Until: \(ts)"
             }
 
         }
@@ -98,7 +121,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     
     // MARK: - Navigation
-
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
 
         // only allow the segue to continue if the data is there
@@ -116,30 +138,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             dvc.currentItem = self.currentItem
         }
         
-    }
-    
-    
-    // MARK: UITextFieldDelegate functions
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,  replacementString string: String) -> Bool {
-        
-        // the first letter is 'K' and there are only 4 characters per
-        if let tfc = textField.text?.count, ((tfc == 1 && string == "") || (tfc >= 4 && string != "")) { return false }
-        
-        // check for letters - they will all be capital
-        if let ucs = string.unicodeScalars.first, CharacterSet.letters.contains(ucs) { return true }
-        
-        // check for the backspace
-        if string == "" { return true }
-        
-        return false
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        // if the text is 3 or 4 long, run the process
-        
-        if let tfc = textField.text, tfc.count > 1 && tfc.count >= 3 {
-            print("We did end editing: \(tfc)")
-        }
     }
     
     // MARK: Segmented Controller functions
@@ -160,16 +158,25 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 // in the simulator, we will use one single location
                 location = CLLocationCoordinate2D(latitude: 38.920898,
                                                   longitude: -77.031372)
+                lastLocation    = location
+                initialLocation = location
+            
+                //set region on the map
+                let region = getRegion(Double(milesRadius), lastLocation)
+                mapView.setRegion(region, animated: true)
+
             #else
                 // get the current location
-                location = locationManager.location?.coordinate
+                location = lastLocation
+
             #endif
             
             let comms = Comms()
-            comms.getMETAR(location, 25) { (results, error) in
+            comms.getMETAR(location, milesRadius) { (results, error) in
                 DispatchQueue.main.async {
-                    self.tableData = results
+                    self.tableData = results.sorted { ($0.observationTime ?? 0) > ($1.observationTime ?? 0) }
                     self.tableView.reloadData()
+                    self.dropPins()
                 }
             }
             
@@ -184,16 +191,24 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 // in the simulator, we will use one single location
                 location = CLLocationCoordinate2D(latitude: 38.920898,
                                                   longitude: -77.031372)
+                lastLocation    = location
+                initialLocation = location
+            
+                //set region on the map
+                let region = getRegion(Double(milesRadius), lastLocation)
+                mapView.setRegion(region, animated: true)
+
             #else
                 // get the current location
-                location = locationManager.location?.coordinate
+                location = lastLocation
             #endif
             
             let comms = Comms()
-            comms.getTAF(location, 25) { (results, error) in
+            comms.getTAF(location, milesRadius) { (results, error) in
                 DispatchQueue.main.async {
-                    self.tableData = results
+                    self.tableData = results.sorted { ($0.toTime ?? 0) > ($1.toTime ?? 0) }
                     self.tableView.reloadData()
+                    self.dropPins()
                 }
             }
             
@@ -205,8 +220,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let mp = MetarParser()
             if let data = mp.sampleMETAR.data(using: .utf8) {
                 mp.parseDocument(data) { (metar) in
-                    self.tableData = metar
+                    self.tableData = metar.sorted { (($0 as! METAR).observationTime ?? 0) > (($1 as! METAR).observationTime ?? 0) }
                     self.tableView.reloadData()
+                    self.dropPins()
                 }
             }
             
@@ -218,8 +234,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let mp = TafParser()
             if let data = mp.sampleTAF.data(using: .utf8) {
                 mp.parseDocument(data) { (taf) in
-                    self.tableData = taf
+                    self.tableData = taf.sorted { (($0 as! TAF).toTime ?? 0) > (($1 as! TAF).toTime ?? 0) }
                     self.tableView.reloadData()
+                    self.dropPins()
                 }
             }
         default:
@@ -229,4 +246,57 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             print("This should not occur")
         }
     }
+    
+    // MARK: - Map Functions
+    internal func dropPins() {
+        
+        // remove the current pins
+        for p in mapView.annotations {
+            mapView.removeAnnotation(p)
+        }
+        
+        // add the new pins
+        for p in tableData {
+            
+            let pin = WeatherAnnotation()
+            var loc = CLLocationCoordinate2D()
+            
+            if p is METAR, let p1 = p as? METAR,
+                let lat = p1.latitude, let lon = p1.longitude,
+                let title = p1.stationId {
+                    loc.latitude   = lat
+                    loc.longitude  = lon
+                    pin.coordinate = loc
+                    pin.title      = title
+                    pin.subtitle   = "Latitude: \(lat), Longitude: \(lon)"
+            } else if p is TAF, let p1 = p as? TAF,
+                let lat = p1.latitude, let lon = p1.longitude,
+                let title = p1.stationId {
+                    loc.latitude = lat
+                    loc.longitude = lon
+                    pin.coordinate = loc
+                    pin.title      = title
+                    pin.subtitle   = "Latitude: \(lat), Longitude: \(lon)"
+            }
+            
+            // now drop the pin
+            mapView.addAnnotation(pin)
+        }
+    }
+    
+    // MARK: - Button functions
+    @IBAction func centerMap(_ sender: UIButton) {
+        
+        let region = getRegion((Double(milesRadius) * 2.0), lastLocation)
+        
+        #if targetEnvironment(simulator)
+            mapView.setCenter(lastLocation, animated: true)
+        #else
+            mapView.setCenter(mapView?.userLocation.coordinate ?? lastLocation, animated: true)
+        #endif
+        
+        mapView.setRegion(region, animated: true)
+        
+    }
+    
 }

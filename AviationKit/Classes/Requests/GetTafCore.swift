@@ -98,14 +98,14 @@ struct GetTafCore : NetworkingCodableProtocol {
      - Returns: A new business search request
      
     */
-    init(radiusInMiles: Int=5, longitude: Double=0.0, latitude: Double=0.0, dataSource: String = "tafs", requestType: String = "retrieve", dataFormat: String = "xml",mostRecent: Bool = true, hoursBeforeNow: Int = 3) {
+    init(radiusInMiles: Int=5, longitude: Double=0.0, latitude: Double=0.0, dataSource: String = "tafs", requestType: String = "retrieve", dataFormat: String = "xml",mostRecent: Bool = false, hoursBeforeNow: Int = 3) {
 
         // initially set to the defaults
         self.longitude      = 0.0
         self.latitude       = 0.0
         self.radiusInMiles  = 5
         self.dataSource     = "tafs"
-        self.mostRecent     = true
+        self.mostRecent     = false
         self.hoursBeforeNow = 3
         self.requestType    = "retrieve"
         self.dataFormat     = "xml"
