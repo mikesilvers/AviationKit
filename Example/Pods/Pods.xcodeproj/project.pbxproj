@@ -20,6 +20,7 @@
 		126D190B228F1ACA007C4ABD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126D190A228F1ACA007C4ABD /* Extensions.swift */; };
 		126D190E228F1C2D007C4ABD /* GetMetarCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126D190D228F1C2D007C4ABD /* GetMetarCore.swift */; };
 		126D1910228F3BBB007C4ABD /* XMLCustomParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126D190F228F3BBB007C4ABD /* XMLCustomParserProtocol.swift */; };
+		127DB156229255A1003B8B80 /* GetTafCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127DB155229255A1003B8B80 /* GetTafCore.swift */; };
 		129B7E87228497EA00C1B22D /* TurbulenceCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B7E84228497E900C1B22D /* TurbulenceCondition.swift */; };
 		129B7E88228497EA00C1B22D /* IcingCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B7E85228497EA00C1B22D /* IcingCondition.swift */; };
 		129B7E89228497EA00C1B22D /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B7E86228497EA00C1B22D /* Temperature.swift */; };
@@ -91,6 +92,7 @@
 		126D190A228F1ACA007C4ABD /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		126D190D228F1C2D007C4ABD /* GetMetarCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMetarCore.swift; sourceTree = "<group>"; };
 		126D190F228F3BBB007C4ABD /* XMLCustomParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLCustomParserProtocol.swift; sourceTree = "<group>"; };
+		127DB155229255A1003B8B80 /* GetTafCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTafCore.swift; sourceTree = "<group>"; };
 		129B7E84228497E900C1B22D /* TurbulenceCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TurbulenceCondition.swift; path = AviationKit/Classes/TurbulenceCondition.swift; sourceTree = "<group>"; };
 		129B7E85228497EA00C1B22D /* IcingCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IcingCondition.swift; path = AviationKit/Classes/IcingCondition.swift; sourceTree = "<group>"; };
 		129B7E86228497EA00C1B22D /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Temperature.swift; path = AviationKit/Classes/Temperature.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		126D190C228F1C2D007C4ABD /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				127DB155229255A1003B8B80 /* GetTafCore.swift */,
 				126D190D228F1C2D007C4ABD /* GetMetarCore.swift */,
 			);
 			name = Requests;
@@ -570,6 +573,7 @@
 				129B7E89228497EA00C1B22D /* Temperature.swift in Sources */,
 				129B7E8B22849A9A00C1B22D /* Forecast.swift in Sources */,
 				126D1907228F0221007C4ABD /* HTTPMethod.swift in Sources */,
+				127DB156229255A1003B8B80 /* GetTafCore.swift in Sources */,
 				126D1906228F0221007C4ABD /* ProcessHTTP.swift in Sources */,
 				1234923C2281C93C00A9D164 /* MetarParser.swift in Sources */,
 				126D1904228F0221007C4ABD /* NetworkingCodableProtocol.swift in Sources */,

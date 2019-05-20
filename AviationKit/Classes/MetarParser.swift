@@ -21,7 +21,7 @@ public class MetarParser : NSObject, XMLParserDelegate, XMLCustomParserProtocol 
     The variable that contains METAR XML for testing.
     There are three individual METAR's used for testing.
     */
-    public var demoMETAR : String {
+    public var sampleMETAR : String {
         get {
             var st = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
             st.append("<response xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XML-Schema-instance\" version=\"1.2\" ")

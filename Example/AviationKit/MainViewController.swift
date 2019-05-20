@@ -10,7 +10,6 @@ import UIKit
 import AviationKit
 import CoreLocation
 
-
 //class TestGeneric<L : Codable>: Codable {
 //    private var theGeneric : L?
 //}
@@ -23,6 +22,25 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     private var tableData : [Any] = []
     private var currentItem : Codable?
+    
+    private var locationManager = CLLocationManager()
+    
+    // MARK: - View functions
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let status = CLLocationManager.authorizationStatus()
+        switch status {
+        case .authorizedWhenInUse:
+            locationManager.startUpdatingLocation()
+        case .denied:
+            DisplayMessages.deniedLocation(self, locationManager)
+        default:
+            DisplayMessages.requestLocation(self, locationManager)
+        }
+        
+        
+    }
     
     // MARK: - Table view data source
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -137,11 +155,12 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             // this is METAR Airport Code
             #if targetEnvironment(simulator)
+                // in the simulator, we will use one single location
                 location = CLLocationCoordinate2D(latitude: 38.920898,
                                                   longitude: -77.031372)
             #else
-                location = CLLocationCoordinate2D(latitude: 0.0,
-                                                  longitude: 0.0)
+                // get the current location
+                location = locationManager.location?.coordinate
             #endif
             
             let comms = Comms()
@@ -152,27 +171,33 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 }
             }
             
-            
         case 1:
 
             var location: CLLocationCoordinate2D
 
             // this is TAC Airport Code
             #if targetEnvironment(simulator)
+                // in the simulator, we will use one single location
                 location = CLLocationCoordinate2D(latitude: 38.920898,
                                                   longitude: -77.031372)
             #else
-                location = CLLocationCoordinate2D(latitude: 0.0,
-                                                  longitude: 0.0)
+                // get the current location
+                location = locationManager.location?.coordinate
             #endif
             
-            
+            let comms = Comms()
+            comms.getTAF(location, 25) { (results, error) in
+                DispatchQueue.main.async {
+                    self.tableData = results
+                    self.tableView.reloadData()
+                }
+            }
             
         case 2:
             
-            // add the demo data for METAR
+            // add the sample data for METAR
             let mp = MetarParser()
-            if let data = mp.demoMETAR.data(using: .utf8) {
+            if let data = mp.sampleMETAR.data(using: .utf8) {
                 mp.parseDocument(data) { (metar) in
                     self.tableData = metar
                     self.tableView.reloadData()
@@ -181,9 +206,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
         case 3:
             
-            // add the demo data for TAF
+            // add the sample data for TAF
             let mp = TafParser()
-            if let data = mp.demoTAF.data(using: .utf8) {
+            if let data = mp.sampleTAF.data(using: .utf8) {
                 mp.parseDocument(data) { (taf) in
                     self.tableData = taf
                     self.tableView.reloadData()

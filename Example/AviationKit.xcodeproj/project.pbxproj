@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1234921F2280A76000A9D164 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1234921E2280A76000A9D164 /* MainViewController.swift */; };
+		126D19122292330C007C4ABD /* Supporting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126D19112292330C007C4ABD /* Supporting.swift */; };
 		12C0F3002285BB59005ECE01 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C0F2FF2285BB59005ECE01 /* DetailViewController.swift */; };
 		405880707C5B54920DAFF2C9 /* Pods_AviationKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC564BCD534CAABA7F4C64DB /* Pods_AviationKit_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		1234921E2280A76000A9D164 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		126D19112292330C007C4ABD /* Supporting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supporting.swift; sourceTree = "<group>"; };
 		12C0F2FF2285BB59005ECE01 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		29CE255DB2071B47DF0268B1 /* Pods-AviationKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AviationKit_Example.release.xcconfig"; path = "Target Support Files/Pods-AviationKit_Example/Pods-AviationKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3B24E10FB87DBB7212BB54AD /* AviationKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AviationKit.podspec; path = ../AviationKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				126D19112292330C007C4ABD /* Supporting.swift */,
 				1234921E2280A76000A9D164 /* MainViewController.swift */,
 				12C0F2FF2285BB59005ECE01 /* DetailViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -260,6 +263,7 @@
 			files = (
 				1234921F2280A76000A9D164 /* MainViewController.swift in Sources */,
 				12C0F3002285BB59005ECE01 /* DetailViewController.swift in Sources */,
+				126D19122292330C007C4ABD /* Supporting.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +410,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mikesilvers.AviationKit-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -422,6 +427,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mikesilvers.AviationKit-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
