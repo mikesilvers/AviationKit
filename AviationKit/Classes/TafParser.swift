@@ -7,8 +7,20 @@
 
 import Foundation
 
+/**
+ The *TafParser* class will parse the XML document containing TAF data
+ and return an array of TAF objects.
+ 
+ This class parses the XML document in the *parseDocument* function and
+ returns the array of TAF's in a closure.
+ */
 public class TafParser : NSObject, XMLParserDelegate, XMLCustomParserProtocol {
     
+    // MARK: - Supporting variables with sample data
+    /**
+     The variable that contains TAF XML for testing.
+     There are three individual TAF's used for testing.
+     */
     public var sampleTAF : String {
         get {
             var st = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
@@ -385,14 +397,12 @@ public class TafParser : NSObject, XMLParserDelegate, XMLCustomParserProtocol {
         
     }
 
-    // MARK: - Supporting Functions
-    
     // MARK: - Initializers
     
     /**
-     Initializes the new *MafParser*.
+     Initializes the new *TafParser*.
      
-     - Returns: A new instance of the MafParser.
+     - Returns: A new instance of the TafParser.
      
      */
     public override init() {
@@ -406,7 +416,7 @@ public class TafParser : NSObject, XMLParserDelegate, XMLCustomParserProtocol {
     /**
      The completion block for the return of parsed TAF objects.
      
-     - parameter metar: An array of TAF objects parsed from the XML documents
+     - parameter taf: An array of TAF objects parsed from the XML documents
      */
     public typealias parseCompletion = (_ taf: [Any])->()
 
@@ -428,7 +438,6 @@ public class TafParser : NSObject, XMLParserDelegate, XMLCustomParserProtocol {
         } else if let  pe = parser.parserError {
             print("Parse Error (PE1000): \(pe)")
         }
-        
     }
     
     // MARK: - XMLParserDelegate functions
@@ -533,7 +542,6 @@ public class TafParser : NSObject, XMLParserDelegate, XMLCustomParserProtocol {
             // all other elements are processed, so set the current element name
             currentElement = elementName
         }
-
     }
     
     public func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
@@ -583,13 +591,23 @@ public class TafParser : NSObject, XMLParserDelegate, XMLCustomParserProtocol {
                 currentForecast.temperature?.append(currentValues.temperature)
             }
 
-            
         case "raw_text":
             // this is the actual raw text of the METAR
             currentTaf.rawText = currentValues.string
         case "station_id":
             // the station ID for the weather station
             currentTaf.stationId = currentValues.string
+        case "remarks":
+            // remarks for the TAF
+            currentTaf.remarks = currentValues.string
+        case "change_indicator":
+            // the current change
+            currentForecast.changeIndicator = currentValues.string
+        case "wx_string":
+            currentForecast.weatherDescription = currentValues.string
+        case "not_decoded":
+            currentForecast.notDecoded = currentValues.string
+
         case "issue_time":
             // the time the observation was made (in Epoch)
             currentTaf.issueTime = currentValues.integer
@@ -602,28 +620,12 @@ public class TafParser : NSObject, XMLParserDelegate, XMLCustomParserProtocol {
         case "valid_time_to":
             // the time the TAF ends (in Epoch)
             currentTaf.toTime = currentValues.integer
-        case "latitude":
-            // latitude of the weather station
-            currentTaf.latitude = currentValues.double
-        case "longitude":
-            // longitude of the weather station
-            currentTaf.longitude = currentValues.double
-        case "remarks":
-            // remarks for the TAF
-            currentTaf.remarks = currentValues.string
-        case "elevation_m":
-            // the elevation of the weather station in meters
-            currentTaf.elevation = currentValues.double
-
         case "fcst_time_from":
             // the current time from for forecast
             currentForecast.validFromTime = currentValues.integer
         case "fcst_time_to":
             // the current time from to forecast
             currentForecast.validToTime = currentValues.integer
-        case "change_indicator":
-            // the current change
-            currentForecast.changeIndicator = currentValues.string
         case "time_becoming":
             // the current time starting
             currentForecast.timeBecoming = currentValues.integer
@@ -642,19 +644,24 @@ public class TafParser : NSObject, XMLParserDelegate, XMLCustomParserProtocol {
             currentForecast.windShearDirection = currentValues.integer
         case "wind_shear_speed_kt":
             currentForecast.windShearSpeed = currentValues.integer
+        case "vert_vis_ft":
+            currentForecast.verticalVisibility = currentValues.integer
+        case "valid_time":
+            currentTemperature.validTime = currentValues.integer
+
+        case "latitude":
+            // latitude of the weather station
+            currentTaf.latitude = currentValues.double
+        case "longitude":
+            // longitude of the weather station
+            currentTaf.longitude = currentValues.double
+        case "elevation_m":
+            // the elevation of the weather station in meters
+            currentTaf.elevation = currentValues.double
         case "visibility_statute_mi":
             currentForecast.visibility = currentValues.double
         case "altim_in_hg":
             currentForecast.altimiter = currentValues.double
-        case "vert_vis_ft":
-            currentForecast.verticalVisibility = currentValues.integer
-        case "wx_string":
-            currentForecast.weatherDescription = currentValues.string
-        case "not_decoded":
-            currentForecast.notDecoded = currentValues.string
-            
-        case "valid_time":
-            currentTemperature.validTime = currentValues.integer
         case "sfc_temp_c":
             currentTemperature.surfaceTemp = currentValues.double
         case "max_temp_c":
@@ -662,7 +669,6 @@ public class TafParser : NSObject, XMLParserDelegate, XMLCustomParserProtocol {
         case "min_temp_c":
             currentTemperature.minTemp = currentValues.double
 
-            
         default:
             // this is the default "whoops - we missed that one"
             print("Element \(elementName) NOT ended")
@@ -742,7 +748,4 @@ public class TafParser : NSObject, XMLParserDelegate, XMLCustomParserProtocol {
         // this is just a debug statement for a parser error
         print("Parse error thrown: \(parseError)")
     }
-
-
-
 }

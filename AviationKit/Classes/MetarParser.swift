@@ -251,8 +251,6 @@ public class MetarParser : NSObject, XMLParserDelegate, XMLCustomParserProtocol 
             // all other elements are processed, so set the current element name
             currentElement = elementName
         }
-        
-        
     }
     
     public func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
@@ -476,5 +474,4 @@ public class MetarParser : NSObject, XMLParserDelegate, XMLCustomParserProtocol 
         // this is just a debug statement for a parser error
         print("parse error: \(parseError)")
     }
-    
 }
