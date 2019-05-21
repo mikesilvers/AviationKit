@@ -14,6 +14,7 @@
 		127DB15C2292DCDC003B8B80 /* WeatherAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127DB15B2292DCDC003B8B80 /* WeatherAnnotation.swift */; };
 		12C0F3002285BB59005ECE01 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C0F2FF2285BB59005ECE01 /* DetailViewController.swift */; };
 		12D0E5F8229442B200DF057E /* AviationKit_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D0E5F7229442B200DF057E /* AviationKit_ExampleTests.swift */; };
+		12D0E6022294731400DF057E /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 12D0E6012294731400DF057E /* CHANGELOG.md */; };
 		405880707C5B54920DAFF2C9 /* Pods_AviationKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC564BCD534CAABA7F4C64DB /* Pods_AviationKit_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		12D0E5F5229442B100DF057E /* AviationKit_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AviationKit_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12D0E5F7229442B200DF057E /* AviationKit_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AviationKit_ExampleTests.swift; sourceTree = "<group>"; };
 		12D0E5F9229442B200DF057E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12D0E6012294731400DF057E /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		29CE255DB2071B47DF0268B1 /* Pods-AviationKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AviationKit_Example.release.xcconfig"; path = "Target Support Files/Pods-AviationKit_Example/Pods-AviationKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3B24E10FB87DBB7212BB54AD /* AviationKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AviationKit.podspec; path = ../AviationKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5D78BA3895C3CF0343452CA8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				12D0E6012294731400DF057E /* CHANGELOG.md */,
 				3B24E10FB87DBB7212BB54AD /* AviationKit.podspec */,
 				5D78BA3895C3CF0343452CA8 /* README.md */,
 				B0364FFF2F6B31A7C3D62AC2 /* LICENSE */,
@@ -280,6 +283,7 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				12D0E6022294731400DF057E /* CHANGELOG.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

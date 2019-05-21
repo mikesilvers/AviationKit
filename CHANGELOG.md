@@ -1,6 +1,10 @@
 ## Change Log: Master Branch
 The change log contains all version updates and information.
 
+### Version 1.0.1
+
+* Minor changes to the README and associated documentation.
+
 ### Version 1.0.0: Initial Release
 This is the primary release and contains the following:
 
