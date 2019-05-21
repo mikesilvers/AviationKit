@@ -52,7 +52,7 @@ AviationKit is available under the MIT license. See the LICENSE file for more in
 ## Change Log
 The change log contains all version updates and information.
 
-### Version 1.0
+### Version 1.0.0
 This is the primary release and contains the following:
 
 * [METAR](https://aviationweather.gov/dataserver):

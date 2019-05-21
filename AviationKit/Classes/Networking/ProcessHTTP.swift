@@ -1,5 +1,5 @@
 //
-//  CodableHTTP.swift
+//  ProcessHTTP.swift
 //  AviationKit
 //
 //  Created by Mike Silvers on 5/13/19.
@@ -87,17 +87,17 @@ class ProcessHTTP {
             // lets see if this is an XML
             if let xml = xmlParser, let theD = theData {
                 
+                // parse the actual document
                 xml.parseDocument(theD, completion: { (result) in
                     
+                    // and return the parsed results
                     completion(nil, result, httpResponse, theData, error)
                     
                 })
                 
             }
             
-            
-            
-            // process the data returned from the async call
+            // process the data returned from the async call (JSON, not XML)
             if (theData != nil) {
                 do {
                     // First try decoding the JSON to CodableSuccess generic type:

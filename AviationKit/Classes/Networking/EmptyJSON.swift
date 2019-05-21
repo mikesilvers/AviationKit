@@ -3,7 +3,6 @@
 //  AviationKit
 //
 //  Created by Mike Silvers on 5/13/19.
-
 //
 
 import Foundation
