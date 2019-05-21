@@ -30,11 +30,11 @@ pod 'AviationKit'
 
 | METAR By Location | TAF By Location |
 | :----- | :------ |
-| ![METAR by location](images/metar-location-1.png) | ![TAF by location](images/taf-location-1.png)
+| ![METAR by location](https://github.com/mikesilvers/AviationKit/blob/master/images/metar-location-1.png) | ![TAF by location](https://github.com/mikesilvers/AviationKit/blob/master/images/taf-location-1.png)
 
 | METAR Sample | TAF Sample |
 | :--- | :--- |
-| ![METAR Sample](images/metar-sample-1.png) | ![TAF Sample](images/taf-sample-1.png)
+| ![METAR Sample](https://github.com/mikesilvers/AviationKit/blob/master/images/metar-sample-1.png) | ![TAF Sample](https://github.com/mikesilvers/AviationKit/blob/master/images/taf-sample-1.png)
 
 ## Author
 
