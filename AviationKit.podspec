@@ -8,19 +8,16 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AviationKit'
-  s.version          = '0.0.1'
-  s.summary          = 'AviationKit provides supporting functions for aviation related apps.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.version          = '1.0.0'
+  s.summary          = 'AviationKit provides an interface with the FAA weather servers (aviationweather.gov) for aviation related apps.'
   s.description      = <<-DESC
-AviationKit orivides the following:
-* Current TAF information
-* Current METAR informnation
+  AviationKit provides an interface with the FAA weather servers (aviationweather.gov).  These services are provided using XML from the servers.  We include `Codable` data models allowing for easy encoding and decoding of the data models.  The services include:
+* TAF
+* METAR
+* AIR/SIGMET
+* G-AIRMET
+* Aircraft Reports
+* Station Info
                        DESC
 
   s.homepage         = 'https://github.com/mikesilvers/AviationKit'

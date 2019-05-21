@@ -23,9 +23,8 @@ public struct Comms {
         let gmc = GetMetarCore(radiusInMiles: radiusInMiles,
                                longitude: centerPoint.longitude,
                                latitude: centerPoint.latitude,
-                               dataSource: "metars",
-                               mostRecent: false,
-                               hoursBeforeNow: 3)
+                               hoursBeforeNow: 3,
+                               mostRecent: false)
         
         ProcessHTTP.shared.makeRequest(gmc,
                                        responseType: METAR.self,
@@ -45,9 +44,8 @@ public struct Comms {
         let gmc = GetTafCore(radiusInMiles: radiusInMiles,
                                longitude: centerPoint.longitude,
                                latitude: centerPoint.latitude,
-                               dataSource: "tafs",
-                               mostRecent: false,
-                               hoursBeforeNow: 3)
+                               hoursBeforeNow: 3,
+                               mostRecent: false)
         
         ProcessHTTP.shared.makeRequest(gmc,
                                        responseType: TAF.self,

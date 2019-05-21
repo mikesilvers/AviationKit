@@ -1,9 +1,8 @@
 //
-//  GetBusinesses.swift
+//  GetTafCore.swift
 //  AviationKit
 //
 //  Created by Mike Silvers on 5/13/19.
-
 //
 
 import Foundation
@@ -11,13 +10,17 @@ import Foundation
 /**
  Used to retrieve TAF's from a Aviation Weather API call.
  
- There are four supported parameters for this API call.  These API parameters are:
+ There are supported parameters for this API call.  These API parameters are:
  * latitude: the search starting latitude
  * longitude: the search starting longitude
- * term: the search term
- * radius: the radius (in meters) to expand the search from the starting latitude and longitude.
- 
- There are other accepted Aviation Weather API parameters, but these are the four this process is using.
+ * radialDistance: the radius (in miles) to expand the search from the starting latitude and longitude.
+ * datasource: `tafs` to retrieve TAF records
+ * mostRecent: `true` will return the one most recent record.  `false` will return all records.
+ * hoursBeforeNow: The number of hours prior to the request to check for records.  The max value is 3.
+ * requesttype: The valid requesttype is `retrieve` to retrieve records
+ * format: The valid format is `xml`.
+
+ There are other accepted Aviation Weather API parameters, but they will be integrated in the project in the future.
  */
 struct GetTafCore : NetworkingCodableProtocol {
     
@@ -90,15 +93,26 @@ struct GetTafCore : NetworkingCodableProtocol {
     /**
      Initializes the object with the required parameters
      
-     - Parameter searchTerm: The term used during the API search
+     - Parameter radiusInMiles: The radius (in miles) to retrieve records
      - Parameter longitude: The longitude for the starting point of the search
      - Parameter latitude: The latitude for the starting point of the search
-     - Parameter radius: The distance (in meters) from the search point to include
-     
-     - Returns: A new business search request
+     - Parameter hoursBeforeNow: The number of hours to return results.  The max value is 3 as only 3 hours are maintained on the current server.
+     - Parameter mostRecent: `true` returns only one record - the latest record.  `false` returns all records.
+     - Parameter dataSource: The default (and only valid value) is `tafs`.
+     - Parameter requestType: The default (and only valid value) is `retrieve`.
+     - Parameter dataFormat: The default (and only valid value) is `xml`.
+
+     - Returns: A new TAF search request
      
     */
-    init(radiusInMiles: Int=5, longitude: Double=0.0, latitude: Double=0.0, dataSource: String = "tafs", requestType: String = "retrieve", dataFormat: String = "xml",mostRecent: Bool = false, hoursBeforeNow: Int = 3) {
+    init(radiusInMiles: Int=5,
+         longitude: Double=0.0,
+         latitude: Double=0.0,
+         hoursBeforeNow: Int = 3,
+         mostRecent: Bool = false,
+         dataSource: String = "tafs",
+         requestType: String = "retrieve",
+         dataFormat: String = "xml") {
 
         // initially set to the defaults
         self.longitude      = 0.0
