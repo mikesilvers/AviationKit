@@ -9,6 +9,9 @@
 
 import Foundation
 
+/**
+ This struct contains the TAF.
+ */
 public struct TAF : Codable {
     
     // MARK: - Variables used for the METAR object

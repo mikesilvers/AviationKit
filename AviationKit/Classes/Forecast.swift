@@ -8,7 +8,7 @@
 import Foundation
 
 /**
- This struct contains the icing condition information.
+ This struct contains the forecast information.
  */
 public struct Forecast : Codable {
     
