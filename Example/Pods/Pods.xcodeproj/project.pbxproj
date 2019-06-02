@@ -21,6 +21,8 @@
 		126D190E228F1C2D007C4ABD /* GetMetarCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126D190D228F1C2D007C4ABD /* GetMetarCore.swift */; };
 		126D1910228F3BBB007C4ABD /* XMLCustomParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126D190F228F3BBB007C4ABD /* XMLCustomParserProtocol.swift */; };
 		127DB156229255A1003B8B80 /* GetTafCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127DB155229255A1003B8B80 /* GetTafCore.swift */; };
+		128E84D722A3088700A6CC1D /* GetReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E84D622A3088700A6CC1D /* GetReport.swift */; };
+		128E84DA22A308C800A6CC1D /* Supporting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E84D922A308C800A6CC1D /* Supporting.swift */; };
 		129B7E87228497EA00C1B22D /* TurbulenceCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B7E84228497E900C1B22D /* TurbulenceCondition.swift */; };
 		129B7E88228497EA00C1B22D /* IcingCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B7E85228497EA00C1B22D /* IcingCondition.swift */; };
 		129B7E89228497EA00C1B22D /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B7E86228497EA00C1B22D /* Temperature.swift */; };
@@ -80,10 +82,10 @@
 		0294C872FBA45BED12432A9873D0CBA8 /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstants.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
 		06ABFEDC0B0F96988968E8327C26CFDE /* IQKeyboardManagerSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManagerSwift-prefix.pch"; sourceTree = "<group>"; };
 		0D6202BCDBC1EF58B267AAC38F4B4C2C /* IQKeyboardManagerSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IQKeyboardManagerSwift-Info.plist"; sourceTree = "<group>"; };
-		1234923B2281C93C00A9D164 /* MetarParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MetarParser.swift; path = AviationKit/Classes/MetarParser.swift; sourceTree = "<group>"; };
-		1234923D2281CD7200A9D164 /* TafParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TafParser.swift; path = AviationKit/Classes/TafParser.swift; sourceTree = "<group>"; };
-		123492432281EEEC00A9D164 /* SkyCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SkyCondition.swift; path = AviationKit/Classes/SkyCondition.swift; sourceTree = "<group>"; };
-		126D18FB228DB896007C4ABD /* Ext.Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Ext.Codable.swift; path = AviationKit/Classes/Ext.Codable.swift; sourceTree = "<group>"; };
+		1234923B2281C93C00A9D164 /* MetarParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetarParser.swift; sourceTree = "<group>"; };
+		1234923D2281CD7200A9D164 /* TafParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TafParser.swift; sourceTree = "<group>"; };
+		123492432281EEEC00A9D164 /* SkyCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyCondition.swift; sourceTree = "<group>"; };
+		126D18FB228DB896007C4ABD /* Ext.Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ext.Codable.swift; sourceTree = "<group>"; };
 		126D18FE228F0221007C4ABD /* NetworkingCodableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingCodableProtocol.swift; sourceTree = "<group>"; };
 		126D18FF228F0221007C4ABD /* EmptyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyJSON.swift; sourceTree = "<group>"; };
 		126D1900228F0221007C4ABD /* ProcessHTTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessHTTP.swift; sourceTree = "<group>"; };
@@ -93,14 +95,16 @@
 		126D190D228F1C2D007C4ABD /* GetMetarCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMetarCore.swift; sourceTree = "<group>"; };
 		126D190F228F3BBB007C4ABD /* XMLCustomParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLCustomParserProtocol.swift; sourceTree = "<group>"; };
 		127DB155229255A1003B8B80 /* GetTafCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTafCore.swift; sourceTree = "<group>"; };
-		129B7E84228497E900C1B22D /* TurbulenceCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TurbulenceCondition.swift; path = AviationKit/Classes/TurbulenceCondition.swift; sourceTree = "<group>"; };
-		129B7E85228497EA00C1B22D /* IcingCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IcingCondition.swift; path = AviationKit/Classes/IcingCondition.swift; sourceTree = "<group>"; };
-		129B7E86228497EA00C1B22D /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Temperature.swift; path = AviationKit/Classes/Temperature.swift; sourceTree = "<group>"; };
-		129B7E8A22849A9A00C1B22D /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Forecast.swift; path = AviationKit/Classes/Forecast.swift; sourceTree = "<group>"; };
+		128E84D622A3088700A6CC1D /* GetReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReport.swift; sourceTree = "<group>"; };
+		128E84D922A308C800A6CC1D /* Supporting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supporting.swift; sourceTree = "<group>"; };
+		129B7E84228497E900C1B22D /* TurbulenceCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurbulenceCondition.swift; sourceTree = "<group>"; };
+		129B7E85228497EA00C1B22D /* IcingCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IcingCondition.swift; sourceTree = "<group>"; };
+		129B7E86228497EA00C1B22D /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		129B7E8A22849A9A00C1B22D /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		17D5053F2A5215D7472A947EDE5B61B6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		1A8BC998D2B89A05AEEBE8B9DA642BAE /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardReturnKeyHandler.swift; path = IQKeyboardManagerSwift/IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
 		1B864BFE95FAE118C4C3A52725C9B261 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		210D4EDECC767CAE990A21520AC76265 /* METAR.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = METAR.swift; path = AviationKit/Classes/METAR.swift; sourceTree = "<group>"; };
+		210D4EDECC767CAE990A21520AC76265 /* METAR.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = METAR.swift; sourceTree = "<group>"; };
 		249CA9C0501AB9B0615D6BF305559F07 /* Pods-AviationKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AviationKit_Example-Info.plist"; sourceTree = "<group>"; };
 		3076BA458F5430E34FEF0E31BF6AB881 /* AviationKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AviationKit.xcconfig; sourceTree = "<group>"; };
 		30C5248F3F8F5DD6FF2489BCA891824D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -134,7 +138,7 @@
 		AF2FD815DD25DCAB1DDD14801D1EA169 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B5166EE569A2A563FAF50232761E081B /* Pods-AviationKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AviationKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B52E2517C711AF6D227A9CC155D98419 /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstantsInternal.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
-		BDDD0DC0452B8870018FEB5C7901F537 /* Comms.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Comms.swift; path = AviationKit/Classes/Comms.swift; sourceTree = "<group>"; };
+		BDDD0DC0452B8870018FEB5C7901F537 /* Comms.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Comms.swift; sourceTree = "<group>"; };
 		C01D4FB6141AFA6B18421C9E9890F370 /* Pods_AviationKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AviationKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE2D9C1C947F1D271D5D71B985E0303 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUITextFieldView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
 		DB77BFFBE0469D7CC0342D30A8C236DC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -143,7 +147,7 @@
 		E5004C70C729A7A34E88F7A42158876F /* Pods-AviationKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AviationKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		EA342D075CC268914BAD358420480AD6 /* AviationKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AviationKit-prefix.pch"; sourceTree = "<group>"; };
 		F3E9DF635FB01E2C2FD627DD26ADCBD3 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQNSArray+Sort.swift"; path = "IQKeyboardManagerSwift/Categories/IQNSArray+Sort.swift"; sourceTree = "<group>"; };
-		F5936300EC0ACBD925A37804A230398E /* TAF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TAF.swift; path = AviationKit/Classes/TAF.swift; sourceTree = "<group>"; };
+		F5936300EC0ACBD925A37804A230398E /* TAF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TAF.swift; sourceTree = "<group>"; };
 		F9CBBA914B82B97B6A8FAC4BA9BFF279 /* IQUIViewController+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIViewController+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIViewController+Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +192,7 @@
 				126D1901228F0221007C4ABD /* HTTPMethod.swift */,
 				126D18FE228F0221007C4ABD /* NetworkingCodableProtocol.swift */,
 				126D190F228F3BBB007C4ABD /* XMLCustomParserProtocol.swift */,
+				BDDD0DC0452B8870018FEB5C7901F537 /* Comms.swift */,
 			);
 			name = Networking;
 			path = AviationKit/Classes/Networking;
@@ -198,9 +203,53 @@
 			children = (
 				127DB155229255A1003B8B80 /* GetTafCore.swift */,
 				126D190D228F1C2D007C4ABD /* GetMetarCore.swift */,
+				128E84D622A3088700A6CC1D /* GetReport.swift */,
 			);
 			name = Requests;
 			path = AviationKit/Classes/Requests;
+			sourceTree = "<group>";
+		};
+		128E84D822A3089F00A6CC1D /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				126D18FB228DB896007C4ABD /* Ext.Codable.swift */,
+				128E84D922A308C800A6CC1D /* Supporting.swift */,
+			);
+			name = Supporting;
+			path = AviationKit/Classes/Supporting;
+			sourceTree = "<group>";
+		};
+		128E84DB22A40E2600A6CC1D /* Codable Objects */ = {
+			isa = PBXGroup;
+			children = (
+				128E84DD22A40EC000A6CC1D /* Codable Support */,
+				F5936300EC0ACBD925A37804A230398E /* TAF.swift */,
+				210D4EDECC767CAE990A21520AC76265 /* METAR.swift */,
+			);
+			name = "Codable Objects";
+			path = "AviationKit/Classes/Codable Objects";
+			sourceTree = "<group>";
+		};
+		128E84DC22A40E8100A6CC1D /* XML Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				1234923D2281CD7200A9D164 /* TafParser.swift */,
+				1234923B2281C93C00A9D164 /* MetarParser.swift */,
+			);
+			name = "XML Parsers";
+			path = "AviationKit/Classes/XML Parsers";
+			sourceTree = "<group>";
+		};
+		128E84DD22A40EC000A6CC1D /* Codable Support */ = {
+			isa = PBXGroup;
+			children = (
+				129B7E8A22849A9A00C1B22D /* Forecast.swift */,
+				129B7E86228497EA00C1B22D /* Temperature.swift */,
+				123492432281EEEC00A9D164 /* SkyCondition.swift */,
+				129B7E85228497EA00C1B22D /* IcingCondition.swift */,
+				129B7E84228497E900C1B22D /* TurbulenceCondition.swift */,
+			);
+			path = "Codable Support";
 			sourceTree = "<group>";
 		};
 		323D7334E767305AAF6A489C1C82DC34 /* Pods */ = {
@@ -214,19 +263,11 @@
 		3385823FF1715A4117490DEB938D133D /* AviationKit */ = {
 			isa = PBXGroup;
 			children = (
+				128E84DC22A40E8100A6CC1D /* XML Parsers */,
+				128E84DB22A40E2600A6CC1D /* Codable Objects */,
+				128E84D822A3089F00A6CC1D /* Supporting */,
 				126D190C228F1C2D007C4ABD /* Requests */,
 				126D18FD228F0221007C4ABD /* Networking */,
-				BDDD0DC0452B8870018FEB5C7901F537 /* Comms.swift */,
-				129B7E8A22849A9A00C1B22D /* Forecast.swift */,
-				129B7E86228497EA00C1B22D /* Temperature.swift */,
-				123492432281EEEC00A9D164 /* SkyCondition.swift */,
-				129B7E85228497EA00C1B22D /* IcingCondition.swift */,
-				129B7E84228497E900C1B22D /* TurbulenceCondition.swift */,
-				F5936300EC0ACBD925A37804A230398E /* TAF.swift */,
-				210D4EDECC767CAE990A21520AC76265 /* METAR.swift */,
-				1234923D2281CD7200A9D164 /* TafParser.swift */,
-				1234923B2281C93C00A9D164 /* MetarParser.swift */,
-				126D18FB228DB896007C4ABD /* Ext.Codable.swift */,
 				3CA68E371AFC12388D22BDCEBF2F22F9 /* Pod */,
 				3BF20E5CF3BC85E087652464B867CEF8 /* Support Files */,
 			);
@@ -581,6 +622,8 @@
 				129B7E8B22849A9A00C1B22D /* Forecast.swift in Sources */,
 				126D1907228F0221007C4ABD /* HTTPMethod.swift in Sources */,
 				127DB156229255A1003B8B80 /* GetTafCore.swift in Sources */,
+				128E84D722A3088700A6CC1D /* GetReport.swift in Sources */,
+				128E84DA22A308C800A6CC1D /* Supporting.swift in Sources */,
 				126D1906228F0221007C4ABD /* ProcessHTTP.swift in Sources */,
 				1234923C2281C93C00A9D164 /* MetarParser.swift in Sources */,
 				126D1904228F0221007C4ABD /* NetworkingCodableProtocol.swift in Sources */,
