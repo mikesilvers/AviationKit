@@ -18,6 +18,32 @@ public struct Comms {
     //MARK: - initializers
     public init () {}
     
+    //MARK: - Generic Get Functions
+    static func getMetarReport(_ params: MetarParams) -> ([METAR]?,Error?) {
+        
+        return (nil,nil)
+    }
+
+    static func getTafReport(_ params: TafParams) -> ([TAF]?,Error?) {
+        
+        return (nil,nil)
+    }
+
+    static func getAircraftReport(_ params: AircraftReportParams) -> ([AIRCRAFT]?,Error?) {
+        
+        return (nil,nil)
+    }
+
+    static func getAirSigmetReport(_ params: AirSigmetParams) -> ([AIRSIGMET]?,Error?) {
+        
+        return (nil,nil)
+    }
+
+    static func getStationReport(_ params: StationInfoParams) -> ([STATION]?,Error?) {
+        
+        return (nil,nil)
+    }
+
     //MARK: - Get Functions
     /**
      Retrieves the METAR reports.
@@ -30,6 +56,8 @@ public struct Comms {
      - Parameter completion (Error): The optional error object in the completion object.
      
     */
+    
+    @available(*, deprecated, message: "Use Reports.getReports(struct) with the MetarParams structure for the report.")
     public func getMETAR(_ centerPoint: CLLocationCoordinate2D,
                          _ radiusInMiles: Int = 10,
                          completion: @escaping (_ metar: [METAR], Error?)->()) {
@@ -62,8 +90,8 @@ public struct Comms {
      - Parameter radiusInMiles: The radius from the centerpoint for the search
      - Parameter completion (metar): The array of TAF's returned by the completion block.
      - Parameter completion (Error): The optional error object in the completion object.
-     
      */
+    @available(*, deprecated, message: "Use Reports.getReports(struct) with the TafParams structure for the report.")
     public func getTAF(_ centerPoint: CLLocationCoordinate2D,
                        _ radiusInMiles: Int = 10,
                        completion: @escaping (_ metar: [TAF], Error?)->()) {

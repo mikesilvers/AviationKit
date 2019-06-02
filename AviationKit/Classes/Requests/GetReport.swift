@@ -7,21 +7,33 @@
 
 import Foundation
 
-func getReport<T>(_ reportStruct : T) {
+public struct Reports {
     
-    switch reportStruct {
-    case is MetarParams:
-        print("METAR passed")
-    case is TafParams:
-        print("TAF passed")
-    case is AircraftReports:
-        print("AircraftReport passed - NOT IMPLEMENTED")
-    case is AIRSIGMET:
-        print("AIRSIGMET passed - NOT IMPLEMENTED")
-    case is StationInfo:
-        print("Station passed - NOT IMPLEMENTED")
-    default:
-        print("Incorrect item passed")
+    @discardableResult
+    public static func getReport<T>(_ reportStruct : T) -> ([T]?, Error?) {
+    
+        switch reportStruct {
+        case is MetarParams:
+            print("METAR passed")
+            return Comms.getMetarReport(reportStruct as! MetarParams) as! ([T]?, Error?)
+        case is TafParams:
+            print("TAF passed")
+            return Comms.getTafReport(reportStruct as! TafParams) as! ([T]?, Error?)
+        case is AircraftReportParams:
+            print("AircraftReport passed - NOT IMPLEMENTED")
+            let error = AircraftError.notImplemented
+            return (nil,error)
+        case is AirSigmetParams:
+            print("AIRSIGMET passed - NOT IMPLEMENTED")
+            let error = AirSigmetError.notImplemented
+            return (nil,error)
+        case is StationInfoParams:
+            print("Station passed - NOT IMPLEMENTED")
+            let error = StationError.notImplemented
+            return (nil,error)
+        default:
+            print("Incorrect item passed")
+            return (nil,nil)
+        }
     }
-    
 }

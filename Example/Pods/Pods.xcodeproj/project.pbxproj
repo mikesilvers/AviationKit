@@ -23,6 +23,11 @@
 		127DB156229255A1003B8B80 /* GetTafCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127DB155229255A1003B8B80 /* GetTafCore.swift */; };
 		128E84D722A3088700A6CC1D /* GetReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E84D622A3088700A6CC1D /* GetReport.swift */; };
 		128E84DA22A308C800A6CC1D /* Supporting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E84D922A308C800A6CC1D /* Supporting.swift */; };
+		128E84DF22A4163300A6CC1D /* AIRCRAFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E84DE22A4163300A6CC1D /* AIRCRAFT.swift */; };
+		128E84E122A4167A00A6CC1D /* AIRSIGMET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E84E022A4167A00A6CC1D /* AIRSIGMET.swift */; };
+		128E84E322A4174900A6CC1D /* STATION.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E84E222A4174900A6CC1D /* STATION.swift */; };
+		128E84E522A41EF900A6CC1D /* ReportError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E84E422A41EF900A6CC1D /* ReportError.swift */; };
+		128E84E722A4287900A6CC1D /* Ext.ReportError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E84E622A4287900A6CC1D /* Ext.ReportError.swift */; };
 		129B7E87228497EA00C1B22D /* TurbulenceCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B7E84228497E900C1B22D /* TurbulenceCondition.swift */; };
 		129B7E88228497EA00C1B22D /* IcingCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B7E85228497EA00C1B22D /* IcingCondition.swift */; };
 		129B7E89228497EA00C1B22D /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B7E86228497EA00C1B22D /* Temperature.swift */; };
@@ -97,6 +102,11 @@
 		127DB155229255A1003B8B80 /* GetTafCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTafCore.swift; sourceTree = "<group>"; };
 		128E84D622A3088700A6CC1D /* GetReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReport.swift; sourceTree = "<group>"; };
 		128E84D922A308C800A6CC1D /* Supporting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supporting.swift; sourceTree = "<group>"; };
+		128E84DE22A4163300A6CC1D /* AIRCRAFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIRCRAFT.swift; sourceTree = "<group>"; };
+		128E84E022A4167A00A6CC1D /* AIRSIGMET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIRSIGMET.swift; sourceTree = "<group>"; };
+		128E84E222A4174900A6CC1D /* STATION.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STATION.swift; sourceTree = "<group>"; };
+		128E84E422A41EF900A6CC1D /* ReportError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportError.swift; sourceTree = "<group>"; };
+		128E84E622A4287900A6CC1D /* Ext.ReportError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ext.ReportError.swift; sourceTree = "<group>"; };
 		129B7E84228497E900C1B22D /* TurbulenceCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurbulenceCondition.swift; sourceTree = "<group>"; };
 		129B7E85228497EA00C1B22D /* IcingCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IcingCondition.swift; sourceTree = "<group>"; };
 		129B7E86228497EA00C1B22D /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
@@ -214,6 +224,8 @@
 			children = (
 				126D18FB228DB896007C4ABD /* Ext.Codable.swift */,
 				128E84D922A308C800A6CC1D /* Supporting.swift */,
+				128E84E422A41EF900A6CC1D /* ReportError.swift */,
+				128E84E622A4287900A6CC1D /* Ext.ReportError.swift */,
 			);
 			name = Supporting;
 			path = AviationKit/Classes/Supporting;
@@ -225,6 +237,9 @@
 				128E84DD22A40EC000A6CC1D /* Codable Support */,
 				F5936300EC0ACBD925A37804A230398E /* TAF.swift */,
 				210D4EDECC767CAE990A21520AC76265 /* METAR.swift */,
+				128E84DE22A4163300A6CC1D /* AIRCRAFT.swift */,
+				128E84E022A4167A00A6CC1D /* AIRSIGMET.swift */,
+				128E84E222A4174900A6CC1D /* STATION.swift */,
 			);
 			name = "Codable Objects";
 			path = "AviationKit/Classes/Codable Objects";
@@ -604,11 +619,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				128E84E122A4167A00A6CC1D /* AIRSIGMET.swift in Sources */,
 				126D1908228F0221007C4ABD /* OffsetLimit.swift in Sources */,
 				1234923E2281CD7200A9D164 /* TafParser.swift in Sources */,
 				126D190E228F1C2D007C4ABD /* GetMetarCore.swift in Sources */,
 				126D18FC228DB896007C4ABD /* Ext.Codable.swift in Sources */,
 				39745ADE01F64DA4332C4CC1027955D1 /* AviationKit-dummy.m in Sources */,
+				128E84DF22A4163300A6CC1D /* AIRCRAFT.swift in Sources */,
 				126D1910228F3BBB007C4ABD /* XMLCustomParserProtocol.swift in Sources */,
 				7F65FEED8135FED5918E94C2AC38F631 /* Comms.swift in Sources */,
 				129B7E88228497EA00C1B22D /* IcingCondition.swift in Sources */,
@@ -616,8 +633,11 @@
 				126D190B228F1ACA007C4ABD /* Extensions.swift in Sources */,
 				CE15768F05ECB156358AB4EE9F72E42F /* METAR.swift in Sources */,
 				129B7E87228497EA00C1B22D /* TurbulenceCondition.swift in Sources */,
+				128E84E522A41EF900A6CC1D /* ReportError.swift in Sources */,
 				123492442281EEEC00A9D164 /* SkyCondition.swift in Sources */,
 				E5C95CAA7A870B88C5133FE76A039EDB /* TAF.swift in Sources */,
+				128E84E722A4287900A6CC1D /* Ext.ReportError.swift in Sources */,
+				128E84E322A4174900A6CC1D /* STATION.swift in Sources */,
 				129B7E89228497EA00C1B22D /* Temperature.swift in Sources */,
 				129B7E8B22849A9A00C1B22D /* Forecast.swift in Sources */,
 				126D1907228F0221007C4ABD /* HTTPMethod.swift in Sources */,
