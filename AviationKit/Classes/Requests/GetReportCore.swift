@@ -27,19 +27,19 @@ public struct ReportCore : NetworkingCodableProtocol {
             }
         case is TafParams:
             if let rs = reportStruct as? TafParams {
-                
+
             }
         case is AircraftReportParams:
             if let rs = reportStruct as? AircraftReportParams {
-                
+                completion(nil, AircraftError.notImplemented as Error)
             }
         case is AirSigmetParams:
             if let rs = reportStruct as? AirSigmetParams {
-                
+                completion(nil, AirSigmetError.notImplemented as Error)
             }
         case is StationInfoParams:
             if let rs = reportStruct as? StationInfoParams {
-                
+                completion(nil, StationError.notImplemented as Error)
             }
         default:
             completion(nil,  (GeneralError.self as! Error))
