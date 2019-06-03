@@ -16,33 +16,47 @@ public struct ReportCore : NetworkingCodableProtocol {
     var headers: [String : String]?
     
     //MARK: - initializers
-    public init () {}
+    public init() {  }
     
-    static func getReport<T>(_ reportStruct : T, completion: @escaping (_ results: [T]?, Error?)->()) {
+    mutating func getReport<T>(_ reportStruct : T) {
         
+        let cr = CoreRequirements()
+        
+        // setup the core params across all reports
+        urlParams = [:]
+        urlParams?["requesttype"] = cr.requestType
+        urlParams?["format"] = cr.dataFormat
+
         switch reportStruct {
+            
         case is MetarParams:
             if let rs = reportStruct as? MetarParams {
-                
+                self.setupMetar(rs)
             }
+            
         case is TafParams:
             if let rs = reportStruct as? TafParams {
-
+                self.setupTaf(rs)
             }
+            
         case is AircraftReportParams:
             if let rs = reportStruct as? AircraftReportParams {
-                completion(nil, AircraftError.notImplemented as Error)
+                self.setupAircraft(rs)
             }
+            
         case is AirSigmetParams:
             if let rs = reportStruct as? AirSigmetParams {
-                completion(nil, AirSigmetError.notImplemented as Error)
+                self.setupAirSigmet(rs)
             }
+            
         case is StationInfoParams:
             if let rs = reportStruct as? StationInfoParams {
-                completion(nil, StationError.notImplemented as Error)
+                self.setupStation(rs)
             }
+            
         default:
-            completion(nil,  (GeneralError.self as! Error))
+            print("This should not happen here.  Passed in \(T.self)")
         }
     }
+    
 }

@@ -31,7 +31,7 @@ public struct Comms {
      
     */
     
-    @available(*, deprecated, message: "Use Reports.getReports(struct) with the MetarParams structure for the report.")
+    @available(*, deprecated, message: "Use Reports.getReport(MetarParams) to generate the report.")
     public func getMETAR(_ centerPoint: CLLocationCoordinate2D,
                          _ radiusInMiles: Int = 10,
                          completion: @escaping (_ metar: [METAR], Error?)->()) {
@@ -65,7 +65,7 @@ public struct Comms {
      - Parameter completion (metar): The array of TAF's returned by the completion block.
      - Parameter completion (Error): The optional error object in the completion object.
      */
-    @available(*, deprecated, message: "Use Reports.getReports(struct) with the TafParams structure for the report.")
+//    @available(*, deprecated, message: "Use Reports.getReport(TafParams) to generate the report.")
     public func getTAF(_ centerPoint: CLLocationCoordinate2D,
                        _ radiusInMiles: Int = 10,
                        completion: @escaping (_ metar: [TAF], Error?)->()) {

@@ -22,12 +22,20 @@ public struct Reports {
         switch params {
         case is MetarParams:
             
-            // process the METARS
-            self.getMetarReport(params as! MetarParams, { (results, error) in
-                // pass the completion on....
-                completion(results as? [T],error)
-            })
+            var gmc = ReportCore()
+                gmc.getReport(params)
             
+            // perform the actual get request using the networking functionality
+            ProcessHTTP.shared.makeRequest(gmc,
+                                           responseType: METAR.self,
+                                           requestBody: EmptyJSON(),
+                                           xmlParser: MetarParser(), nil) { (nil, result, response, data, error) in
+                                            
+                                            if let res = result as? [T] {
+                                                completion(res, error)
+                                            }
+            }
+
         default:
             completion(nil, nil)
         }
