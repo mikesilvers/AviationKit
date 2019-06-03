@@ -70,3 +70,14 @@ extension StationError {
 
 }
 
+extension GeneralError {
+    
+    public var errorDescription: String? {
+        switch self {
+        case .generalError :
+            return NSLocalizedString("There was a general error", comment: "")
+        }
+    }
+    
+}
+

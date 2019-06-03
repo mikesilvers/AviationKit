@@ -21,13 +21,19 @@
 		126D190E228F1C2D007C4ABD /* GetMetarCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126D190D228F1C2D007C4ABD /* GetMetarCore.swift */; };
 		126D1910228F3BBB007C4ABD /* XMLCustomParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126D190F228F3BBB007C4ABD /* XMLCustomParserProtocol.swift */; };
 		127DB156229255A1003B8B80 /* GetTafCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127DB155229255A1003B8B80 /* GetTafCore.swift */; };
-		128E84D722A3088700A6CC1D /* GetReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E84D622A3088700A6CC1D /* GetReport.swift */; };
+		128E84D722A3088700A6CC1D /* GetReportCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E84D622A3088700A6CC1D /* GetReportCore.swift */; };
 		128E84DA22A308C800A6CC1D /* Supporting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E84D922A308C800A6CC1D /* Supporting.swift */; };
 		128E84DF22A4163300A6CC1D /* AIRCRAFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E84DE22A4163300A6CC1D /* AIRCRAFT.swift */; };
 		128E84E122A4167A00A6CC1D /* AIRSIGMET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E84E022A4167A00A6CC1D /* AIRSIGMET.swift */; };
 		128E84E322A4174900A6CC1D /* STATION.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E84E222A4174900A6CC1D /* STATION.swift */; };
 		128E84E522A41EF900A6CC1D /* ReportError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E84E422A41EF900A6CC1D /* ReportError.swift */; };
 		128E84E722A4287900A6CC1D /* Ext.ReportError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E84E622A4287900A6CC1D /* Ext.ReportError.swift */; };
+		128E84F422A583C500A6CC1D /* Reports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E84F322A583C500A6CC1D /* Reports.swift */; };
+		128E84FB22A584FE00A6CC1D /* Ext.Reports.Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E84F622A584FE00A6CC1D /* Ext.Reports.Station.swift */; };
+		128E84FC22A584FE00A6CC1D /* Ext.Reports.Taf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E84F722A584FE00A6CC1D /* Ext.Reports.Taf.swift */; };
+		128E84FD22A584FE00A6CC1D /* Ext.Reports.AirSigMet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E84F822A584FE00A6CC1D /* Ext.Reports.AirSigMet.swift */; };
+		128E84FE22A584FE00A6CC1D /* Ext.Reports.Metar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E84F922A584FE00A6CC1D /* Ext.Reports.Metar.swift */; };
+		128E84FF22A584FE00A6CC1D /* Ext.Reports.Aircraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E84FA22A584FE00A6CC1D /* Ext.Reports.Aircraft.swift */; };
 		129B7E87228497EA00C1B22D /* TurbulenceCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B7E84228497E900C1B22D /* TurbulenceCondition.swift */; };
 		129B7E88228497EA00C1B22D /* IcingCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B7E85228497EA00C1B22D /* IcingCondition.swift */; };
 		129B7E89228497EA00C1B22D /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B7E86228497EA00C1B22D /* Temperature.swift */; };
@@ -100,13 +106,19 @@
 		126D190D228F1C2D007C4ABD /* GetMetarCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMetarCore.swift; sourceTree = "<group>"; };
 		126D190F228F3BBB007C4ABD /* XMLCustomParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLCustomParserProtocol.swift; sourceTree = "<group>"; };
 		127DB155229255A1003B8B80 /* GetTafCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTafCore.swift; sourceTree = "<group>"; };
-		128E84D622A3088700A6CC1D /* GetReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReport.swift; sourceTree = "<group>"; };
+		128E84D622A3088700A6CC1D /* GetReportCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReportCore.swift; sourceTree = "<group>"; };
 		128E84D922A308C800A6CC1D /* Supporting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supporting.swift; sourceTree = "<group>"; };
 		128E84DE22A4163300A6CC1D /* AIRCRAFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIRCRAFT.swift; sourceTree = "<group>"; };
 		128E84E022A4167A00A6CC1D /* AIRSIGMET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIRSIGMET.swift; sourceTree = "<group>"; };
 		128E84E222A4174900A6CC1D /* STATION.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STATION.swift; sourceTree = "<group>"; };
 		128E84E422A41EF900A6CC1D /* ReportError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportError.swift; sourceTree = "<group>"; };
 		128E84E622A4287900A6CC1D /* Ext.ReportError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ext.ReportError.swift; sourceTree = "<group>"; };
+		128E84F322A583C500A6CC1D /* Reports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reports.swift; sourceTree = "<group>"; };
+		128E84F622A584FE00A6CC1D /* Ext.Reports.Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext.Reports.Station.swift; sourceTree = "<group>"; };
+		128E84F722A584FE00A6CC1D /* Ext.Reports.Taf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext.Reports.Taf.swift; sourceTree = "<group>"; };
+		128E84F822A584FE00A6CC1D /* Ext.Reports.AirSigMet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext.Reports.AirSigMet.swift; sourceTree = "<group>"; };
+		128E84F922A584FE00A6CC1D /* Ext.Reports.Metar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext.Reports.Metar.swift; sourceTree = "<group>"; };
+		128E84FA22A584FE00A6CC1D /* Ext.Reports.Aircraft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext.Reports.Aircraft.swift; sourceTree = "<group>"; };
 		129B7E84228497E900C1B22D /* TurbulenceCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurbulenceCondition.swift; sourceTree = "<group>"; };
 		129B7E85228497EA00C1B22D /* IcingCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IcingCondition.swift; sourceTree = "<group>"; };
 		129B7E86228497EA00C1B22D /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
@@ -195,6 +207,9 @@
 		126D18FD228F0221007C4ABD /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				128E84F322A583C500A6CC1D /* Reports.swift */,
+				128E84F522A584FE00A6CC1D /* Ext.Reports */,
+				BDDD0DC0452B8870018FEB5C7901F537 /* Comms.swift */,
 				126D1900228F0221007C4ABD /* ProcessHTTP.swift */,
 				126D190A228F1ACA007C4ABD /* Extensions.swift */,
 				126D1902228F0221007C4ABD /* OffsetLimit.swift */,
@@ -202,7 +217,6 @@
 				126D1901228F0221007C4ABD /* HTTPMethod.swift */,
 				126D18FE228F0221007C4ABD /* NetworkingCodableProtocol.swift */,
 				126D190F228F3BBB007C4ABD /* XMLCustomParserProtocol.swift */,
-				BDDD0DC0452B8870018FEB5C7901F537 /* Comms.swift */,
 			);
 			name = Networking;
 			path = AviationKit/Classes/Networking;
@@ -213,7 +227,7 @@
 			children = (
 				127DB155229255A1003B8B80 /* GetTafCore.swift */,
 				126D190D228F1C2D007C4ABD /* GetMetarCore.swift */,
-				128E84D622A3088700A6CC1D /* GetReport.swift */,
+				128E84D622A3088700A6CC1D /* GetReportCore.swift */,
 			);
 			name = Requests;
 			path = AviationKit/Classes/Requests;
@@ -222,10 +236,10 @@
 		128E84D822A3089F00A6CC1D /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
-				126D18FB228DB896007C4ABD /* Ext.Codable.swift */,
 				128E84D922A308C800A6CC1D /* Supporting.swift */,
 				128E84E422A41EF900A6CC1D /* ReportError.swift */,
 				128E84E622A4287900A6CC1D /* Ext.ReportError.swift */,
+				126D18FB228DB896007C4ABD /* Ext.Codable.swift */,
 			);
 			name = Supporting;
 			path = AviationKit/Classes/Supporting;
@@ -265,6 +279,18 @@
 				129B7E84228497E900C1B22D /* TurbulenceCondition.swift */,
 			);
 			path = "Codable Support";
+			sourceTree = "<group>";
+		};
+		128E84F522A584FE00A6CC1D /* Ext.Reports */ = {
+			isa = PBXGroup;
+			children = (
+				128E84F622A584FE00A6CC1D /* Ext.Reports.Station.swift */,
+				128E84F722A584FE00A6CC1D /* Ext.Reports.Taf.swift */,
+				128E84F822A584FE00A6CC1D /* Ext.Reports.AirSigMet.swift */,
+				128E84F922A584FE00A6CC1D /* Ext.Reports.Metar.swift */,
+				128E84FA22A584FE00A6CC1D /* Ext.Reports.Aircraft.swift */,
+			);
+			path = Ext.Reports;
 			sourceTree = "<group>";
 		};
 		323D7334E767305AAF6A489C1C82DC34 /* Pods */ = {
@@ -620,13 +646,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				128E84E122A4167A00A6CC1D /* AIRSIGMET.swift in Sources */,
+				128E84FF22A584FE00A6CC1D /* Ext.Reports.Aircraft.swift in Sources */,
 				126D1908228F0221007C4ABD /* OffsetLimit.swift in Sources */,
+				128E84FC22A584FE00A6CC1D /* Ext.Reports.Taf.swift in Sources */,
 				1234923E2281CD7200A9D164 /* TafParser.swift in Sources */,
 				126D190E228F1C2D007C4ABD /* GetMetarCore.swift in Sources */,
 				126D18FC228DB896007C4ABD /* Ext.Codable.swift in Sources */,
 				39745ADE01F64DA4332C4CC1027955D1 /* AviationKit-dummy.m in Sources */,
 				128E84DF22A4163300A6CC1D /* AIRCRAFT.swift in Sources */,
 				126D1910228F3BBB007C4ABD /* XMLCustomParserProtocol.swift in Sources */,
+				128E84FE22A584FE00A6CC1D /* Ext.Reports.Metar.swift in Sources */,
+				128E84F422A583C500A6CC1D /* Reports.swift in Sources */,
 				7F65FEED8135FED5918E94C2AC38F631 /* Comms.swift in Sources */,
 				129B7E88228497EA00C1B22D /* IcingCondition.swift in Sources */,
 				126D1905228F0221007C4ABD /* EmptyJSON.swift in Sources */,
@@ -640,12 +670,14 @@
 				128E84E322A4174900A6CC1D /* STATION.swift in Sources */,
 				129B7E89228497EA00C1B22D /* Temperature.swift in Sources */,
 				129B7E8B22849A9A00C1B22D /* Forecast.swift in Sources */,
+				128E84FD22A584FE00A6CC1D /* Ext.Reports.AirSigMet.swift in Sources */,
 				126D1907228F0221007C4ABD /* HTTPMethod.swift in Sources */,
 				127DB156229255A1003B8B80 /* GetTafCore.swift in Sources */,
-				128E84D722A3088700A6CC1D /* GetReport.swift in Sources */,
+				128E84D722A3088700A6CC1D /* GetReportCore.swift in Sources */,
 				128E84DA22A308C800A6CC1D /* Supporting.swift in Sources */,
 				126D1906228F0221007C4ABD /* ProcessHTTP.swift in Sources */,
 				1234923C2281C93C00A9D164 /* MetarParser.swift in Sources */,
+				128E84FB22A584FE00A6CC1D /* Ext.Reports.Station.swift in Sources */,
 				126D1904228F0221007C4ABD /* NetworkingCodableProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

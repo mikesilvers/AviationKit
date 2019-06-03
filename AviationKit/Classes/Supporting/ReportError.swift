@@ -31,3 +31,7 @@ public enum StationError: Swift.Error {
     case incorrectParameters(message: String)
     case notImplemented
 }
+
+public enum GeneralError: Swift.Error {
+    case generalError
+}

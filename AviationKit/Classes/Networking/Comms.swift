@@ -11,39 +11,13 @@ import CoreLocation
 public struct Comms {
     
     struct url {
-        static let metar = "https://aviationweather.gov/adds/dataserver_current/httpparam"
-        static let taf   = "https://aviationweather.gov/adds/dataserver_current/httpparam"
+        static let taf     = "https://aviationweather.gov/adds/dataserver_current/httpparam"
+        static let metar   = "https://aviationweather.gov/adds/dataserver_current/httpparam"
     }
     
     //MARK: - initializers
     public init () {}
     
-    //MARK: - Generic Get Functions
-    static func getMetarReport(_ params: MetarParams) -> ([METAR]?,Error?) {
-        
-        return (nil,nil)
-    }
-
-    static func getTafReport(_ params: TafParams) -> ([TAF]?,Error?) {
-        
-        return (nil,nil)
-    }
-
-    static func getAircraftReport(_ params: AircraftReportParams) -> ([AIRCRAFT]?,Error?) {
-        
-        return (nil,nil)
-    }
-
-    static func getAirSigmetReport(_ params: AirSigmetParams) -> ([AIRSIGMET]?,Error?) {
-        
-        return (nil,nil)
-    }
-
-    static func getStationReport(_ params: StationInfoParams) -> ([STATION]?,Error?) {
-        
-        return (nil,nil)
-    }
-
     //MARK: - Get Functions
     /**
      Retrieves the METAR reports.
