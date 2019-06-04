@@ -1,6 +1,12 @@
 ## Change Log: Master Branch
 The change log contains all version updates and information.
 
+### Version 1.1.0
+
+* Reworked the report generation process.  The core processes were changed to be more generic and be driven by the use of parameter structures.  It will make the addition of new reports easier and more direct.  
+* Added all parameters for the METAR reports (and have them using the new report process).  The parameters are described on the [FAA weather website](https://www.aviationweather.gov/dataserver/example?datatype=metar).
+* Updated the documentation to show the usage of the new processes.
+
 ### Version 1.0.1
 
 * Minor changes to the README and associated documentation.

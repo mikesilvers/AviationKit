@@ -36,6 +36,8 @@ pod 'AviationKit'
 | :--- | :--- |
 | ![METAR Sample](https://github.com/mikesilvers/AviationKit/blob/master/images/metar-sample-1.png) | ![TAF Sample](https://github.com/mikesilvers/AviationKit/blob/master/images/taf-sample-1.png)
 
+## Usage
+
 ## Author
 
 Mike Silvers, mikesilvers@gmail.com
