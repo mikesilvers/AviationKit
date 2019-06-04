@@ -6,3 +6,8 @@ target 'AviationKit_Example' do
   pod 'IQKeyboardManagerSwift'
 
 end
+
+target 'AviationKit_Tests' do
+  inherit! :search_paths
+
+end

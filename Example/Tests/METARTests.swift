@@ -1,14 +1,15 @@
 //
-//  AviationKit_ExampleTests.swift
-//  AviationKit_ExampleTests
+//  METARTests.swift
+//  AviationKit_Tests
 //
-//  Created by Mike Silvers on 5/21/19.
+//  Created by Mike Silvers on 6/4/19.
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
 import XCTest
+//import AviationKit
 
-class AviationKit_ExampleTests: XCTestCase {
+class METARTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -22,6 +23,9 @@ class AviationKit_ExampleTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         XCTAssert(true)
+        
+        
+        
     }
 
     func testPerformanceExample() {

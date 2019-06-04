@@ -22,13 +22,13 @@
          </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
-            buildForRunning = "YES"
+            buildForRunning = "NO"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
+               BlueprintIdentifier = "128E852522A6DE1D00A6CC1D"
                BuildableName = "AviationKit_Tests.xctest"
                BlueprintName = "AviationKit_Tests"
                ReferencedContainer = "container:AviationKit.xcodeproj">
@@ -46,9 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "12D0E5F4229442B100DF057E"
-               BuildableName = "AviationKit_ExampleTests.xctest"
-               BlueprintName = "AviationKit_ExampleTests"
+               BlueprintIdentifier = "128E852522A6DE1D00A6CC1D"
+               BuildableName = "AviationKit_Tests.xctest"
+               BlueprintName = "AviationKit_Tests"
                ReferencedContainer = "container:AviationKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
