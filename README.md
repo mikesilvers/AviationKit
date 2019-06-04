@@ -37,6 +37,55 @@ pod 'AviationKit'
 | ![METAR Sample](https://github.com/mikesilvers/AviationKit/blob/master/images/metar-sample-1.png) | ![TAF Sample](https://github.com/mikesilvers/AviationKit/blob/master/images/taf-sample-1.png)
 
 ## Usage
+The reports are created using the base report function and the proper report parameter structure.  The core reporting function is:
+
+```
+let reports = Reports()
+reports.getReport(parmStructure) { (results, error) in 
+    // code here 
+}
+```
+### METAR
+The METAR report is generated using the `MetarParams` structure.  There are no parameter checking processes.  
+
+You are responsible for setting the correct parameters as described in the [FAA weather site](https://www.aviationweather.gov/dataserver/example?datatype=metar).  
+
+If you set incorrect parameters, the error is returned from the API endpoint in the `error` variable of the closure.
+
+METAR example:
+
+```
+var metarParms = MetarParams()
+metarParms.areaConstraint = AreaConstraints(Coordinates(location.longitude, location.latitude), milesRadius)
+
+let reports = Reports()
+reports.getReport(metarParms) { (results, error) in
+    
+    if let res = results, let resultsarray = res as? [METAR] {
+    	// process the METAR array
+    } else {
+    	// process the error
+    }
+    
+}           
+```
+
+### TAF
+The TAF reports are still using the older functions.  You use the `Comms` object ro get the TAF information.  There are only a few options at this time - more updates to come!
+
+TAF example: 
+
+```
+let location = CLLocationCoordinate2D(latitude: 38.920898, longitude:-77.031372)
+let milesRadius = 10
+
+let comms = Comms()
+comms.getTAF(location, milesRadius) { (results, error) in
+
+	// process the results array of [TAF] objects
+	
+}
+```
 
 ## Author
 

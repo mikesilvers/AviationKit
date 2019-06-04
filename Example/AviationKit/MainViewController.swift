@@ -176,11 +176,14 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             let reports = Reports()
             reports.getReport(metarParms) { (results, error) in
-                let results = results as! [METAR]
-                DispatchQueue.main.async {
-                    self.tableData = results.sorted { ($0.observationTime ?? 0) > ($1.observationTime ?? 0) }
-                    self.tableView.reloadData()
-                    self.dropPins()
+                if let res = results, let resultsarray = res as? [METAR] {
+                    DispatchQueue.main.async {
+                        self.tableData = resultsarray.sorted { ($0.observationTime ?? 0) > ($1.observationTime ?? 0) }
+                        self.tableView.reloadData()
+                        self.dropPins()
+                    }
+                } else {
+                    // prcess the error
                 }
 
             }
