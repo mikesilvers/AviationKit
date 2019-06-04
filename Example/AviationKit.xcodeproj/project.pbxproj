@@ -14,7 +14,6 @@
 		127DB15C2292DCDC003B8B80 /* WeatherAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127DB15B2292DCDC003B8B80 /* WeatherAnnotation.swift */; };
 		128E852922A6DE1D00A6CC1D /* AviationKit_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E852822A6DE1D00A6CC1D /* AviationKit_Tests.swift */; };
 		128E853122A6DFAE00A6CC1D /* METARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E853022A6DFAE00A6CC1D /* METARTests.swift */; };
-		128E853322A6E3A100A6CC1D /* AviationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128E853222A6E3A100A6CC1D /* AviationKit.framework */; };
 		12C0F3002285BB59005ECE01 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C0F2FF2285BB59005ECE01 /* DetailViewController.swift */; };
 		341A0006B35387B49C9DB183 /* Pods_AviationKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6910D5682D9FA616D5C3BE89 /* Pods_AviationKit_Tests.framework */; };
 		510BB95C87042DA3B3E785A1 /* Pods_AviationKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3404ACA8F6C0F8C1FBB10E0 /* Pods_AviationKit_Example.framework */; };
@@ -70,7 +69,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				128E853322A6E3A100A6CC1D /* AviationKit.framework in Frameworks */,
 				341A0006B35387B49C9DB183 /* Pods_AviationKit_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
