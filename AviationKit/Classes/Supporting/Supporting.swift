@@ -20,12 +20,14 @@ public struct StartEnd : Codable {
 
 public struct StationConstraints : Codable {
     var stationString            : [String]?
-    var mostRecentForEachStation : Bool?
+    var mostRecentForEachStation : MostRecentForEachStationConstraints?
 }
 
-public struct AreaConstraints : Codable {
-    var coordinates   : Coordinates?
-    var radiusInMiles : Int?   = 5
+public enum MostRecentForEachStationConstraints : String, Codable {
+    case constraint = "constraint"
+    case postfilter = "postfilter"
+    case `false`    = "false"
+    case `true`     = "true"
 }
 
 public struct Coordinates : Codable {
@@ -33,9 +35,21 @@ public struct Coordinates : Codable {
     var latitude  : Double = 0.0
 }
 
-struct hold {
-    var mostRecent : Bool = false
+public struct CoordinatePath : Codable {
+    var leg                   : Int = 1
+    var endPoint              : Coordinates?
+    var startPoint            : Coordinates?
+    var stationString         : String?
 }
+
+public struct FlightPath  : Codable {
+    var maxDistanceInMiles   : Double
+    var flightPathCoordinates:[CoordinatePath]
+}
+
+//struct hold {
+//    var mostRecent : Bool = false
+//}
 
 struct CoreRequirements : Codable {
     let requestType : String = "retrieve"
@@ -43,16 +57,19 @@ struct CoreRequirements : Codable {
 }
 
 // MARK: - Report structures
-public struct MetarParams : Codable {
-    let dataSource         : String  = "metars"
-    var timeConstraints    : TimeConstraints
-    var stationConstraints : StationConstraints?
-    var mostRecent         : Bool?
-    var flightPath         : Bool?
-    var fields             : [String]?
+public struct MetarParams  : Codable {
+    let dataSource            : String  = "metars"
+    var timeConstraints       : TimeConstraints
+    var stationConstraints    : StationConstraints?
+    var mostRecent            : Bool?
+    var flightPath            : FlightPath?
+    var fields                : [String]?
+    var areaConstraint        : AreaConstraints?
+    var coordinateRectangle   : CoordinateRectangle?
+    var minimumDegreeDistance : Double?
 }
 
-public struct TafParams : Codable {
+struct TafParams : Codable {
     let dataSource : String  = "tafs"
 }
 
@@ -67,5 +84,17 @@ struct AirSigmetParams : Codable {
 struct StationInfoParams : Codable {
     let dataSource : String  = ""
 }
+
+// area constraints
+public struct AreaConstraints : Codable {
+    var coordinates   : Coordinates
+    var radiusInMiles : Int   = 5
+}
+
+public struct CoordinateRectangle : Codable {
+    var minimum : Coordinates
+    var maximum : Coordinates
+}
+
 
 
