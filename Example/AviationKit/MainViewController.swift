@@ -171,13 +171,18 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
             #endif
             
-            let comms = Comms()
-            comms.getMETAR(location, milesRadius) { (results, error) in
+            var metarParms = MetarParams()
+            metarParms.areaConstraint = AreaConstraints(Coordinates(location.longitude, location.latitude), milesRadius)
+            
+            let reports = Reports()
+            reports.getReport(metarParms) { (results, error) in
+                let results = results as! [METAR]
                 DispatchQueue.main.async {
                     self.tableData = results.sorted { ($0.observationTime ?? 0) > ($1.observationTime ?? 0) }
                     self.tableView.reloadData()
                     self.dropPins()
                 }
+
             }
             
         case 1:
@@ -214,6 +219,13 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
         case 2:
             
+            let initialLocation = CLLocation(latitude: 39.809734, longitude: -98.555618)
+            let regionRadius: CLLocationDistance = 4828032   // 3000 miles
+            let coordinateRegion = MKCoordinateRegion(center: initialLocation.coordinate ,
+                                                      latitudinalMeters: regionRadius,
+                                                      longitudinalMeters: regionRadius)
+            mapView.setRegion(coordinateRegion, animated: true)
+                
             tableData = []
 
             // add the sample data for METAR
@@ -227,7 +239,14 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
             
         case 3:
-            
+
+            let initialLocation = CLLocation(latitude: 39.809734, longitude: -98.555618)
+            let regionRadius: CLLocationDistance = 4828032     // 3000 miles
+            let coordinateRegion = MKCoordinateRegion(center: initialLocation.coordinate ,
+                                                      latitudinalMeters: regionRadius,
+                                                      longitudinalMeters: regionRadius)
+            mapView.setRegion(coordinateRegion, animated: true)
+
             tableData = []
 
             // add the sample data for TAF

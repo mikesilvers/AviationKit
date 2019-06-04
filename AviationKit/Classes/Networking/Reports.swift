@@ -17,7 +17,7 @@ public struct Reports {
     public init () {}
     
     //MARK: - Generic Get Functions
-    public func getReport<T>(_ params: T,_ completion: @escaping (_ result: [T]?, Error?)->()) {
+    public func getReport<T>(_ params: T,_ completion: @escaping (_ result: [Any]?, Error?)->()) {
         
         switch params {
         case is MetarParams:
@@ -31,7 +31,7 @@ public struct Reports {
                                            requestBody: EmptyJSON(),
                                            xmlParser: MetarParser(), nil) { (nil, result, response, data, error) in
                                             
-                                            if let res = result as? [T] {
+                                            if let res = result as? [METAR] {
                                                 completion(res, error)
                                             }
             }
