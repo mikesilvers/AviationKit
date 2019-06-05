@@ -26,6 +26,8 @@ class METARTests: XCTestCase {
             let components = URLComponents(url: theurl, resolvingAgainstBaseURL: false),
             let queryItems = components.queryItems {
             
+                print("Checking the URL: \(theurl)")
+
                 // break apart the query parms to make sure they are valid
                 for pc in queryItems {
                 
@@ -51,14 +53,51 @@ class METARTests: XCTestCase {
             XCTAssert(false, "The URL query params were not parsed")
         }
 
-        // test for
+        // test for a single station
         metarparms = MetarParams()
+        metarparms.stationConstraints = StationConstraints(["KDCA"], nil)
         
         urlstring = reports.getReport(metarparms, true) { (result, error) in }
         if let urlstring = urlstring,
             let theurl = URL(string: urlstring),
             let components = URLComponents(url: theurl, resolvingAgainstBaseURL: false),
             let queryItems = components.queryItems {
+            
+                print("Checking the URL: \(theurl)")
+            
+                // break apart the query parms to make sure they are valid
+                for pc in queryItems {
+                
+                    // test the query parameters
+                    switch pc.name {
+                    
+                    // base items on all requests
+                    case "hoursBeforeNow", "requesttype", "dataSource", "format":
+                        XCTAssert(true)
+
+                    // test the remainder of the items....
+                    case "stationString":
+                        XCTAssertTrue(pc.value == "KDCA")
+
+                    default:
+                        XCTAssert(false, "The name \(pc.name) with value \(pc.value ?? "NO_VALUE") was not found in the test")
+                    }
+                }
+            
+        } else {
+            XCTAssert(false, "The URL query params were not parsed")
+        }
+
+        // test for multiple stations
+        metarparms.stationConstraints = StationConstraints(["KDCA","KIAD"], nil)
+        
+        urlstring = reports.getReport(metarparms, true) { (result, error) in }
+        if let urlstring = urlstring,
+            let theurl = URL(string: urlstring),
+            let components = URLComponents(url: theurl, resolvingAgainstBaseURL: false),
+            let queryItems = components.queryItems {
+            
+            print("Checking the URL: \(theurl)")
             
             // break apart the query parms to make sure they are valid
             for pc in queryItems {
@@ -69,10 +108,10 @@ class METARTests: XCTestCase {
                 // base items on all requests
                 case "hoursBeforeNow", "requesttype", "dataSource", "format":
                     XCTAssert(true)
-
-                // test the remainder of the items....
-                
                     
+                // test the remainder of the items....
+                case "stationString":
+                    XCTAssertTrue(pc.value == "KDCA,KIAD")
                     
                 default:
                     XCTAssert(false, "The name \(pc.name) with value \(pc.value ?? "NO_VALUE") was not found in the test")
