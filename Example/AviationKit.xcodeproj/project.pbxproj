@@ -203,7 +203,6 @@
 				128E852222A6DE1D00A6CC1D /* Sources */,
 				128E852322A6DE1D00A6CC1D /* Frameworks */,
 				128E852422A6DE1D00A6CC1D /* Resources */,
-				8CFC3A81088EBCEDD97A1C25 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -301,24 +300,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8CFC3A81088EBCEDD97A1C25 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AviationKit_Tests/Pods-AviationKit_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AviationKit_Tests/Pods-AviationKit_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8F2D84538B710DAE814B492C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
