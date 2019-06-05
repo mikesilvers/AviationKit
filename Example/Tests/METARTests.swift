@@ -7,7 +7,7 @@
 //
 
 import XCTest
-//import AviationKit
+import AviationKit
 
 class METARTests: XCTestCase {
 
