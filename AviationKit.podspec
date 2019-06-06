@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AviationKit'
-  s.version          = '1.1.0'
+  s.version          = '1.1.1'
   s.summary          = 'AviationKit provides an interface with the FAA weather servers (aviationweather.gov) for aviation related apps.'
   s.description      = <<-DESC
   AviationKit provides an interface with the FAA weather servers (aviationweather.gov).  These services are provided using XML from the servers.  We include `Codable` data models allowing for easy encoding and decoding of the data models.  The services include:
