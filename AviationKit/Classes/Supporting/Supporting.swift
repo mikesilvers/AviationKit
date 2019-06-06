@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Supporting Structures
 public struct TimeConstraints : Codable {
-    public var hoursBeforeNow : Int?
+    public var hoursBeforeNow : Double?
     public var startEnd       : StartEnd?
     
     public init() {
@@ -17,7 +17,7 @@ public struct TimeConstraints : Codable {
         self.hoursBeforeNow = nil
     }
     
-    public init(_ hoursBefore: Int?,_ startEnd: StartEnd?) {
+    public init(_ hoursBefore: Double?,_ startEnd: StartEnd?) {
         self.hoursBeforeNow = hoursBefore
         self.startEnd = startEnd
     }
@@ -82,7 +82,7 @@ public struct CoordinatePath : Codable {
         self.stationString = nil
     }
     
-    public init(_ leg: Int, _ startPoint: Coordinates?, _ endPoint: Coordinates?, _ stationString: String?) {
+    public init(_ leg: Int = 1, _ startPoint: Coordinates?, _ endPoint: Coordinates?, _ stationString: String?) {
         self.leg           = leg
         self.startPoint    = startPoint
         self.endPoint      = endPoint

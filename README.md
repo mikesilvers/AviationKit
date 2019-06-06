@@ -69,9 +69,33 @@ reports.getReport(metarParms) { (results, error) in
     
 }           
 ```
+#### Options
+This list of valid options was taken from the [FAA website](https://www.aviationweather.gov/dataserver/example?datatype=metar) on 6/4/19.  Please check [the site](https://www.aviationweather.gov/dataserver/example?datatype=metar) and let me know if you are receiving errors while following this guide.  Please review the FAA site to determine the correct options to retrieve the data you would like.  I will not repeat the constraints here as they may change.  This chart is describing the FAA variables to the AviationKit variables.
+
+| FAA Variable | Variable | Variable Type | Notes |
+|----------|--------------|:-------------:|-------|
+| stationString | StationConstraints.stationString | [String] | An array of four letter [airport station abbreviations](https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/dafd/search/advanced/) assigned by the FAA.  This allows for multiple entries in one request. |
+| startTime | StartEnd.startTime | Int | start and end times in seconds since January 1, 1970 |
+| endTime | StartEnd.endTime | Int | start and end times in seconds since January 1, 1970 |
+| hoursBeforeNow | TimeConstraints.hoursBeforeNow | Double | Any positive floating point number.  Based on the METAR observation time |
+| mostRecent | MetarParams.mostRecent | Bool | Defaults to `false`.  Optional value. |
+| mostRecentForEachStation | StationConstraints.mostRecentForEachStation | enum | There are 4 values in the `MostRecentForEachStationConstraints` enum.  The default is `false`. |
+| minLat | CoordinateRectangle.minimum.latitude | Double | Part of the rectangle bounds |
+| maxLat | CoordinateRectangle.maximum.latitude | Double | Part of the rectangle bounds |
+| minLon | CoordinateRectangle.minimum.longitude | Double | Part of the rectangle bounds |
+| maxLon | CoordinateRectangle.maximum.longitude | Double | Part of the rectangle bounds |
+| radialDistance | AreaConstraints.radiusInMiles | Int | Radius in statute miles |
+| flightPath (radial distance) | flightPathCoordinates.maxDistanceInMiles | Double | The number of statute miles from the path |
+| flightPath (Coordinates array) | flightPathCoordinates | [CoordinatePath] | See the CoordinatePath fir definition. |
+|  | CoordinatePath.leg | Int | The leg for this coordinate path - default 1 |
+|  | CoordinatePath.endPoint | Coordinates | The end point for this path (optional) |
+|  | CoordinatePath.startPoint | Coordinates | The starting point for this path (optional) |
+|  | CoordinatePath.stationString | String | An airport station rather than coordnates for this path |
+| minDegreeDistance | MetarParams.minimumDegreeDistance | Double | 0 < any value <90.  The degree distance is the distance (based on longitude and latitude) between stations. The larger the value of minDegreeDistance, the less dense the results.  Duplicate stations are filtered and the most recent of duplicate stations is reported. |
+| fields | MetarParams.fields | [String] | The fields you would like to return after processing.  Refer to [FAA docs](https://www.aviationweather.gov/dataserver/fields?datatype=metar) for the fields available.  |
 
 ### TAF
-The TAF reports are still using the older functions.  You use the `Comms` object ro get the TAF information.  There are only a few options at this time - more updates to come!
+The TAF reports are still using the older functions.  You use the `Comms` object to get the TAF information.  There are only a few options at this time - more updates to come!
 
 TAF example: 
 
