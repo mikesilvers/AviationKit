@@ -1,6 +1,9 @@
 ## Change Log: Master Branch
 The change log contains all version updates and information.
 
+### Version 1.1.2
+* Added more documentation of the classes.  Don't worry - we will keep updating documentation!
+
 ### Version 1.1.1
 * Changed the `TimeConstraints.hoursBeforeNow` from an `Int` to a `Double` to allow for more precise time.
 * Added more documentation - with tables, words and other fun stuff!

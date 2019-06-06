@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Structures  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Section/Structures" class="dashAnchor"></a>
+    <a title="Structures  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">AviationKit Docs</a> (10% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">AviationKit Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Structures  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/MetarParser.html">MetarParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TafParser.html">TafParser</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/AirSigmetError.html">AirSigmetError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AircraftError.html">AircraftError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/GeneralError.html">GeneralError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/MetarError.html">MetarError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/MostRecentForEachStationConstraints.html">MostRecentForEachStationConstraints</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/StationError.html">StationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/TafError.html">TafError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Decodable.html">Decodable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/AIRCRAFT.html">AIRCRAFT</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AIRSIGMET.html">AIRSIGMET</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AreaConstraints.html">AreaConstraints</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Comms.html">Comms</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CoordinatePath.html">CoordinatePath</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CoordinateRectangle.html">CoordinateRectangle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Coordinates.html">Coordinates</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightPath.html">FlightPath</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Forecast.html">Forecast</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/IcingCondition.html">IcingCondition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/METAR.html">METAR</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MetarParams.html">MetarParams</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ReportCore.html">ReportCore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Reports.html">Reports</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/STATION.html">STATION</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/SkyCondition.html">SkyCondition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/StartEnd.html">StartEnd</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/StationConstraints.html">StationConstraints</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/TAF.html">TAF</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Temperature.html">Temperature</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/TimeConstraints.html">TimeConstraints</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/TurbulenceCondition.html">TurbulenceCondition</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Structures</h1>
+            <p>The following structures are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit8AIRCRAFTV"></a>
+                    <a name="//apple_ref/swift/Struct/AIRCRAFT" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit8AIRCRAFTV">AIRCRAFT</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AIRCRAFT.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AIRCRAFT</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit9AIRSIGMETV"></a>
+                    <a name="//apple_ref/swift/Struct/AIRSIGMET" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit9AIRSIGMETV">AIRSIGMET</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AIRSIGMET.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AIRSIGMET</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit8ForecastV"></a>
+                    <a name="//apple_ref/swift/Struct/Forecast" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit8ForecastV">Forecast</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This struct contains the forecast information.</p>
+
+                        <a href="Structs/Forecast.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Forecast</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit14IcingConditionV"></a>
+                    <a name="//apple_ref/swift/Struct/IcingCondition" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit14IcingConditionV">IcingCondition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This struct contains the icing condition information.</p>
+
+                        <a href="Structs/IcingCondition.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">IcingCondition</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit12SkyConditionV"></a>
+                    <a name="//apple_ref/swift/Struct/SkyCondition" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit12SkyConditionV">SkyCondition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This struct contains the sky condition information.</p>
+
+                        <a href="Structs/SkyCondition.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SkyCondition</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit11TemperatureV"></a>
+                    <a name="//apple_ref/swift/Struct/Temperature" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit11TemperatureV">Temperature</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This struct contains the temperature information.</p>
+
+                        <a href="Structs/Temperature.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Temperature</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit19TurbulenceConditionV"></a>
+                    <a name="//apple_ref/swift/Struct/TurbulenceCondition" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit19TurbulenceConditionV">TurbulenceCondition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This struct contains the turbulence condition information.</p>
+
+                        <a href="Structs/TurbulenceCondition.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TurbulenceCondition</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit5METARV"></a>
+                    <a name="//apple_ref/swift/Struct/METAR" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit5METARV">METAR</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The struct <em>METAR</em> represents a METAR object.
+This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
+
+                        <a href="Structs/METAR.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">METAR</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit7STATIONV"></a>
+                    <a name="//apple_ref/swift/Struct/STATION" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit7STATIONV">STATION</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/STATION.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">STATION</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit3TAFV"></a>
+                    <a name="//apple_ref/swift/Struct/TAF" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit3TAFV">TAF</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This struct contains the TAF.</p>
+
+                        <a href="Structs/TAF.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TAF</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit5CommsV"></a>
+                    <a name="//apple_ref/swift/Struct/Comms" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit5CommsV">Comms</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/Comms.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Comms</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit7ReportsV"></a>
+                    <a name="//apple_ref/swift/Struct/Reports" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit7ReportsV">Reports</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/Reports.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Reports</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit10ReportCoreV"></a>
+                    <a name="//apple_ref/swift/Struct/ReportCore" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit10ReportCoreV">ReportCore</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/ReportCore.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ReportCore</span> <span class="p">:</span> <span class="kt">NetworkingCodableProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Supporting%20Structures"></a>
+                <a name="//apple_ref/swift/Section/Supporting Structures" class="dashAnchor"></a>
+                <a href="#/Supporting%20Structures">
+                  <h3 class="section-name">Supporting Structures</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit15TimeConstraintsV"></a>
+                    <a name="//apple_ref/swift/Struct/TimeConstraints" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit15TimeConstraintsV">TimeConstraints</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/TimeConstraints.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TimeConstraints</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit8StartEndV"></a>
+                    <a name="//apple_ref/swift/Struct/StartEnd" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit8StartEndV">StartEnd</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/StartEnd.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StartEnd</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit18StationConstraintsV"></a>
+                    <a name="//apple_ref/swift/Struct/StationConstraints" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit18StationConstraintsV">StationConstraints</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/StationConstraints.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StationConstraints</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit11CoordinatesV"></a>
+                    <a name="//apple_ref/swift/Struct/Coordinates" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit11CoordinatesV">Coordinates</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/Coordinates.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Coordinates</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit14CoordinatePathV"></a>
+                    <a name="//apple_ref/swift/Struct/CoordinatePath" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit14CoordinatePathV">CoordinatePath</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/CoordinatePath.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CoordinatePath</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit10FlightPathV"></a>
+                    <a name="//apple_ref/swift/Struct/FlightPath" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit10FlightPathV">FlightPath</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/FlightPath.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FlightPath</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit15AreaConstraintsV"></a>
+                    <a name="//apple_ref/swift/Struct/AreaConstraints" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit15AreaConstraintsV">AreaConstraints</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AreaConstraints.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AreaConstraints</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit19CoordinateRectangleV"></a>
+                    <a name="//apple_ref/swift/Struct/CoordinateRectangle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit19CoordinateRectangleV">CoordinateRectangle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/CoordinateRectangle.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CoordinateRectangle</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Report%20structures"></a>
+                <a name="//apple_ref/swift/Section/Report structures" class="dashAnchor"></a>
+                <a href="#/Report%20structures">
+                  <h3 class="section-name">Report structures</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit11MetarParamsV"></a>
+                    <a name="//apple_ref/swift/Struct/MetarParams" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit11MetarParamsV">MetarParams</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/MetarParams.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MetarParams</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://github.com/mikesilvers/AviationKit" target="_blank" rel="external">Mike Silvers</a>. All rights reserved. (Last updated: 2019-06-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

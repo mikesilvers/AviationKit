@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AviationKit  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="AviationKit  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">AviationKit Docs</a> (10% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">AviationKit Reference</a>
+        <img id="carat" src="img/carat.png" />
+        AviationKit  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/MetarParser.html">MetarParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TafParser.html">TafParser</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/AirSigmetError.html">AirSigmetError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AircraftError.html">AircraftError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/GeneralError.html">GeneralError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/MetarError.html">MetarError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/MostRecentForEachStationConstraints.html">MostRecentForEachStationConstraints</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/StationError.html">StationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/TafError.html">TafError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Decodable.html">Decodable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/AIRCRAFT.html">AIRCRAFT</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AIRSIGMET.html">AIRSIGMET</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AreaConstraints.html">AreaConstraints</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Comms.html">Comms</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CoordinatePath.html">CoordinatePath</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CoordinateRectangle.html">CoordinateRectangle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Coordinates.html">Coordinates</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightPath.html">FlightPath</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Forecast.html">Forecast</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/IcingCondition.html">IcingCondition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/METAR.html">METAR</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MetarParams.html">MetarParams</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ReportCore.html">ReportCore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Reports.html">Reports</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/STATION.html">STATION</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/SkyCondition.html">SkyCondition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/StartEnd.html">StartEnd</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/StationConstraints.html">StationConstraints</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/TAF.html">TAF</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Temperature.html">Temperature</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/TimeConstraints.html">TimeConstraints</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/TurbulenceCondition.html">TurbulenceCondition</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='aviationkit' class='heading'>AviationKit</h1>
+
+<p><a href="https://travis-ci.org/mikesilvers/AviationKit"><img src="https://img.shields.io/travis/mikesilvers/AviationKit.svg?style=flat" alt="CI Status"></a>
+<a href="https://cocoapods.org/pods/AviationKit"><img src="https://img.shields.io/cocoapods/v/AviationKit.svg?style=flat" alt="Version"></a>
+<a href="https://cocoapods.org/pods/AviationKit"><img src="https://img.shields.io/cocoapods/l/AviationKit.svg?style=flat" alt="License"></a>
+<a href="https://cocoapods.org/pods/AviationKit"><img src="https://img.shields.io/cocoapods/p/AviationKit.svg?style=flat" alt="Platform"></a></p>
+<h2 id='overview' class='heading'>Overview</h2>
+
+<p>The FAA provides weather reports and additional notices on a XML based server format.  The FAA <a href="https://www.aviationweather.gov/dataserver">weather server</a>   provides <a href="https://www.aviationweather.gov/metar">METAR&rsquo;s</a>, <a href="https://aviationweather.gov/static/help/taf-decode.php">TAF&rsquo;s</a>, <a href="https://www.aviationweather.gov/airep/help">AIREP</a>, <a href="https://aviationweather.gov/sigmet/help">AIR/SIGMET&rsquo;s</a>, <a href="https://aviationweather.gov/gairmet/help">G-AIRMET&rsquo;s</a>, and STATION INFO.</p>
+
+<p>The initial release of the library contains basic METAR and TAF information based on location.  As the library grows, additional functionality and additional reports will be added.</p>
+<h2 id='example' class='heading'>Example</h2>
+
+<p>The pod contains a fully functional example app.  To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.</p>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<p>In order to keep the library up to date, we will develop one OS level behind the current iOS version.  For example, as iOS current version is 12, we will develop this project at iOS version 11.  When iOS version 13 is released, this project will update to iOS 12 and the back level.  </p>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>AviationKit is available through <a href="https://cocoapods.org">CocoaPods</a>. To install
+it, simply add the following line to your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'AviationKit'</span>
+</code></pre>
+<h2 id='screenshots' class='heading'>Screenshots</h2>
+
+<table><thead>
+<tr>
+<th style="text-align: left">METAR By Location</th>
+<th style="text-align: left">TAF By Location</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><img src="https://github.com/mikesilvers/AviationKit/blob/master/images/metar-location-1.png" alt="METAR by location"></td>
+<td style="text-align: left"><img src="https://github.com/mikesilvers/AviationKit/blob/master/images/taf-location-1.png" alt="TAF by location"></td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th style="text-align: left">METAR Sample</th>
+<th style="text-align: left">TAF Sample</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><img src="https://github.com/mikesilvers/AviationKit/blob/master/images/metar-sample-1.png" alt="METAR Sample"></td>
+<td style="text-align: left"><img src="https://github.com/mikesilvers/AviationKit/blob/master/images/taf-sample-1.png" alt="TAF Sample"></td>
+</tr>
+</tbody></table>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>The reports are created using the base report function and the proper report parameter structure.  The core reporting function is:</p>
+<pre class="highlight plaintext"><code>let reports = Reports()
+reports.getReport(parmStructure) { (results, error) in 
+    // code here 
+}
+</code></pre>
+<h3 id='metar' class='heading'>METAR</h3>
+
+<p>The METAR report is generated using the <code><a href="Structs/MetarParams.html">MetarParams</a></code> structure.  There are no parameter checking processes.  </p>
+
+<p>You are responsible for setting the correct parameters as described in the <a href="https://www.aviationweather.gov/dataserver/example?datatype=metar">FAA weather site</a>.  </p>
+
+<p>If you set incorrect parameters, the error is returned from the API endpoint in the <code>error</code> variable of the closure.</p>
+
+<p>METAR example:</p>
+<pre class="highlight plaintext"><code>var metarParms = MetarParams()
+metarParms.areaConstraint = AreaConstraints(Coordinates(location.longitude, location.latitude), milesRadius)
+
+let reports = Reports()
+reports.getReport(metarParms) { (results, error) in
+
+    if let res = results, let resultsarray = res as? [METAR] {
+        // process the METAR array
+    } else {
+        // process the error
+    }
+
+}           
+</code></pre>
+<h4 id='options' class='heading'>Options</h4>
+
+<p>This list of valid options was taken from the <a href="https://www.aviationweather.gov/dataserver/example?datatype=metar">FAA website</a> on 6/4/19.  Please check <a href="https://www.aviationweather.gov/dataserver/example?datatype=metar">the site</a> and let me know if you are receiving errors while following this guide.  Please review the FAA site to determine the correct options to retrieve the data you would like.  I will not repeat the constraints here as they may change.  This chart is describing the FAA variables to the AviationKit variables.</p>
+
+<table><thead>
+<tr>
+<th>FAA Variable</th>
+<th>Variable</th>
+<th style="text-align: center">Variable Type</th>
+<th>Notes</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>stationString</td>
+<td>StationConstraints.stationString</td>
+<td style="text-align: center">[String]</td>
+<td>An array of four letter <a href="https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/dafd/search/advanced/">airport station abbreviations</a> assigned by the FAA.  This allows for multiple entries in one request.</td>
+</tr>
+<tr>
+<td>startTime</td>
+<td>StartEnd.startTime</td>
+<td style="text-align: center">Int</td>
+<td>start and end times in seconds since January 1, 1970</td>
+</tr>
+<tr>
+<td>endTime</td>
+<td>StartEnd.endTime</td>
+<td style="text-align: center">Int</td>
+<td>start and end times in seconds since January 1, 1970</td>
+</tr>
+<tr>
+<td>hoursBeforeNow</td>
+<td>TimeConstraints.hoursBeforeNow</td>
+<td style="text-align: center">Double</td>
+<td>Any positive floating point number.  Based on the METAR observation time</td>
+</tr>
+<tr>
+<td>mostRecent</td>
+<td>MetarParams.mostRecent</td>
+<td style="text-align: center">Bool</td>
+<td>Defaults to <code>false</code>.  Optional value.</td>
+</tr>
+<tr>
+<td>mostRecentForEachStation</td>
+<td>StationConstraints.mostRecentForEachStation</td>
+<td style="text-align: center">enum</td>
+<td>There are 4 values in the <code><a href="Enums/MostRecentForEachStationConstraints.html">MostRecentForEachStationConstraints</a></code> enum.  The default is <code>false</code>.</td>
+</tr>
+<tr>
+<td>minLat</td>
+<td>CoordinateRectangle.minimum.latitude</td>
+<td style="text-align: center">Double</td>
+<td>Part of the rectangle bounds</td>
+</tr>
+<tr>
+<td>maxLat</td>
+<td>CoordinateRectangle.maximum.latitude</td>
+<td style="text-align: center">Double</td>
+<td>Part of the rectangle bounds</td>
+</tr>
+<tr>
+<td>minLon</td>
+<td>CoordinateRectangle.minimum.longitude</td>
+<td style="text-align: center">Double</td>
+<td>Part of the rectangle bounds</td>
+</tr>
+<tr>
+<td>maxLon</td>
+<td>CoordinateRectangle.maximum.longitude</td>
+<td style="text-align: center">Double</td>
+<td>Part of the rectangle bounds</td>
+</tr>
+<tr>
+<td>radialDistance</td>
+<td>AreaConstraints.radiusInMiles</td>
+<td style="text-align: center">Int</td>
+<td>Radius in statute miles</td>
+</tr>
+<tr>
+<td>flightPath (radial distance)</td>
+<td>flightPathCoordinates.maxDistanceInMiles</td>
+<td style="text-align: center">Double</td>
+<td>The number of statute miles from the path</td>
+</tr>
+<tr>
+<td>flightPath (Coordinates array)</td>
+<td>flightPathCoordinates</td>
+<td style="text-align: center">[CoordinatePath]</td>
+<td>See the CoordinatePath fir definition.</td>
+</tr>
+<tr>
+<td></td>
+<td>CoordinatePath.leg</td>
+<td style="text-align: center">Int</td>
+<td>The leg for this coordinate path - default 1</td>
+</tr>
+<tr>
+<td></td>
+<td>CoordinatePath.endPoint</td>
+<td style="text-align: center">Coordinates</td>
+<td>The end point for this path (optional)</td>
+</tr>
+<tr>
+<td></td>
+<td>CoordinatePath.startPoint</td>
+<td style="text-align: center">Coordinates</td>
+<td>The starting point for this path (optional)</td>
+</tr>
+<tr>
+<td></td>
+<td>CoordinatePath.stationString</td>
+<td style="text-align: center">String</td>
+<td>An airport station rather than coordnates for this path</td>
+</tr>
+<tr>
+<td>minDegreeDistance</td>
+<td>MetarParams.minimumDegreeDistance</td>
+<td style="text-align: center">Double</td>
+<td>0 &lt; any value &lt;90.  The degree distance is the distance (based on longitude and latitude) between stations. The larger the value of minDegreeDistance, the less dense the results.  Duplicate stations are filtered and the most recent of duplicate stations is reported.</td>
+</tr>
+<tr>
+<td>fields</td>
+<td>MetarParams.fields</td>
+<td style="text-align: center">[String]</td>
+<td>The fields you would like to return after processing.  Refer to <a href="https://www.aviationweather.gov/dataserver/fields?datatype=metar">FAA docs</a> for the fields available.</td>
+</tr>
+</tbody></table>
+<h3 id='taf' class='heading'>TAF</h3>
+
+<p>The TAF reports are still using the older functions.  You use the <code><a href="Structs/Comms.html">Comms</a></code> object to get the TAF information.  There are only a few options at this time - more updates to come!</p>
+
+<p>TAF example: </p>
+<pre class="highlight plaintext"><code>let location = CLLocationCoordinate2D(latitude: 38.920898, longitude:-77.031372)
+let milesRadius = 10
+
+let comms = Comms()
+comms.getTAF(location, milesRadius) { (results, error) in
+
+    // process the results array of [TAF] objects
+
+}
+</code></pre>
+<h2 id='author' class='heading'>Author</h2>
+
+<p>Mike Silvers, <a href="mailto:mikesilvers@gmail.com">mikesilvers@gmail.com</a></p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>AviationKit is available under the MIT license. See the LICENSE file for more info.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://github.com/mikesilvers/AviationKit" target="_blank" rel="external">Mike Silvers</a>. All rights reserved. (Last updated: 2019-06-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

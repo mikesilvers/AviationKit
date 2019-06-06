@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Forecast Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/Forecast" class="dashAnchor"></a>
+    <a title="Forecast Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">AviationKit Docs</a> (10% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">AviationKit Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Forecast Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MetarParser.html">MetarParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TafParser.html">TafParser</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AirSigmetError.html">AirSigmetError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AircraftError.html">AircraftError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/GeneralError.html">GeneralError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MetarError.html">MetarError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MostRecentForEachStationConstraints.html">MostRecentForEachStationConstraints</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/StationError.html">StationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TafError.html">TafError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Decodable.html">Decodable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AIRCRAFT.html">AIRCRAFT</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AIRSIGMET.html">AIRSIGMET</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AreaConstraints.html">AreaConstraints</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Comms.html">Comms</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CoordinatePath.html">CoordinatePath</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CoordinateRectangle.html">CoordinateRectangle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Coordinates.html">Coordinates</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/FlightPath.html">FlightPath</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Forecast.html">Forecast</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/IcingCondition.html">IcingCondition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/METAR.html">METAR</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MetarParams.html">MetarParams</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ReportCore.html">ReportCore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Reports.html">Reports</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/STATION.html">STATION</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SkyCondition.html">SkyCondition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/StartEnd.html">StartEnd</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/StationConstraints.html">StationConstraints</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TAF.html">TAF</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Temperature.html">Temperature</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TimeConstraints.html">TimeConstraints</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TurbulenceCondition.html">TurbulenceCondition</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Forecast</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Forecast</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                </div>
+              </div>
+            <p>This struct contains the forecast information.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Variables%20to%20define%20the%20sky%20condition"></a>
+                <a name="//apple_ref/swift/Section/Variables to define the sky condition" class="dashAnchor"></a>
+                <a href="#/Variables%20to%20define%20the%20sky%20condition">
+                  <h3 class="section-name">Variables to define the sky condition</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit8ForecastV13validFromTimeSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/validFromTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit8ForecastV13validFromTimeSiSgvp">validFromTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">validFromTime</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit8ForecastV11validToTimeSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/validToTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit8ForecastV11validToTimeSiSgvp">validToTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">validToTime</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit8ForecastV12timeBecomingSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/timeBecoming" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit8ForecastV12timeBecomingSiSgvp">timeBecoming</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">timeBecoming</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit8ForecastV11probabilitySiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/probability" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit8ForecastV11probabilitySiSgvp">probability</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">probability</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit8ForecastV13windDirectionSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/windDirection" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit8ForecastV13windDirectionSiSgvp">windDirection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">windDirection</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit8ForecastV9windSpeedSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/windSpeed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit8ForecastV9windSpeedSiSgvp">windSpeed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">windSpeed</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit8ForecastV8windGustSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/windGust" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit8ForecastV8windGustSiSgvp">windGust</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">windGust</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit8ForecastV18windShearDirectionSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/windShearDirection" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit8ForecastV18windShearDirectionSiSgvp">windShearDirection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">windShearDirection</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit8ForecastV14windShearSpeedSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/windShearSpeed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit8ForecastV14windShearSpeedSiSgvp">windShearSpeed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">windShearSpeed</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit8ForecastV18windShearHeightAGLSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/windShearHeightAGL" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit8ForecastV18windShearHeightAGLSiSgvp">windShearHeightAGL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">windShearHeightAGL</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit8ForecastV18verticalVisibilitySiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/verticalVisibility" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit8ForecastV18verticalVisibilitySiSgvp">verticalVisibility</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">verticalVisibility</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit8ForecastV10visibilitySdSgvp"></a>
+                    <a name="//apple_ref/swift/Property/visibility" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit8ForecastV10visibilitySdSgvp">visibility</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">visibility</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit8ForecastV9altimiterSdSgvp"></a>
+                    <a name="//apple_ref/swift/Property/altimiter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit8ForecastV9altimiterSdSgvp">altimiter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">altimiter</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit8ForecastV18weatherDescriptionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/weatherDescription" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit8ForecastV18weatherDescriptionSSSgvp">weatherDescription</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">weatherDescription</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit8ForecastV15changeIndicatorSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/changeIndicator" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit8ForecastV15changeIndicatorSSSgvp">changeIndicator</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">changeIndicator</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit8ForecastV10notDecodedSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/notDecoded" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit8ForecastV10notDecodedSSSgvp">notDecoded</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">notDecoded</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit8ForecastV11temperatureSayAA11TemperatureVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/temperature" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit8ForecastV11temperatureSayAA11TemperatureVGSgvp">temperature</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">temperature</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/Temperature.html">Temperature</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit8ForecastV12skyConditionSayAA03SkyE0VGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/skyCondition" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit8ForecastV12skyConditionSayAA03SkyE0VGSgvp">skyCondition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">skyCondition</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/SkyCondition.html">SkyCondition</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit8ForecastV14icingConditionSayAA05IcingE0VGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/icingCondition" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit8ForecastV14icingConditionSayAA05IcingE0VGSgvp">icingCondition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">icingCondition</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/IcingCondition.html">IcingCondition</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AviationKit8ForecastV19turbulenceConditionSayAA010TurbulenceE0VGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/turbulenceCondition" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AviationKit8ForecastV19turbulenceConditionSayAA010TurbulenceE0VGSgvp">turbulenceCondition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">turbulenceCondition</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/TurbulenceCondition.html">TurbulenceCondition</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://github.com/mikesilvers/AviationKit" target="_blank" rel="external">Mike Silvers</a>. All rights reserved. (Last updated: 2019-06-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

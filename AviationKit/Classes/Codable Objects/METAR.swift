@@ -16,15 +16,23 @@ import Foundation
 public struct METAR : Codable {
     
     // MARK: - Variables used for the METAR object
+    
+    /// The raw METAR
     public var rawText              : String?
+    /// Station identifier; Always a four character alphanumeric( A-Z, 0-9)
     public var stationId            : String?
     
+    /// Time( in Epoch format) this METAR was observed.
     public var observationTime      : Int?
     
+    /// The latitude (in decimal degrees )of the station that reported this METAR
     public var latitude             : Double?
+    /// The longitude (in decimal degrees )of the station that reported this METAR
     public var longitude            : Double?
     
+    /// The ir temperature
     public var temperature                 : Double?
+    /// 
     public var sixHourMinTemp              : Double?
     public var sixHourMaxTemp              : Double?
     public var twentyFourHourTempMax       : Double?

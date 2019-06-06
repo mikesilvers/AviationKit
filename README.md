@@ -10,6 +10,8 @@ The FAA provides weather reports and additional notices on a XML based server fo
 
 The initial release of the library contains basic METAR and TAF information based on location.  As the library grows, additional functionality and additional reports will be added.
 
+In addition to the FAA documentation, there is a [documentation server here on github](https://mikesilvers.github.io/aviationkit/).  The documentation will continue to be updated reguarding the classes, structures, enums and everything.
+
 ## Example
 
 The pod contains a fully functional example app.  To run the example project, clone the repo, and run `pod install` from the Example directory first.
