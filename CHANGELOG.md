@@ -1,6 +1,12 @@
 ## Change Log: Master Branch
 The change log contains all version updates and information.
 
+### Version 1.1.1
+* Changed the `TimeConstraints.hoursBeforeNow` from an `Int` to a `Double` to allow for more precise time.
+* Added more documentation - with tables, words and other fun stuff!
+* Added tests related to the `METAR`.  The tests cover the query parameters of the call itself.  We need to make sure the parameters are getting added to the query string properly.
+
+
 ### Version 1.1.0
 
 * Reworked the report generation process.  The core processes were changed to be more generic and be driven by the use of parameter structures.  It will make the addition of new reports easier and more direct.  
