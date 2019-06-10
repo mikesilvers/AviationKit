@@ -14,7 +14,7 @@
     <a title="MetarParser Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">AviationKit Docs</a> (27% documented)</p>
+        <p><a href="../index.html">AviationKit Docs</a> (30% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -381,7 +381,7 @@ There are three individual METAR&rsquo;s used for testing.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An <code>XMLParserDelegate</code> function when the parser starts the XML document.</p>
 
                       </div>
                       <div class="declaration">
@@ -391,6 +391,25 @@ There are three individual METAR&rsquo;s used for testing.</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">parserDidStartDocument</span><span class="p">(</span><span class="n">_</span> <span class="nv">parser</span><span class="p">:</span> <span class="kt">XMLParser</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parser</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>XMLParser</code> used to parse this document.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -408,7 +427,7 @@ There are three individual METAR&rsquo;s used for testing.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An <code>XMLParserDelegate</code> function when the parser ends the XML document.</p>
 
                       </div>
                       <div class="declaration">
@@ -418,6 +437,25 @@ There are three individual METAR&rsquo;s used for testing.</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">parserDidEndDocument</span><span class="p">(</span><span class="n">_</span> <span class="nv">parser</span><span class="p">:</span> <span class="kt">XMLParser</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parser</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>XMLParser</code> used to parse this document.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -435,7 +473,7 @@ There are three individual METAR&rsquo;s used for testing.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An <code>XMLParserDelegate</code> function when the parser starts an element in the XML document.</p>
 
                       </div>
                       <div class="declaration">
@@ -445,6 +483,73 @@ There are three individual METAR&rsquo;s used for testing.</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">parser</span><span class="p">(</span><span class="n">_</span> <span class="nv">parser</span><span class="p">:</span> <span class="kt">XMLParser</span><span class="p">,</span> <span class="n">didStartElement</span> <span class="nv">elementName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">namespaceURI</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">qualifiedName</span> <span class="nv">qName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">attributes</span> <span class="nv">attributeDict</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:])</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parser</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>XMLParser</code> used to parse this document.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>elementName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the element that is starting.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>namespaceURI</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The namespace for this element.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>qName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The qualified name of the element that is starting.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>attributeDict</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>[String:String]</code> dictionary containing attribute names and attribute values.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -462,7 +567,7 @@ There are three individual METAR&rsquo;s used for testing.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An <code>XMLParserDelegate</code> function when the parser ends an element in the XML document.</p>
 
                       </div>
                       <div class="declaration">
@@ -472,6 +577,61 @@ There are three individual METAR&rsquo;s used for testing.</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">parser</span><span class="p">(</span><span class="n">_</span> <span class="nv">parser</span><span class="p">:</span> <span class="kt">XMLParser</span><span class="p">,</span> <span class="n">didEndElement</span> <span class="nv">elementName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">namespaceURI</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">qualifiedName</span> <span class="nv">qName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parser</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>XMLParser</code> used to parse this document.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>elementName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the element that is ending.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>namespaceURI</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The namespace for this element.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>qName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The qualified name of the element that is ending.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -489,7 +649,7 @@ There are three individual METAR&rsquo;s used for testing.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An <code>XMLParserDelegate</code> function when the parser finds characters in the element of the XML document.</p>
 
                       </div>
                       <div class="declaration">
@@ -499,6 +659,37 @@ There are three individual METAR&rsquo;s used for testing.</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">parser</span><span class="p">(</span><span class="n">_</span> <span class="nv">parser</span><span class="p">:</span> <span class="kt">XMLParser</span><span class="p">,</span> <span class="n">foundCharacters</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parser</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>XMLParser</code> used to parse this document.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>string</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The characters of the element.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -516,7 +707,7 @@ There are three individual METAR&rsquo;s used for testing.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An <code>XMLParserDelegate</code> function when the parser starts the XML document.</p>
 
                       </div>
                       <div class="declaration">
@@ -526,6 +717,37 @@ There are three individual METAR&rsquo;s used for testing.</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">parser</span><span class="p">(</span><span class="n">_</span> <span class="nv">parser</span><span class="p">:</span> <span class="kt">XMLParser</span><span class="p">,</span> <span class="n">parseErrorOccurred</span> <span class="nv">parseError</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parser</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>XMLParser</code> used to parse this document.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parseError</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>Error</code> that occurred when parsing the document.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>

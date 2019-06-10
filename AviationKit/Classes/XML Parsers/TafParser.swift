@@ -441,16 +441,36 @@ public class TafParser : NSObject, XMLParserDelegate, XMLCustomParserProtocol {
     }
     
     // MARK: - XMLParserDelegate functions
+    
+    /**
+     An `XMLParserDelegate` function when the parser starts the XML document.
+     
+     - parameter parser: The `XMLParser` used to parse this document.
+     */
     public func parserDidStartDocument(_ parser: XMLParser) {
         // we are only setting this for debug purposes - so you can see when the document has started processing
         print("parserDidStartDocument")
     }
     
+    /**
+     An `XMLParserDelegate` function when the parser ends the XML document.
+     
+     - parameter parser: The `XMLParser` used to parse this document.
+     */
     public func parserDidEndDocument(_ parser: XMLParser) {
         // we are only setting this for debug purposes - so you can see when the document has ended processing
         print("parserDidEndDocument")
     }
     
+    /**
+     An `XMLParserDelegate` function when the parser starts an element in the XML document.
+     
+     - parameter parser: The `XMLParser` used to parse this document.
+     - parameter elementName: The name of the element that is starting.
+     - parameter namespaceURI: The namespace for this element.
+     - parameter qName: The qualified name of the element that is starting.
+     - parameter attributeDict: A `[String:String]` dictionary containing attribute names and attribute values.
+     */
     public func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         
         currentElement = ""
@@ -544,6 +564,14 @@ public class TafParser : NSObject, XMLParserDelegate, XMLCustomParserProtocol {
         }
     }
     
+    /**
+     An `XMLParserDelegate` function when the parser ends an element in the XML document.
+     
+     - parameter parser: The `XMLParser` used to parse this document.
+     - parameter elementName: The name of the element that is ending.
+     - parameter namespaceURI: The namespace for this element.
+     - parameter qName: The qualified name of the element that is ending.
+     */
     public func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         
         switch elementName {
@@ -680,6 +708,12 @@ public class TafParser : NSObject, XMLParserDelegate, XMLCustomParserProtocol {
         
     }
     
+    /**
+     An `XMLParserDelegate` function when the parser finds characters in the element of the XML document.
+     
+     - parameter parser: The `XMLParser` used to parse this document.
+     - parameter string: The characters of the element.
+     */
     public func parser(_ parser: XMLParser, foundCharacters string: String) {
         
         // set the base data and make sure there are no spaces or anything
@@ -744,6 +778,12 @@ public class TafParser : NSObject, XMLParserDelegate, XMLCustomParserProtocol {
         }
     }
 
+    /**
+     An `XMLParserDelegate` function when the parser starts the XML document.
+     
+     - parameter parser: The `XMLParser` used to parse this document.
+     - parameter parseError: The `Error` that occurred when parsing the document.
+     */
     public func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
         // this is just a debug statement for a parser error
         print("Parse error thrown: \(parseError)")

@@ -260,13 +260,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/METAR.swift",
-      "line": 160,
-      "symbol": "METAR.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/STATION.swift",
       "line": 10,
       "symbol": "STATION",

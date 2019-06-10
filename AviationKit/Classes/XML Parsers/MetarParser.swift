@@ -205,6 +205,7 @@ public class MetarParser : NSObject, XMLParserDelegate, XMLCustomParserProtocol 
     }
     
     // MARK: - XMLParserDelegate functions
+    
     /**
      An `XMLParserDelegate` function when the parser starts the XML document.
      

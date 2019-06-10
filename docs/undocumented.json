@@ -1009,48 +1009,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/XML Parsers/MetarParser.swift",
-      "line": 208,
-      "symbol": "MetarParser.parserDidStartDocument(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/XML Parsers/MetarParser.swift",
-      "line": 213,
-      "symbol": "MetarParser.parserDidEndDocument(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/XML Parsers/MetarParser.swift",
-      "line": 218,
-      "symbol": "MetarParser.parser(_:didStartElement:namespaceURI:qualifiedName:attributes:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/XML Parsers/MetarParser.swift",
-      "line": 256,
-      "symbol": "MetarParser.parser(_:didEndElement:namespaceURI:qualifiedName:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/XML Parsers/MetarParser.swift",
-      "line": 394,
-      "symbol": "MetarParser.parser(_:foundCharacters:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/XML Parsers/MetarParser.swift",
-      "line": 473,
-      "symbol": "MetarParser.parser(_:parseErrorOccurred:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/XML Parsers/TafParser.swift",
       "line": 444,
       "symbol": "TafParser.parserDidStartDocument(_:)",
