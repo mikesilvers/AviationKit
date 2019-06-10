@@ -14,7 +14,7 @@
     <a title="METAR Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">AviationKit Docs</a> (10% documented)</p>
+        <p><a href="../index.html">AviationKit Docs</a> (27% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -182,7 +182,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>the raw text returned with no parsing</p>
+                        <p>The raw METAR (raw_text)</p>
 
                       </div>
                       <div class="declaration">
@@ -209,7 +209,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Station identifier; Always a four character alphanumeric( A-Z, 0-9) (station_id)</p>
 
                       </div>
                       <div class="declaration">
@@ -236,7 +236,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Time( in Epoch format) this METAR was observed. (observation_time)</p>
 
                       </div>
                       <div class="declaration">
@@ -263,7 +263,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The latitude (in decimal degrees) of the station that reported this METAR (latitude)</p>
 
                       </div>
                       <div class="declaration">
@@ -290,7 +290,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The longitude (in decimal degrees) of the station that reported this METAR (longitude)</p>
 
                       </div>
                       <div class="declaration">
@@ -317,7 +317,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The air temperature (temp_c)</p>
 
                       </div>
                       <div class="declaration">
@@ -344,7 +344,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Minimum air temperature from the past 6 hours (minT_c)</p>
 
                       </div>
                       <div class="declaration">
@@ -371,7 +371,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Maximum air temperature from the past 6 hours (maxT_c)</p>
 
                       </div>
                       <div class="declaration">
@@ -398,7 +398,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Maximum air temperature from the past 24 hours (maxT24hr_c)</p>
 
                       </div>
                       <div class="declaration">
@@ -425,7 +425,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Minimum air temperature from the past 24 hours (minT24hr_c)</p>
 
                       </div>
                       <div class="declaration">
@@ -452,7 +452,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Dewpoint temperature (dewpoint_c)</p>
 
                       </div>
                       <div class="declaration">
@@ -479,7 +479,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Snow depth on the ground (snow_in)</p>
 
                       </div>
                       <div class="declaration">
@@ -506,7 +506,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Liquid precipitation since the last regular METAR (precip_in)</p>
 
                       </div>
                       <div class="declaration">
@@ -533,7 +533,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Liquid precipitation from the past 3 hours. 0.0005 in = trace precipitation (pcp3hr_in)</p>
 
                       </div>
                       <div class="declaration">
@@ -560,7 +560,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Liquid precipitation from the past 6 hours. 0.0005 in = trace precipitation (pcp6hr_in)</p>
 
                       </div>
                       <div class="declaration">
@@ -587,7 +587,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Liquid precipitation from the past 24 hours. 0.0005 in = trace precipitation (pcp24hr_in)</p>
 
                       </div>
                       <div class="declaration">
@@ -614,7 +614,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Direction from which the wind is blowing.  0 degrees=variable wind direction. (wind_dir_degrees)</p>
 
                       </div>
                       <div class="declaration">
@@ -641,7 +641,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Wind speed; 0 degree wdir and 0 wspd = calm winds (wind_speed_kt)</p>
 
                       </div>
                       <div class="declaration">
@@ -668,7 +668,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Wind gust (wind_gust_kt)</p>
 
                       </div>
                       <div class="declaration">
@@ -695,7 +695,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Vertical Visibility (vert_vis_ft)</p>
 
                       </div>
                       <div class="declaration">
@@ -722,7 +722,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Horizontal visibility (visibility_statute_mi)</p>
 
                       </div>
                       <div class="declaration">
@@ -749,7 +749,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Altimiter (altim_in_hg)</p>
 
                       </div>
                       <div class="declaration">
@@ -776,7 +776,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The elevation of the station that reported this METAR (elevation_m)</p>
 
                       </div>
                       <div class="declaration">
@@ -803,7 +803,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Sea-level pressure (sea_level_pressure_mb)</p>
 
                       </div>
                       <div class="declaration">
@@ -830,7 +830,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Pressure change in the past 3 hours (three_hr_pressure_tendency_mb)</p>
 
                       </div>
                       <div class="declaration">
@@ -857,7 +857,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Corrected (corrected)</p>
 
                       </div>
                       <div class="declaration">
@@ -884,7 +884,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>No signal (no_signal)</p>
 
                       </div>
                       <div class="declaration">
@@ -911,7 +911,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Fully automated (auto)</p>
 
                       </div>
                       <div class="declaration">
@@ -938,7 +938,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Indicates that the automated station type is one of the following: A01|A01A|A02|A02A|AOA|AWOS  NOTE: The type of station is not returned. This simply indicates that this station is one of the six stations enumerated above. (auto_station)</p>
 
                       </div>
                       <div class="declaration">
@@ -965,7 +965,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Maintenance check indicator - maintenance is needed (maintenance_indicator)</p>
 
                       </div>
                       <div class="declaration">
@@ -992,7 +992,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The lightning detection sensor is not operating- thunderstorm information is not available. (lightning_sensor_off)</p>
 
                       </div>
                       <div class="declaration">
@@ -1019,7 +1019,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The freezing rain sensor is not operating (freezing_rain_sensor_off)</p>
 
                       </div>
                       <div class="declaration">
@@ -1046,7 +1046,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The present weather sensor is not operating (present_weather_sensor_off)</p>
 
                       </div>
                       <div class="declaration">
@@ -1073,7 +1073,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Sky condition object (sky_condition)</p>
 
                       </div>
                       <div class="declaration">
@@ -1100,7 +1100,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Weather strings to symbols: <a href="https://www.aviationweather.gov/docs/metar/wxSymbols_anno2.pdf">https://www.aviationweather.gov/docs/metar/wxSymbols_anno2.pdf</a> (wx_string)</p>
 
                       </div>
                       <div class="declaration">
@@ -1127,7 +1127,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>METAR or SPECI (metar_type)</p>
 
                       </div>
                       <div class="declaration">
@@ -1154,7 +1154,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Flight category of this METAR. Values: VFR|MVFR|IFR|LIFR  See <a href="http://www.aviationweather.gov/metar/help?page=plot#fltcat">http://www.aviationweather.gov/metar/help?page=plot#fltcat</a> (flight_category)</p>
 
                       </div>
                       <div class="declaration">
@@ -1192,7 +1192,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The base <code>init</code> for convienance.</p>
 
                       </div>
                       <div class="declaration">
@@ -1209,9 +1209,9 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Se4fromxs7Decoder_p_tKcfc"></a>
+                    <a name="/s:11AviationKit5METARV4fromACs7Decoder_p_tKcfc"></a>
                     <a name="//apple_ref/swift/Method/init(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Se4fromxs7Decoder_p_tKcfc">init(from:)</a>
+                    <a class="token" href="#/s:11AviationKit5METARV4fromACs7Decoder_p_tKcfc">init(from:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1219,7 +1219,8 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>The base decoding <code>init</code>.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1228,6 +1229,25 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">from</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt">Decoder</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>decoder</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>Decoder</code> used to Decode the object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -1246,9 +1266,9 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:SE6encode2toys7Encoder_p_tKF"></a>
+                    <a name="/s:11AviationKit5METARV6encode2toys7Encoder_p_tKF"></a>
                     <a name="//apple_ref/swift/Method/encode(to:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:SE6encode2toys7Encoder_p_tKF">encode(to:)</a>
+                    <a class="token" href="#/s:11AviationKit5METARV6encode2toys7Encoder_p_tKF">encode(to:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1256,7 +1276,8 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>The base decoding <code>init</code>.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1266,6 +1287,25 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>encoder</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>Encoder</code> used to Encode the object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1274,7 +1314,7 @@ This object is <em>codable</em> to allow easy manipulaition with JSON.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/mikesilvers/AviationKit" target="_blank" rel="external">Mike Silvers</a>. All rights reserved. (Last updated: 2019-06-06)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/mikesilvers/AviationKit" target="_blank" rel="external">Mike Silvers</a>. All rights reserved. (Last updated: 2019-06-10)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

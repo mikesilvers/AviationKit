@@ -25,9 +25,9 @@ public struct METAR : Codable {
     /// Time( in Epoch format) this METAR was observed. (observation_time)
     public var observationTime      : Int?
     
-    /// The latitude (in decimal degrees )of the station that reported this METAR (latitude)
+    /// The latitude (in decimal degrees) of the station that reported this METAR (latitude)
     public var latitude             : Double?
-    /// The longitude (in decimal degrees )of the station that reported this METAR (longitude)
+    /// The longitude (in decimal degrees) of the station that reported this METAR (longitude)
     public var longitude            : Double?
     
     /// The air temperature (temp_c)
@@ -157,8 +157,16 @@ public struct METAR : Codable {
     }
     
     // MARK: - Initializers
+    /**
+     The base `init` for convienance.
+     */
     public init() { }
     
+    /**
+     The base decoding `init`.
+     
+     - Parameter decoder: The `Decoder` used to Decode the object.
+     */
     public init(from decoder: Decoder) throws {
         
         let values = try decoder.container(keyedBy: CodingKeys.self)
@@ -206,6 +214,12 @@ public struct METAR : Codable {
     }
     
     // MARK: - The encoder
+    
+    /**
+     The base decoding `init`.
+     
+     - Parameter encoder: The `Encoder` used to Encode the object.
+     */
     public func encode(to encoder: Encoder) throws {
         
         var container = encoder.container(keyedBy: CodingKeys.self)
