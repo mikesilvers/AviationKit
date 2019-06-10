@@ -17,56 +17,86 @@ public struct METAR : Codable {
     
     // MARK: - Variables used for the METAR object
     
-    /// The raw METAR
+    /// The raw METAR (raw_text)
     public var rawText              : String?
-    /// Station identifier; Always a four character alphanumeric( A-Z, 0-9)
+    /// Station identifier; Always a four character alphanumeric( A-Z, 0-9) (station_id)
     public var stationId            : String?
     
-    /// Time( in Epoch format) this METAR was observed.
+    /// Time( in Epoch format) this METAR was observed. (observation_time)
     public var observationTime      : Int?
     
-    /// The latitude (in decimal degrees )of the station that reported this METAR
+    /// The latitude (in decimal degrees )of the station that reported this METAR (latitude)
     public var latitude             : Double?
-    /// The longitude (in decimal degrees )of the station that reported this METAR
+    /// The longitude (in decimal degrees )of the station that reported this METAR (longitude)
     public var longitude            : Double?
     
-    /// The ir temperature
+    /// The air temperature (temp_c)
     public var temperature                 : Double?
-    /// 
+    /// Minimum air temperature from the past 6 hours (minT_c)
     public var sixHourMinTemp              : Double?
+    /// Maximum air temperature from the past 6 hours (maxT_c)
     public var sixHourMaxTemp              : Double?
+    /// Maximum air temperature from the past 24 hours (maxT24hr_c)
     public var twentyFourHourTempMax       : Double?
+    /// Minimum air temperature from the past 24 hours (minT24hr_c)
     public var twentyFourHourTempMin       : Double?
+    /// Dewpoint temperature (dewpoint_c)
     public var dewpoint                    : Double?
+    /// Snow depth on the ground (snow_in)
     public var snow                        : Double?
+    /// Liquid precipitation since the last regular METAR (precip_in)
     public var precipitation               : Double?
+    /// Liquid precipitation from the past 3 hours. 0.0005 in = trace precipitation (pcp3hr_in)
     public var precipitationThreeHour      : Double?
+    /// Liquid precipitation from the past 6 hours. 0.0005 in = trace precipitation (pcp6hr_in)
     public var precipitationSixHour        : Double?
+    /// Liquid precipitation from the past 24 hours. 0.0005 in = trace precipitation (pcp24hr_in)
     public var precipitationTwentyFourHour : Double?
 
+    /// Direction from which the wind is blowing.  0 degrees=variable wind direction. (wind_dir_degrees)
     public var windDirection        : Int?
+    /// Wind speed; 0 degree wdir and 0 wspd = calm winds (wind_speed_kt)
     public var windSpeed            : Int?
+    /// Wind gust (wind_gust_kt)
     public var windGust             : Int?
+    /// Vertical Visibility (vert_vis_ft)
     public var verticalVisibility   : Int?
+    /// Horizontal visibility (visibility_statute_mi)
     public var visibility           : Double?
+    /// Altimiter (altim_in_hg)
     public var altimiter            : Double?
+    /// The elevation of the station that reported this METAR (elevation_m)
     public var elevation            : Double?
+    /// Sea-level pressure (sea_level_pressure_mb)
     public var sealevelPressure     : Double?
+    /// Pressure change in the past 3 hours (three_hr_pressure_tendency_mb)
     public var threeHourPressure    : Double?
 
+    /// Corrected (corrected)
     public var correctedRecord         : Bool = false
+    /// No signal (no_signal)
     public var noSignal                : Bool = false
+    /// Fully automated (auto)
     public var autoRecord              : Bool = false
+    /// Indicates that the automated station type is one of the following: A01|A01A|A02|A02A|AOA|AWOS  NOTE: The type of station is not returned. This simply indicates that this station is one of the six stations enumerated above. (auto_station)
     public var autoStation             : Bool = false
+    /// Maintenance check indicator - maintenance is needed (maintenance_indicator)
     public var maintenance             : Bool = false
+    /// The lightning detection sensor is not operating- thunderstorm information is not available. (lightning_sensor_off)
     public var lightningSensorOff      : Bool = false
+    /// The freezing rain sensor is not operating (freezing_rain_sensor_off)
     public var freezingRainSensorOff   : Bool = false
+    /// The present weather sensor is not operating (present_weather_sensor_off)
     public var presentWeatherSensorOff : Bool = false
 
+    /// Sky condition object (sky_condition)
     public var skyCondition         : [SkyCondition]?
     
+    /// Weather strings to symbols: https://www.aviationweather.gov/docs/metar/wxSymbols_anno2.pdf (wx_string)
     public var weatherDescription   : String?
+    /// METAR or SPECI (metar_type)
     public var metarType            : String?
+    /// Flight category of this METAR. Values: VFR|MVFR|IFR|LIFR  See http://www.aviationweather.gov/metar/help?page=plot#fltcat (flight_category)
     public var flightCategory       : String?
     
     // MARK: - Coding Key enums to process the codable
