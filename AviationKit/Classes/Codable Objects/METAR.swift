@@ -159,6 +159,8 @@ public struct METAR : Codable {
     // MARK: - Initializers
     /**
      The base `init` for convienance.
+
+     - Returns: A new instance of the METAR.
      */
     public init() { }
     
@@ -166,6 +168,8 @@ public struct METAR : Codable {
      The base decoding `init`.
      
      - Parameter decoder: The `Decoder` used to Decode the object.
+     
+     - Returns: A new instance of the METAR.
      */
     public init(from decoder: Decoder) throws {
         
@@ -219,6 +223,9 @@ public struct METAR : Codable {
      The base decoding `init`.
      
      - Parameter encoder: The `Encoder` used to Encode the object.
+     
+     - Returns: A new instance of the METAR.
+
      */
     public func encode(to encoder: Encoder) throws {
         
