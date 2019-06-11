@@ -1007,48 +1007,6 @@
       "symbol": "MetarParams.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/XML Parsers/TafParser.swift",
-      "line": 444,
-      "symbol": "TafParser.parserDidStartDocument(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/XML Parsers/TafParser.swift",
-      "line": 449,
-      "symbol": "TafParser.parserDidEndDocument(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/XML Parsers/TafParser.swift",
-      "line": 454,
-      "symbol": "TafParser.parser(_:didStartElement:namespaceURI:qualifiedName:attributes:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/XML Parsers/TafParser.swift",
-      "line": 547,
-      "symbol": "TafParser.parser(_:didEndElement:namespaceURI:qualifiedName:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/XML Parsers/TafParser.swift",
-      "line": 683,
-      "symbol": "TafParser.parser(_:foundCharacters:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/XML Parsers/TafParser.swift",
-      "line": 747,
-      "symbol": "TafParser.parser(_:parseErrorOccurred:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
     }
   ],
   "source_directory": "/Users/mikesilvers/repositories/AviationKit"
