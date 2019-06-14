@@ -142,10 +142,17 @@ struct CoreRequirements : Codable {
 }
 
 //MARK: - Enums
+/**
+ Valid values for the constraint `MostRecentForEachStation`.
+ */
 public enum MostRecentForEachStationConstraints : String, Codable {
+    /// Request the most recent METAR for each station
     case constraint = "constraint"
+    /// Post filter results after applying all other constrants
     case postfilter = "postfilter"
+    /// Do not apply this parameter.  The same as omitting the parameter.
     case `false`    = "false"
+    /// Same as the `postfilter`
     case `true`     = "true"
 }
 

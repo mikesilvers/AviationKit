@@ -7,31 +7,14 @@
 
 import Foundation
 
-public enum MetarError: Swift.Error {
-    case incorrectParameters(message: String)
-    case notImplemented
-}
-
-public enum TafError: Swift.Error {
-    case incorrectParameters(message: String)
-    case notImplemented
-}
-
-public enum AircraftError: Swift.Error {
-    case incorrectParameters(message: String)
-    case notImplemented
-}
-
-public enum AirSigmetError: Swift.Error {
-    case incorrectParameters(message: String)
-    case notImplemented
-}
-
-public enum StationError: Swift.Error {
-    case incorrectParameters(message: String)
-    case notImplemented
-}
-
+/**
+ A general error thrown by AviationKit.
+ 
+ A generalized error thrown by AviationKit
+ */
 public enum GeneralError: Swift.Error {
+    /// The general error
     case generalError
+    /// The expected function has not been implemented
+    case notImplemented(message: String)
 }

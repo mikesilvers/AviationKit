@@ -7,73 +7,13 @@
 
 import Foundation
 
-extension MetarError {
-    public var errorDescription: String? {
-        switch self {
-        case .incorrectParameters:
-            return NSLocalizedString("The incorrect parameters were passed in.  Please review the documentation for the correct parameter combination.", comment: "")
-        case .notImplemented:
-            return NSLocalizedString("This function was not implemented", comment: "")
-        }
-    }
-}
-
-extension TafError {
-    
-    public var errorDescription: String? {
-        switch self {
-        case .incorrectParameters:
-            return NSLocalizedString("The incorrect parameters were passed in.  Please review the documentation for the correct parameter combination.", comment: "")
-        case .notImplemented:
-            return NSLocalizedString("This function was not implemented", comment: "")
-        }
-    }
-
-}
-
-extension AircraftError {
-    
-    public var errorDescription: String? {
-        switch self {
-        case .incorrectParameters:
-            return NSLocalizedString("The incorrect parameters were passed in.  Please review the documentation for the correct parameter combination.", comment: "")
-        case .notImplemented:
-            return NSLocalizedString("This function was not implemented", comment: "")
-        }
-    }
-
-}
-
-extension AirSigmetError {
-    
-    public var errorDescription: String? {
-        switch self {
-        case .incorrectParameters:
-            return NSLocalizedString("The incorrect parameters were passed in.  Please review the documentation for the correct parameter combination.", comment: "")
-        case .notImplemented:
-            return NSLocalizedString("This function was not implemented", comment: "")
-        }
-    }
-    
-}
-
-extension StationError {
-    
-    public var errorDescription: String? {
-        switch self {
-        case .incorrectParameters:
-            return NSLocalizedString("The incorrect parameters were passed in.  Please review the documentation for the correct parameter combination.", comment: "")
-        case .notImplemented:
-            return NSLocalizedString("This function was not implemented", comment: "")
-        }
-    }
-
-}
-
 extension GeneralError {
     
+    /// Error descriptions for the general error.
     public var errorDescription: String? {
         switch self {
+        case .notImplemented:
+            return NSLocalizedString("This function is not implemented.", comment: "")
         case .generalError :
             return NSLocalizedString("There was a general error", comment: "")
         }
