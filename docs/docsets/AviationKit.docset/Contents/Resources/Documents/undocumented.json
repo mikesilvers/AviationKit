@@ -702,91 +702,70 @@
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Supporting/Supporting.swift",
-      "line": 151,
-      "symbol": "MostRecentForEachStationConstraints.postfilter",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Supporting/Supporting.swift",
-      "line": 152,
-      "symbol": "MostRecentForEachStationConstraints.false",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Supporting/Supporting.swift",
-      "line": 153,
-      "symbol": "MostRecentForEachStationConstraints.true",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Supporting/Supporting.swift",
-      "line": 157,
+      "line": 160,
       "symbol": "MetarParams",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Supporting/Supporting.swift",
-      "line": 159,
+      "line": 162,
       "symbol": "MetarParams.timeConstraints",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Supporting/Supporting.swift",
-      "line": 160,
+      "line": 163,
       "symbol": "MetarParams.stationConstraints",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Supporting/Supporting.swift",
-      "line": 161,
+      "line": 164,
       "symbol": "MetarParams.mostRecent",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Supporting/Supporting.swift",
-      "line": 162,
+      "line": 165,
       "symbol": "MetarParams.flightPath",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Supporting/Supporting.swift",
-      "line": 163,
+      "line": 166,
       "symbol": "MetarParams.fields",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Supporting/Supporting.swift",
-      "line": 164,
+      "line": 167,
       "symbol": "MetarParams.areaConstraint",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Supporting/Supporting.swift",
-      "line": 165,
+      "line": 168,
       "symbol": "MetarParams.coordinateRectangle",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Supporting/Supporting.swift",
-      "line": 166,
+      "line": 169,
       "symbol": "MetarParams.minimumDegreeDistance",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Supporting/Supporting.swift",
-      "line": 168,
+      "line": 171,
       "symbol": "MetarParams.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

@@ -1,34 +1,6 @@
 {
   "warnings": [
     {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/AIRCRAFT.swift",
-      "line": 10,
-      "symbol": "AIRCRAFT",
-      "symbol_kind": "source.lang.swift.decl.struct",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/AIRCRAFT.swift",
-      "line": 13,
-      "symbol": "AIRCRAFT.rawText",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/AIRSIGMET.swift",
-      "line": 10,
-      "symbol": "AIRSIGMET",
-      "symbol_kind": "source.lang.swift.decl.struct",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/AIRSIGMET.swift",
-      "line": 13,
-      "symbol": "AIRSIGMET.rawText",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/Codable Support/Forecast.swift",
       "line": 16,
       "symbol": "Forecast.validFromTime",
@@ -256,20 +228,6 @@
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/Codable Support/TurbulenceCondition.swift",
       "line": 18,
       "symbol": "TurbulenceCondition.maxAltitude",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/STATION.swift",
-      "line": 10,
-      "symbol": "STATION",
-      "symbol_kind": "source.lang.swift.decl.struct",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/STATION.swift",
-      "line": 13,
-      "symbol": "STATION.rawText",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
