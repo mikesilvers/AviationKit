@@ -54,27 +54,63 @@ public struct StationConstraints : Codable {
 
 }
 
+/**
+ An object representing the latitude and longitude of a point.
+ */
 public struct Coordinates : Codable {
+    /// The longitude
     public var longitude : Double = 0.0
+    /// The latitude
     public var latitude  : Double = 0.0
     
+    /**
+     Default initializer.
+     
+     - Returns: An initialized `Coordinates` object.
+     */
     public init() {
         self.longitude = 0.0
         self.latitude  = 0.0
     }
     
+    /**
+     Initializer with all variables.
+     
+     - Parameter longitude: The longitude
+     - Parameter latitude: The latitude
+     - Returns: An initialized `Coordinates` object.
+     */
     public init(_ longitude: Double,_ latitude: Double) {
         self.longitude = longitude
         self.latitude = latitude
     }
 }
 
+/**
+ Represents one leg of a flight path.
+ 
+ Representing one leg of a flight path using either:
+ - A station String
+ - The starting point and the ending point
+ 
+ When using the station string, the four digit airport is the starting point.  The ending point is the is the next leg station string.
+ */
 public struct CoordinatePath : Codable {
+    /// The leg of the journey.  Organized ascending and this number should be a positive interger.
     public var leg                   : Int = 1
+    /// The starting coordinate for the leg
     public var endPoint              : Coordinates?
+    /// The ending coordinate for the leg
     public var startPoint            : Coordinates?
+    /// The station string for the airport
     public var stationString         : String?
     
+    //MARK: Initializers
+    /**
+     The default initilaizer.
+     
+     - Returns: An initialized `CoordinatePath` object.
+    */
     public init() {
         self.leg           = 1
         self.endPoint      = nil
@@ -82,6 +118,15 @@ public struct CoordinatePath : Codable {
         self.stationString = nil
     }
     
+    /**
+     Initializer with all variables.
+     
+     - Parameter leg: Int representing the leg of the journey
+     - Parameter startPoint: The `Coordinates` object representing the latitude and longitude of the starting point.
+     - Parameter endPoint: The `Coordinates` object representing the latitude and longitude of the ending point.
+     - Parameter stationString: The four character station string for the airport.
+     - Returns: An initialized `CoordinatePath` object.
+     */
     public init(_ leg: Int = 1, _ startPoint: Coordinates?, _ endPoint: Coordinates?, _ stationString: String?) {
         self.leg           = leg
         self.startPoint    = startPoint
@@ -90,15 +135,34 @@ public struct CoordinatePath : Codable {
     }
 }
 
+/**
+ The total flight path.
+ 
+ The flight path containing all legs of the flight.  The `CoordinatePath` objects are arranged in ascending order of leg numbers.
+ */
 public struct FlightPath  : Codable {
+    /// The maximum distance from the flight path in miles.
     public var maxDistanceInMiles   : Double
+    /// An `Array` of `CoordinatePath` objects representing the flight path.
     public var flightPathCoordinates:[CoordinatePath]
     
+    /**
+     The default initializer.
+     
+     - Returns: An initialized `FlightPath` object.
+     */
     public init() {
         self.maxDistanceInMiles    = 1.0
         self.flightPathCoordinates = []
     }
     
+    /**
+     The initializer with all variables.
+     
+     - Parameter maxDistance: A `Double` representing the maximum distance from the flight path.
+     - Parameter flightPath: An `Array` of `CoordinatePath` objects representing each leg of the flight path.
+     - Returns: An initialized `FlightPath` object.
+     */
     public init(_ maxDistance: Double, _ flightPath: [CoordinatePath]) {
         self.maxDistanceInMiles    = maxDistance
         self.flightPathCoordinates = flightPath
@@ -106,30 +170,67 @@ public struct FlightPath  : Codable {
 }
 
 // area constraints
+/**
+ Represents the coordinates and radius of a specific point.
+ */
 public struct AreaConstraints : Codable {
+    /// Coordinates of a specific point
     public var coordinates   : Coordinates
+    /// Radius around the coordinate (in miles)
     public var radiusInMiles : Int   = 5
     
+    // MARK: Initializers
+    /**
+     Default initializer.
+     
+     - Returns: An initialized `AreaConstraints` object
+    */
     public init() {
         self.coordinates   = Coordinates()
         self.radiusInMiles = 5
     }
     
+    /**
+     Initializer with all parameters.
+     
+     - Parameter coordinates: A `Coordinates` object representing the coordinate point
+     - Parameter radius: The radius on miles from the coordinate.
+     
+     - Returns: An initialized `AreaConstraints` object
+     */
     public init(_ coordinates: Coordinates, _ radius: Int) {
         self.coordinates = coordinates
         self.radiusInMiles = radius
     }
 }
 
+/**
+ A rectangle bounded by coordinates
+ */
 public struct CoordinateRectangle : Codable {
+    /// The minimum coordinates for the rectangle
     public var minimum : Coordinates
+    /// The maximum coordinates for the rectangle
     public var maximum : Coordinates
     
+    // MARK: Initializers
+    /**
+     Default initializer
+     
+     - Returns: An initialized `CoordinateRectangle` object.
+     */
     public init() {
         self.minimum = Coordinates()
         self.maximum = Coordinates()
     }
     
+    /**
+     An initializer with all variables.
+     
+     - Parameter minimum: The `Coordinates` object representing the minimum corner of the rectangle
+     - Parameter maximum: The `Coordinates` object representing the maximum corner of the rectangle
+     - Returns: An initialized `CoordinateRectangle` object.
+     */
     public init(_ minimum: Coordinates, _ maximum: Coordinates) {
         self.minimum = minimum
         self.maximum = maximum

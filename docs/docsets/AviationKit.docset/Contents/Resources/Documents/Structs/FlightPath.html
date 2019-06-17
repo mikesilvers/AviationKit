@@ -14,7 +14,7 @@
     <a title="FlightPath Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">AviationKit Docs</a> (45% documented)</p>
+        <p><a href="../index.html">AviationKit Docs</a> (61% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -140,7 +140,9 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>The total flight path.</p>
+
+<p>The flight path containing all legs of the flight.  The <code><a href="../Structs/CoordinatePath.html">CoordinatePath</a></code> objects are arranged in ascending order of leg numbers.</p>
 
           </section>
           <section class="section task-group-section">
@@ -159,7 +161,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The maximum distance from the flight path in miles.</p>
 
                       </div>
                       <div class="declaration">
@@ -186,7 +188,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An <code>Array</code> of <code><a href="../Structs/CoordinatePath.html">CoordinatePath</a></code> objects representing the flight path.</p>
 
                       </div>
                       <div class="declaration">
@@ -213,7 +215,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The default initializer.</p>
 
                       </div>
                       <div class="declaration">
@@ -223,6 +225,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An initialized <code>FlightPath</code> object.</p>
                       </div>
                     </section>
                   </div>
@@ -240,7 +246,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The initializer with all variables.</p>
 
                       </div>
                       <div class="declaration">
@@ -251,6 +257,41 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>maxDistance</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>Double</code> representing the maximum distance from the flight path.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>flightPath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <code>Array</code> of <code><a href="../Structs/CoordinatePath.html">CoordinatePath</a></code> objects representing each leg of the flight path.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An initialized <code>FlightPath</code> object.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -259,7 +300,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/mikesilvers/AviationKit" target="_blank" rel="external">Mike Silvers</a>. All rights reserved. (Last updated: 2019-06-14)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/mikesilvers/AviationKit" target="_blank" rel="external">Mike Silvers</a>. All rights reserved. (Last updated: 2019-06-16)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

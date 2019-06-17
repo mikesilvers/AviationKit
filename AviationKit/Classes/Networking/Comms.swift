@@ -8,14 +8,21 @@
 import Foundation
 import CoreLocation
 
+/**
+ Core structure providing the communications processes.
+ 
+ This structure is the core structure that was providing communications for the reports.  This structure is in the process of being deprecated and is being replaced by a generic `Reports` object.
+ */
 public struct Comms {
     
+    /// The core URL's for TAFs and METARS.
     struct url {
         static let taf     = "https://aviationweather.gov/adds/dataserver_current/httpparam"
         static let metar   = "https://aviationweather.gov/adds/dataserver_current/httpparam"
     }
     
     //MARK: - initializers
+    /// Generic initializer.
     public init () {}
     
     //MARK: - Get Functions
@@ -30,7 +37,6 @@ public struct Comms {
      - Parameter completion (Error): The optional error object in the completion object.
      
     */
-    
     @available(*, deprecated, message: "Use Reports.getReport(MetarParams) to generate the report.")
     public func getMETAR(_ centerPoint: CLLocationCoordinate2D,
                          _ radiusInMiles: Int = 10,
@@ -53,7 +59,7 @@ public struct Comms {
                                                 completion(res, error)
                                             }
                                         }
-                        }
+    }
     
     /**
      Retrieves the TAF reports.
@@ -65,7 +71,6 @@ public struct Comms {
      - Parameter completion (metar): The array of TAF's returned by the completion block.
      - Parameter completion (Error): The optional error object in the completion object.
      */
-//    @available(*, deprecated, message: "Use Reports.getReport(TafParams) to generate the report.")
     public func getTAF(_ centerPoint: CLLocationCoordinate2D,
                        _ radiusInMiles: Int = 10,
                        completion: @escaping (_ metar: [TAF], Error?)->()) {

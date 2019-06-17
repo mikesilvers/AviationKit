@@ -8,7 +8,7 @@
 import Foundation
 
 /**
- This struct contains the forecast information.
+ This struct contains the forecast information returned by the report request.
  */
 public struct Forecast : Codable {
     
