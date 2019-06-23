@@ -2,140 +2,126 @@
   "warnings": [
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/Codable Support/Forecast.swift",
-      "line": 16,
-      "symbol": "Forecast.validFromTime",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/Codable Support/Forecast.swift",
-      "line": 17,
-      "symbol": "Forecast.validToTime",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/Codable Support/Forecast.swift",
-      "line": 18,
+      "line": 21,
       "symbol": "Forecast.timeBecoming",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/Codable Support/Forecast.swift",
-      "line": 19,
+      "line": 22,
       "symbol": "Forecast.probability",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/Codable Support/Forecast.swift",
-      "line": 20,
+      "line": 23,
       "symbol": "Forecast.windDirection",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/Codable Support/Forecast.swift",
-      "line": 21,
+      "line": 24,
       "symbol": "Forecast.windSpeed",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/Codable Support/Forecast.swift",
-      "line": 22,
+      "line": 25,
       "symbol": "Forecast.windGust",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/Codable Support/Forecast.swift",
-      "line": 23,
+      "line": 26,
       "symbol": "Forecast.windShearDirection",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/Codable Support/Forecast.swift",
-      "line": 24,
+      "line": 27,
       "symbol": "Forecast.windShearSpeed",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/Codable Support/Forecast.swift",
-      "line": 25,
+      "line": 28,
       "symbol": "Forecast.windShearHeightAGL",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/Codable Support/Forecast.swift",
-      "line": 26,
+      "line": 29,
       "symbol": "Forecast.verticalVisibility",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/Codable Support/Forecast.swift",
-      "line": 28,
+      "line": 31,
       "symbol": "Forecast.visibility",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/Codable Support/Forecast.swift",
-      "line": 29,
+      "line": 32,
       "symbol": "Forecast.altimiter",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/Codable Support/Forecast.swift",
-      "line": 31,
+      "line": 34,
       "symbol": "Forecast.weatherDescription",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/Codable Support/Forecast.swift",
-      "line": 32,
+      "line": 35,
       "symbol": "Forecast.changeIndicator",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/Codable Support/Forecast.swift",
-      "line": 33,
+      "line": 36,
       "symbol": "Forecast.notDecoded",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/Codable Support/Forecast.swift",
-      "line": 35,
+      "line": 38,
       "symbol": "Forecast.temperature",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/Codable Support/Forecast.swift",
-      "line": 36,
+      "line": 39,
       "symbol": "Forecast.skyCondition",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/Codable Support/Forecast.swift",
-      "line": 37,
+      "line": 40,
       "symbol": "Forecast.icingCondition",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mikesilvers/repositories/AviationKit/AviationKit/Classes/Codable Objects/Codable Support/Forecast.swift",
-      "line": 38,
+      "line": 41,
       "symbol": "Forecast.turbulenceCondition",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
