@@ -13,8 +13,11 @@ import Foundation
 public struct Forecast : Codable {
     
     // MARK: - Variables to define the sky condition
+    /// The timne the forecase is valid from - the start time ()
     public var validFromTime      : Int?
+    /// The time the forecast is valid to - the end time ()
     public var validToTime        : Int?
+    
     public var timeBecoming       : Int?
     public var probability        : Int?
     public var windDirection      : Int?
